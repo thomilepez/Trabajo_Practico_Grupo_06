@@ -4,9 +4,8 @@
 
 #contenido-principal{
     width: 100%;
-    height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     margin: 0 auto;
     gap :2rem;
@@ -30,14 +29,13 @@
 
 .contenedor-img-curso{
    width: 100% ;
-   height: 10rem ;
-    overflow: hidden;
 }
 
 .contenedor-img-curso>img{
     width: 100%;
-    height: 100%;
+    height: 12rem;
     object-fit: cover;
+    display: block;
     
 }
 
