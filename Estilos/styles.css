@@ -5,25 +5,40 @@
 #contenido-principal{
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr)
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    gap :2rem;
     
 }
 
-.CONTENEDOR_DE_CURSOS{
+.CURSOS{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap:2rem;
+    margin: 0 auto;
     max-width: 75rem; 
     padding: 0 1.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
 }
 
 
-.contenedor_img_curso>img{
-    width: 25rem;
-    height: 12,5rem;
-    border-radius : 1.25rem 1.25rem 0 0;
+.contenedor-img-curso{
+   width: 100% ;
+   height: 10rem ;
+    overflow: hidden;
+}
+
+.contenedor-img-curso>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
 }
 
 .header-principal{
