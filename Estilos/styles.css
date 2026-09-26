@@ -1,8 +1,12 @@
+
 :root{
+    --Color-Primario: #4170EB;
+    --Color-Secundario: #F6F3C4;
 
 
+
+    --Color-Hover-hipervinculos: #1e409a;
 }
-
 *{
     margin: 0;
 }
@@ -11,7 +15,7 @@
 
 /*pensar paleta de colores e identidad de marca*/
 
-
+    
 #contenido-principal{
     width: 100%;
     display: flex;
@@ -51,7 +55,7 @@
 
 .contenedor-img-curso>img{
     width: 100%;
-    height: 12rem;
+    height: 12em;
     object-fit: cover;
     display: block;
     
@@ -60,7 +64,7 @@
     width: 12em;
     border: none;
     padding: 0.5em;
-    background-color: #1E90FF;
+    background-color: var(--Color-Primario);
     color: white;
     text-decoration: none;
     margin-top: auto;
@@ -69,6 +73,20 @@
 .header-principal{
     display: flex;
     justify-content: flex-start;
+    width: 100%;
+    height: 4em;
+}
+
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--Color-Primario);
+    justify-content: space-between;
+    align-items: center;
+
+
 }
 
 .navegacion-principal ul{
@@ -78,26 +96,46 @@
 }
 
 .navegacion-principal a{
+    background-color:var(--Color-Primario); ;
+    padding: 0.5em;
+    color:white;
     text-decoration: none;
 }
 
 .SVG_LOGO{
-    width: 100%;
- margin: 0;
- max-width: 25rem;
- height: 10rem;
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    max-width: 25rem;
+
+    background-color: var(--Color-Primario);
 }
 
 .SVG_LOGO img{
+    display: block;
     width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+
+  
 }
 
 .introduccion{
     text-align: center;
-  max-width: 50rem;
-  margin: 0 auto 3rem auto;
-  padding: 0 1rem;
+    max-width: 50rem;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+
+
+.btn-cursos-masInfo:hover{
+   
+    background-color: var(--Color-Hover-hipervinculos);
+
+}
+
+.nav-hipervinculos:hover{
+   
+    background-color: var(--Color-Hover-hipervinculos);
 }
