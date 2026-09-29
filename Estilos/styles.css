@@ -1,4 +1,4 @@
-
+/***        variables COLOR     ***/
 :root{
     --Color-Primario: #4170EB;
     --Color-Secundario: #F6F3C4;
@@ -7,15 +7,12 @@
 
     --Color-Hover-hipervinculos: #1e409a;
 }
+/**         RESET / REGLAS GLOBALES         ***/
 *{
     margin: 0;
 }
 
-/*colores*/
-
-/*pensar paleta de colores e identidad de marca*/
-
-    
+/***            ESTILO EN GENERAL           **/
 #contenido-principal{
     width: 100%;
     display: flex;
@@ -25,51 +22,7 @@
     gap :2rem;
     
 }
-
-.CURSOS{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap:2rem;
-    margin: 0 auto;
-    max-width: 75rem; 
-    padding: 0 1.5rem;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    box-sizing: border-box;
-
-}
-
-
-.contenedor-img-curso{
-   width: 100% ;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   gap: 0.7em;
-    align-items: center;
-
-}
-
-.contenedor-img-curso>img{
-    width: 100%;
-    height: 12em;
-    object-fit: cover;
-    display: block;
-    
-}
-.btn-cursos-masInfo{
-    width: 12em;
-    border: none;
-    padding: 0.5em;
-    background-color: var(--Color-Primario);
-    color: white;
-    text-decoration: none;
-    margin-top: auto;
-}
-
+/**             ENCABEZADO              **/
 .header-principal{
     display: flex;
     justify-content: flex-start;
@@ -77,7 +30,27 @@
     height: 4em;
 }
 
+/***            LOGO            **/
+.SVG_LOGO{
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    max-width: 25rem;
 
+    background-color: var(--Color-Primario);
+}
+
+.SVG_LOGO img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+
+  
+}
+
+/**         BARRA DE NAVEGACION      **/
 .navegacion-principal{
     display: flex;
     flex-direction: row;
@@ -102,25 +75,12 @@
     text-decoration: none;
 }
 
-.SVG_LOGO{
-    width: 30%;
-    height: 100%;
-    margin: 0;
-    max-width: 25rem;
-
-    background-color: var(--Color-Primario);
+.nav-hipervinculos:hover{
+   
+    background-color: var(--Color-Hover-hipervinculos);
 }
 
-.SVG_LOGO img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-
-  
-}
-
+/**         SECCION DE INTRODUCCION        **/
 .introduccion{
     text-align: center;
     max-width: 50rem;
@@ -128,14 +88,56 @@
     padding: 0 1rem;
 }
 
+/**         SECCION DE CURSOS          **/
+.CURSOS{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap:2rem;
+    margin: 0 auto;
+    max-width: 75rem; 
+    padding: 0 1.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
 
+}
+.contenedor-img-curso{
+   width: 100% ;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 0.7em;
+    align-items: center;
+
+}
+.contenedor-img-curso>img{
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+    display: block;
+    
+}
+
+/**     BOTONES  REUTILIZABLES  **/
+.btn-cursos-masInfo{
+    width: 12em;
+    border: none;
+    padding: 0.5em;
+    background-color: var(--Color-Primario);
+    color: white;
+    text-decoration: none;
+    margin-top: auto;
+}
 .btn-cursos-masInfo:hover{
    
     background-color: var(--Color-Hover-hipervinculos);
 
 }
+/**     PIE DE PAGINA      **/
+/*       MEDIA QUERIES      */
 
-.nav-hipervinculos:hover{
-   
-    background-color: var(--Color-Hover-hipervinculos);
-}
+
+
