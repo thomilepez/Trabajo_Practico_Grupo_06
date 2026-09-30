@@ -107,6 +107,7 @@ img{
     max-width: 50rem;
     margin: 0 auto 3rem auto;
     padding: 0 1rem;
+     margin-top: 2rem;
 }
 
 /**         SECCION DE CURSOS          **/
@@ -193,6 +194,57 @@ img{
     background-color: var(--Color-Hover-hipervinculos);
     font-size: 0.85rem;
 }
+
+
+/*css de las paginas web maquetacion*/
+
+body.pagina-red-social {
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+.barra-retorno {
+    background-color: #1a1a1a;
+    padding: 12px 20px;
+}
+
+.barra-retorno a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.barra-retorno a:hover {
+    text-decoration: underline;
+}
+
+.contenedor-mockup img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contenedor-mockup .img-escritorio {
+    display: block;
+}
+
+.contenedor-mockup .img-celular {
+    display: none;
+}
+
+/*media query redesn scociales*/
+
+@media (max-width: 767px) {
+    .contenedor-mockup .img-escritorio {
+        display: none;
+    }
+
+    .contenedor-mockup .img-celular {
+        display: block;
+    }
+}
+
 /*       MEDIA QUERIES      */
 
 
