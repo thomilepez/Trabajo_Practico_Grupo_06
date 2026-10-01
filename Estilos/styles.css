@@ -135,11 +135,11 @@ img{
    gap: 0.7em;
 
 }
-.contenedor-img-curso>img{
+.contenedor-img-curso> img{
     width: 100%;
-    height: 12em;
+    height: 11em;
     object-fit: cover;
-    
+    display: block;
 }
 
 /**     BOTONES  REUTILIZABLES  **/
