@@ -4,32 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesion</title>
+    <link rel="stylesheet" href="../Estilos/styleForm.css">
 </head>
 <body>
     <header></header>
 <main>
-
+    
     <section class="contenedor-inicio-de-sesion">
+        <div class="SVG_LOGO">
+            <img src="../svg-logo/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+        </div>
     <h1>Iniciar sesion</h1>
     
     <form action="*" method="post">
      
 
-        <p>Tipo de cuenta</p>                           <!-- value para en el futuro poder tomar el dato para js-->
-    <input type="radio" id="rol-alumno" name="rol" value="alumno" requiered>
-    <label for="rol-alumno">Alumno</label>
-                                                      <!-- value para en un futuro poder tomar el dato con js-->
-    <input type="radio" id="rol-docente" name="rol" value="docente" required>
-    <label for="rol-docente">Docente</label>
-
+        <p>Tipo de cuenta</p> 
+                                  <!-- value para en el futuro poder tomar el dato para js-->
+    <div class = "contenedor-label-radio">
+        <label for="rol-alumno">Alumno</label>
+        <input type="radio" id="rol-alumno" name="rol" value="alumno" requiered>
+        <!-- value para en un futuro poder tomar el dato con js-->
+        <label for="rol-docente">Docente</label>
+        <input class = "ipt-form"type="radio" id="rol-docente" name="rol" value="docente" required>
+    </div>                              
+        
 
     <label for="email">Correo Electronico</label>
-    <input type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
+    <input class = "ipt-form" type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
 
     <label for="contraseña">Contraseña</label>
-    <input type="password" id="cotraseña" name="contraseña" required>
+    <input class = "ipt-form" type="password" id="cotraseña" name="contraseña" required>
     
-  <button type="submit" class="boton">Ingresar</button>
+  <button class = "btn-form"type="submit" class="boton">Ingresar</button>
 
   <p>Si no tenes usuario <a href="registro.html">registrate acá</a>.</p>
 </form>
