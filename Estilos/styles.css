@@ -13,6 +13,7 @@
     --Color-texto: #1E293B;
     --Color-boton: #3B82F6;
     --Color-Hover-hipervinculos: #2563EB;
+    --Color-Texto-header: #F8FAFC; 
 }
 /**         RESET / REGLAS GLOBALES         ***/
 *{
@@ -49,24 +50,25 @@ img{
 /**             ENCABEZADO              **/
 .header-principal{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     height: 4em;
 }
 
 /***            LOGO            **/
 .SVG_LOGO{
-    width: 30%;
+    display: flex;
+    align-items: center;
+    width: auto;
     height: 100%;
     margin: 0;
-    max-width: 25rem;
 
     background-color: var(--Color-Primario);
 }
 
 .SVG_LOGO img{
     display: block;
-    width: 100%;
+    width: auto;
     height: 100%;
     display: block;
     object-fit: contain;
@@ -78,9 +80,10 @@ img{
 .navegacion-principal{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     background-color: var(--Color-Primario);
-    justify-content: space-between;
+    flex: 1;
+    justify-content: space-around;
     align-items: center;
 
 
@@ -88,7 +91,11 @@ img{
 
 .navegacion-principal ul{
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding:0;
+    align-items: center;
 }
 
 .navegacion-principal a{
@@ -99,6 +106,23 @@ img{
 .nav-hipervinculos:hover{
    
     background-color: var(--Color-Hover-hipervinculos);
+}
+
+.nav-hipervinculos{
+
+    display: inline-flex;    
+    align-items: center;    
+    text-decoration: none;    
+    padding: 0.5em 0.75em;
+    color: var(--Color-Texto-header);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-hipervinculos img {
+    width: 1.25rem;        
+    height: 1.25rem;
+    display: block;                  
 }
 
 /**         SECCION DE INTRODUCCION        **/
@@ -127,7 +151,7 @@ img{
 }
 .contenedor-img-curso{
   
-    box-shadow: 13px 14px 20px rgba(0, 0, 0, 0.5);
+   box-shadow: 13px 14px 20px rgba(0, 0, 0, 0.5);
    width: 100% ;
    height: 100%;
    display: flex;
@@ -150,7 +174,7 @@ img{
     border: none;
     padding: 0.5em;
     background-color: var(--Color-boton);
-    color: white;
+    color: var(--Color-Fondo);
     text-decoration: none;
     margin-top: auto;
     text-align: center;
@@ -166,7 +190,7 @@ img{
 .footer-principal {
     width: 100%;
     background-color: var(--Color-Primario);
-    color: white;
+    color: var(--Color-Texto-header);
     margin-top: 3rem;
 }
 .contenido-footer {
