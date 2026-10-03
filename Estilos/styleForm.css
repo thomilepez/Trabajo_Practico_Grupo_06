@@ -29,19 +29,19 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    width: 100%;
+    color:white;
+    width: 18em;
     min-height: 30em;
     gap: 1rem;
 
-    border : 2px solid var(--Color-Secundario);
-    border-radius: 1em;    
-    box-shadow: 0px 0px 10px 2px var(--Color-Secundario);
+  
    
 }
+/*LOGO SVG*/
+
 .SVG_LOGO{
-    width: 30%;
-    height: 17%;
+    width: 10em;
+    height: 20%;
     margin: 0;
     max-width: 25rem;
 
@@ -58,24 +58,79 @@ main{
   
 }
 
+/*MODIFICACION DE COLORES DE INPUT RADIO*/
 
+.contenedor-input-radio{
+    display: flex;
+    gap: 2.5em;
+}
 
-.contenedor-label-radio > input[type="radio"] {
+input[type="radio"] {
+    
+    appearance: none;
     position: relative;
     top:0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
     
+
+    accent-color: var(--Color-boton);
+    background-color: gray;
+    border: 1px solid rgb(43, 37, 37);
+
+
+    cursor : pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--Color-boton);
+    border: 2px solid var(--Color-boton);
     
 }
+
+input[type="radio"]::before{
+content: "";
+
+position: absolute;
+
+width: 0.45em;
+height: 0.45em;
+
+border-radius: 50%;
+
+background-color: white;
+
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%) scale(0);
+}
+
+input[type="radio"]:checked::before{
+transform: translate(-50%, -50%) scale(1);
+}
+
+/*FORMULARIO */
+
+
+
 
 form{
     display:flex;
     flex-direction: column;
-    gap:0.5em;
-    
+    gap:1em;
+    color: white;
+    width: 100%;
 }
-.ipt-form{
+.ipt-form{ 
+   border: 1px solid var(--Color-Primario);
    border-radius: 0.8em;
-   padding: 0.2em;
+   background-color: rgb(43, 37, 37);
+   color: white;
+   width: 100%;
+   padding: 0.5em;
+   padding-left: 3.6em;
 }
 
 .btn-form{
@@ -85,3 +140,32 @@ form{
     color: white;
     padding: 0.5em;
 }
+
+
+    /*ICONOS*/
+
+.contenedor-input-form{
+    position: relative;
+    width: 100%;
+}
+
+.icono-input{
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.icono-input-ojo{
+
+    position: absolute;
+    top: 50%;
+    left: 15.5em;
+    transform: translateY(-50%);
+    color: white;
+
+}
+
+
+
