@@ -1,0 +1,122 @@
+/***        variables COLOR     ***/
+:root{
+    /*--Color-Primario: #4170EB;
+    --Color-Secundario: #F6F3C4;
+    --Color-texto: #1a1a1a;
+    --Color-Fondo: #f5f5f5;
+    
+    --Color-Hover-hipervinculos: #1e409a;
+    */
+    --Color-Primario: #0F172A;
+    --Color-Secundario: #1E293B;
+    --Color-Fondo: #F8FAFC;
+    --Color-texto: #1E293B;
+    --Color-boton: #3B82F6;
+    --Color-Hover-hipervinculos: #2563EB;
+}
+/**         RESET / REGLAS GLOBALES         ***/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--Color-texto);
+    line-height: 1.6;       /* Espacio entre líneas */
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    max-width: 100%;        /*NO desborda del contenedor*/
+    display: block;
+}
+/***            ESTILO EN GENERAL           **/
+#contenido-principal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap :2rem;
+    
+}
+/**             ENCABEZADO              **/
+.header-principal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 4em;
+}
+
+/***            LOGO            **/
+.SVG_LOGO{
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    max-width: 25rem;
+
+    background-color: var(--Color-Primario);
+}
+
+.SVG_LOGO img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+
+  
+}
+
+/**         BARRA DE NAVEGACION      **/
+.navegacion-principal{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--Color-Primario);
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.navegacion-principal ul{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navegacion-principal a{
+    padding: 0.5em;
+    color:white;
+}
+
+.nav-hipervinculos:hover{
+   
+    background-color: var(--Color-Hover-hipervinculos);
+}
+
+.contenedor-titulo{
+    border-top: 2px solid rgb(73, 70, 70); 
+    width: 100%;
+    height: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../Trabajo_Practico_Grupo_06/imagenes/Programacion/Hover-Programacion.jpg");
+  
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 4em;
+}

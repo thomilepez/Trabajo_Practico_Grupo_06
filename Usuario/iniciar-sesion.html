@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesion</title>
     <link rel="stylesheet" href="../Estilos/styleForm.css">
+   
 </head>
 <body>
   
@@ -12,7 +13,7 @@
     
     <section class="contenedor-inicio-de-sesion">
         <div class="SVG_LOGO">
-            <img src="../svg-logo/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+            <img src="../svg/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
         </div>
     <h1>Iniciar sesion</h1>
     
@@ -21,20 +22,27 @@
 
         <p>Tipo de cuenta</p> 
                                   <!-- value para en el futuro poder tomar el dato para js-->
-    <div class = "contenedor-label-radio">
+    <div class = "contenedor-input-radio">
         <label for="rol-alumno">Alumno</label>
         <input type="radio" id="rol-alumno" name="rol" value="alumno" requiered>
         <!-- value para en un futuro poder tomar el dato con js-->
         <label for="rol-docente">Docente</label>
-        <input class = "ipt-form"type="radio" id="rol-docente" name="rol" value="docente" required>
-    </div>                              
-        
-
+        <input type="radio" id="rol-docente" name="rol" value="docente" required>
+    </div>    
+    
+    
     <label for="email">Correo Electronico</label>
-    <input class = "ipt-form" type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
-
+    <div class="contenedor-input-form">
+        <img class="icono-input" src ="../svg/Iconos-SVG/icono-email.svg" alt="Icono de correo electronico">
+        <input class = "ipt-form" type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
+    </div>
+      
     <label for="contraseña">Contraseña</label>
-    <input class = "ipt-form" type="password" id="cotraseña" name="contraseña" required>
+    <div class="contenedor-input-form">
+        <img class="icono-input" src="../svg/Iconos-SVG/icono-candado-linea.svg" alt="Icono de candado">
+        <input class = "ipt-form" type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
+        <img class="icono-input-ojo" src="../svg/Iconos-SVG/Icono-ojo-close.svg" alt="Icono de ojo">
+    </div>
     
   <button class = "btn-form"type="submit" class="boton">Ingresar</button>
 
