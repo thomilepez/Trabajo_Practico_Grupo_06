@@ -175,6 +175,26 @@ img{
     display: block;
 }
 
+.CURSOS-Nuevos h2{
+    grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+.CURSOS-Nuevos{
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap:2rem;
+    margin: 0 auto;
+    max-width: 75rem; 
+    padding: 0 1.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
 /**     BOTONES  REUTILIZABLES  **/
 .btn-cursos-masInfo{
     width: 12em;
