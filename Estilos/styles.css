@@ -72,8 +72,6 @@ img{
     height: 100%;
     display: block;
     object-fit: contain;
-
-  
 }
 
 /**         BARRA DE NAVEGACION      **/
@@ -192,6 +190,20 @@ img{
     text-align: center;
     justify-content: center;
     box-sizing: border-box;
+}
+
+/*beneficios*/
+
+.seccion-beneficios{
+padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   /*quizas agregar un background color*/
+}
+
+.llamado-accion{
+    text-align: center;
 }
 
 
