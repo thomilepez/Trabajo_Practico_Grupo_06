@@ -52,7 +52,11 @@ img{
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    height: 4em;
+    height: 6em;
+    position: sticky;
+    z-index: 100;
+    top: 0; 
+    background-color: var(--Color-Primario);
 }
 
 /***            LOGO            **/
@@ -63,7 +67,7 @@ img{
     height: 100%;
     margin: 0;
 
-    background-color: var(--Color-Primario);
+    
 }
 
 .SVG_LOGO img{
@@ -81,7 +85,6 @@ img{
     display: flex;
     flex-direction: row;
     width: auto;
-    background-color: var(--Color-Primario);
     flex: 1;
     justify-content: space-around;
     align-items: center;
