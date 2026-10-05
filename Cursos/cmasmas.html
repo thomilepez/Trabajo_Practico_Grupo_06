@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
+    <link rel="stylesheet" href="../Estilos/styles-cursos.css">
     <title>C++</title>
 </head>
 <body>
+          <header class="header-principal">
+        <div class="SVG_LOGO">
+            <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+        </div>
+    <nav class="navegacion-principal" aria-label="Navegación Principal"> 
+       <ul>
+        <!--header-->
+        <li><a class ="nav-hipervinculos" href="index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
+        <li><a class ="nav-hipervinculos"href="tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
+        <li><a class ="nav-hipervinculos"href="Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
+        <li><a class ="nav-hipervinculos"href="Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
+        <li><a class ="nav-hipervinculos"href="Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
+           <!-- boton de cambiar tema-->
 
-      <header>
-        
-      </header>
+              <!-- manejar login-->
+        <li><a class ="nav-hipervinculos" href="Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
+        <li><a class ="nav-hipervinculos" href="Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
+       
+         <li><a class="nav-hipervinculos" href="tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="">Carrito</a></li>   
+    </ul>
+    </nav>
+</header>
      
     <main class="contenedor-curso">
 
@@ -25,40 +45,46 @@
                     <li>Modalidad: A tu propio ritmo</li>
                 </ul>
             </div>
-            <figure class="curso-hero-media">
-                <img src="../imagenes/Programacion/Cmasmas.jpg" alt="Logo de C++ con lineas de codigo detras">
-            </figure>
         </section>
+        <div class="contenedor-de-secciones">
 
-        <section class="curso-seccion">
-            <h2>¿Qué vas a aprender?</h2>
-            <div class="grid-aprendizajes">
-                <article class="item-aprendizaje">
-                    <h3>Fundamentos y logica</h3>
-                    <p>Variables, tipos de datos primitivos, operadores y estructuras de control de flujo.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Programación Orientada a Objetos:</h3>
-                    <p>Clases, objetos, constructores, herencia, encapsulamiento y polimorfismo.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>DGestión de Memoria</h3>
-                    <p>
-                     Comprensión profunda de punteros, referencias y asignación dinámica de memoria.
-                    </p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Buenas Prácticas y Debugging</h3>
-                    <p>Modularización de proyectos, compilación con g++ y resolución de errores de segmentación.
-                    </p>
-                </article>
-            </div>
-        </section>
+          <div class="seccion-uno">
+              
+                <figure class="curso-hero-media">
+                  <img src="../imagenes/Programacion/Cmasmas.jpg" alt="Logo de C++ con lineas de codigo detras">
+                </figure>
 
-        <section class="curso-seccion">
-            <h2>Temario del Curso</h2>
-            <ol class="lista-temario">
-                <li>
+              <section class="curso-seccion">
+                  
+                    
+                    <div class="grid-aprendizajes">
+                        <h2>¿Qué vas a aprender?</h2>
+                        <article class="item-aprendizaje">
+                                <h3>Fundamentos y logica</h3>
+                                <p>Variables, tipos de datos primitivos, operadores y estructuras de control de flujo.</p>
+                            </article>
+                            <article class="item-aprendizaje">
+                                <h3>Programación Orientada a Objetos:</h3>
+                                <p>Clases, objetos, constructores, herencia, encapsulamiento y polimorfismo.</p>
+                            </article>
+                            <article class="item-aprendizaje">
+                                <h3>DGestión de Memoria</h3>
+                                <p>Comprensión profunda de punteros, referencias y asignación dinámica de memoria.</p>
+                            </article>
+                            <article class="item-aprendizaje">
+                                <h3>Buenas Prácticas y Debugging</h3>
+                                <p>Modularización de proyectos, compilación con g++ y resolución de errores de segmentación.</p>
+                            </article>
+                        </div>
+                        
+                    </section>
+            </div>  
+        <div class="seccion-dos">
+
+            <section class="curso-seccion">
+                <h2>Temario del Curso</h2>
+                <ol class="lista-temario">
+                    <li>
                     <h3>Módulo 1: Fundamentos de C++ y Configuración</h3>
                     <p>Instalación de herramientas (compilador y entorno), estructura básica del código, entradas y salidas por consola.</p>
                 </li>
@@ -74,13 +100,15 @@
                     <h3>Módulo 4: Programación Orientada a Objetos y Proyecto</h3>
                     <p>Definición de clases, instanciación, constructores, métodos y desarrollo de una aplicación integral en consola.</p>
                 </li>
-            </ol>
-        </section>
+                </ol>
+            </section>
+        </div>
+        <div class="seccion-tres">
 
-        <section class="curso-seccion">
-            <h2>Requisitos</h2>
-            <ul class="lista-requisitos">
-                <li>Computadora con conexión a internet.</li>
+            <section class="curso-seccion">
+                <h2>Requisitos</h2>
+                <ul class="lista-requisitos">
+                    <li>Computadora con conexión a internet.</li>
                 <li>Compilador de C++ y editor instalados</li>
                 <li>Ganas de aprender y practicar lógica de programación (no requiere experiencia previa).</li>
             </ul>
@@ -102,9 +130,58 @@
                 </div>
             </div>
         </section>
+        </div>
+    </div> 
 
     </main>
- <footer></footer>
+    <footer class="footer-principal"> 
+
+<div class="contenido-footer">
+            <div class="logo-footer">
+                <img src="svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+            </div>
+    <section class="footer-col">
+
+        <section class="footer-col">
+            <h3>Nuestras Redes</h3>
+            <ul class="lista-redes">
+                  <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
+                <li><a href="redes-sociales/instagram.html">Instagram</a></li>
+                <li><a href="redes-sociales/facebook.html">Facebook</a></li>
+                <li><a href="redes-sociales/tiktok.html">Tik-Tok</a></li>
+                <li><a href="redes-sociales/x.html">X</a></li>
+                <li><a href="redes-sociales/youtube.html">You-Tube</a></li>
+            </ul>
+        </section>
+
+        <nav class="footer-col" aria-label="Enlaces del pie de página">
+            <!-- uso aria label para diferenciar el conjunto de botones para los lecotres -->
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="tienda-carrito/catalogo-cursos.html">Cursos</a></li>
+                <li><a href="Institucion/sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="Institucion/docentes.html">Nuestros Docentes</a></li>
+                <li><a href="Institucion/preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="Institucion/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <section class="footer-col">
+            <h3>Contacto</h3>
+            <address>
+                <!-- utilice address porque semanticamente envuelve la infromacion de contacto -->
+                <p>Teléfono: <a href="tel:+5491100000000">+54 9 11 0000-0000</a></p>
+                <p>Consultas: <a href="mailto:info@estudy.com">info@estudy.com</a> / <a href="mailto:administracion@estudy.com">administracion@estudy.com</a></p>
+                <p>Reporte de errores: <a href="mailto:soporte-tecnico@estudy.com">soporte-tecnico@estudy.com</a></p>
+            </address>
+        </section>
+    </div>
+
+    <div class="footer-copyrigth">
+        <!-- derechos de autor-->
+        <p>© Copyrigth 2026 E-Study. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
 </body>
 </html>

@@ -21,6 +21,89 @@
     padding: 0;
 }
 
+.curso-hero-info{
+    color : white;
+    max-height: 18em;
+    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../imagenes/imagen-hero-main-2.jpg);
+    background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
 body{
     background-color: var(--Color-Fondo);
+}
+
+
+.contenedor-de-secciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  
+    gap:2em;
+
+
+
+}
+figure{
+    width: 50%;
+    height: 100%;
+
+}
+
+figure>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+.curso-seccion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.seccion-uno{
+    display: flex;
+    height: 20em;    
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+    border :1px solid rgb(67, 69, 71);
+}
+
+.seccion-dos h2{
+    
+    text-align: center;
+    height: 33%;
+
+}
+
+
+.seccion-tres{
+    display: flex;
+    gap:7em;
+    width: 100%;
+    justify-content: center;
+    height: 33%;
+}
+
+.seccion-tres > .curso-seccion h2{
+    
+    text-align: start;
+}
+.acciones-compra{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
