@@ -14,21 +14,44 @@ body{
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
   
 
 }
-main{
+.SVG_LOGO_MAIN{
+    display: none;
 
+    
+}
+main{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    
 }
 
+.titulo-principal-main{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.contenedor-descripcion-main{
+    display:none;
+    width: 50%;
+
+
+
+}
 
 .contenedor-inicio-de-sesion {
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--Color-Primario);
     color:white;
     width: 18em;
     min-height: 30em;
@@ -58,11 +81,31 @@ main{
   
 }
 
-/*MODIFICACION DE COLORES DE INPUT RADIO*/
+.titulo-form{
+    align-self: center;
+    justify-self: center;
 
+
+}
+
+/*MODIFICACION DE COLORES DE INPUT RADIO*/
+.cont-radio{
+     display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: 3px;
+    border:1px solid white;
+    border-radius: 11px;
+    width: 50%;
+    justify-content: center;
+
+}
 .contenedor-input-radio{
     display: flex;
-    gap: 2.5em;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    
 }
 
 input[type="radio"] {
@@ -122,15 +165,32 @@ form{
     gap:1em;
     color: white;
     width: 100%;
+    height: 100%;
+
 }
+
+
+
 .ipt-form{ 
-   border: 1px solid var(--Color-Primario);
-   border-radius: 0.8em;
-   background-color: rgb(43, 37, 37);
+   
    color: white;
    width: 100%;
    padding: 0.5em;
    padding-left: 3.6em;
+   border: none;
+   background: transparent;
+   outline: none;
+}
+
+.ipt-form:-webkit-autofill,
+.ipt-form:-webkit-autofill:hover,
+.ipt-form:-webkit-autofill:focus,
+.ipt-form:-webkit-autofill:active{
+
+
+    -webkit-text-fill-color: white !important;
+    caret-color: white;
+    transition: background-color 99999s ease-in-out 0s;
 }
 
 .btn-form{
@@ -139,12 +199,18 @@ form{
     background-color: var(--Color-boton);
     color: white;
     padding: 0.5em;
+    width: 50%;
+    align-self: center;
 }
 
 
     /*ICONOS*/
 
 .contenedor-input-form{
+
+    border-bottom: 1px solid white;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
     position: relative;
     width: 100%;
 }
@@ -166,6 +232,109 @@ form{
     color: white;
 
 }
+/* PANTALLA COMPUTADORA */
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        background-image:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), url(../imagenes/Fondo\ inicio.jpg);       
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main{
+    
+         display: flex;
+         /* vertical */
+        width: 100%;
+        min-height: 100vh;
+    }
+    .contenedor-descripcion-main{
+        display: flex;
+        flex-direction: column; 
+        width: 80%;
+        color :white;
+        margin-left: 8em;
+    }
+
+    .titulo-principal-main{
+        display: flex;
+        width: 100%;
+        align-items: start;
+        max-width: 32em;
+    }
+
+    h1{
+        font-size: 4em;
+    }
+    .texto-resaltado{
+        color: var(--Color-boton);
+        
+    }
+    .descripcion{
+        font-size: 1.5em;
+    }
+
+    .contenedor-inicio-de-sesion {
+    border-radius: 30px;
+    border : 2px solid rgba(255,255,255,0.3);
+    width: 50em;
+    height: 100%;
+    max-height: 70%;
+    gap: 1rem;
+    background: transparent;
+    backdrop-filter: blur(20px);
+   
+    align-self: center;
+   margin-right: 3%;
+
+  
+   
+    }
+
+    .SVG_LOGO_MAIN{
+        display: flex;
+       
+        justify-content: center;
+    
+        width: 18%;
+        height: 26%;
+    
 
 
+       
+    }
 
+    .SVG_LOGO{
+    display: none;
+
+    }
+
+    form{
+        width: 70%;
+        max-width: 46em;
+        gap:0px;
+        justify-content: space-around;
+    }
+
+.ipt-form   {
+
+        padding-left: 6.6em;
+        height: 3em;
+    }
+    .icono-input-ojo{
+    left: 25.5em ;
+
+    }
+.cont-radio{
+    border:none;
+}
+
+.cont-radio:hover{
+
+    background-color: var(--Color-boton);
+    cursor: pointer;
+    
+
+  }    
+    
+}
