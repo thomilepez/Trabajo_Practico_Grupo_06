@@ -51,7 +51,10 @@
             </figure>
         </section>
 
-        <section class="curso-seccion">
+        <div class="layout-curso">
+            <div class="columna-contenido">
+                <section class="curso-seccion" id="que-vas-a-aprender">
+                    <h2>¿Qué vas a aprender?</h2>
             <h2>¿Qué vas a aprender?</h2>
             <div class="grid-aprendizajes">
                 <article class="item-aprendizaje">
@@ -77,7 +80,7 @@
             </div>
         </section>
 
-        <section class="curso-seccion">
+        <section class="curso-seccion" id="modulos-del-curso" >
             <h2>Temario del Curso</h2>
             <ol class="lista-temario">
                 <li>
@@ -99,7 +102,7 @@
             </ol>
         </section>
 
-        <section class="curso-seccion">
+        <section class="curso-seccion" id="requisitos">
             <h2>Requisitos</h2>
             <ul class="lista-requisitos">
                 <li>Computadora con conexión a internet estable.</li>
@@ -107,13 +110,37 @@
                 <li>No se requieren conocimientos previos en matemática avanzada ni programación.</li>
             </ul>
         </section>
+        </div>
 
-        <section class="bloque-compra">
+        <aside class="columna-compra">
+            <nav class="menu-curso">
+                <ul>
+                    <li>
+                        <a href="#que-vas-a-aprender">
+                            <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
+                            Qué vas a aprender
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#modulos-del-curso">
+                            <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
+                            Contenido del curso
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#requisitos">
+                            <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
+                            Requisitos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
             <div class="tarjeta-compra">
                 <div class="info-precio">
-                    <p class="etiqueta-oferta">Acceso de por vida</p>
+                    <span class="descuento">20% OFF</span>
+                    <p class="precio-anterior"><s>$12.499 ARS</s></p>
+                    <p class="cuota">Hasta 6 cuotas sin interés</p>
                     <p class="precio">$9.999 ARS</p>
-                    <p>Incluye certificado y proyectos descargables</p>
                 </div>
                 
                 <div class="acciones-compra">
@@ -123,9 +150,11 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </aside>
+    </div>
 
     </main>
+        
 
     <footer class="footer-principal"> 
 
