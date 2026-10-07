@@ -12,7 +12,9 @@
     --Color-texto: #1E293B;
     --Color-boton: #3B82F6;
     --Color-Hover-hipervinculos: #2563EB;
+    --Colo-boton-opaco:#3b83f62f;
     --Color-Texto-header: #F8FAFC; 
+    --Color-Borde: #E2E8F0;
 }
 
 *{
@@ -24,10 +26,14 @@
 body{
     background-color: var(--Color-Fondo);
 }
+li{
+    list-style: none;
+}
 main{
     
     padding: 0 5rem;
 }
+/***          HERO DEL CURSO              ****/
 .curso-hero {
     display: flex;
     flex-wrap: wrap;
@@ -41,8 +47,18 @@ main{
 
 .curso-hero-media {
     flex: 1 1 20rem;
-    margin:
-     0;
+    
+}
+.tipo-de-curso {
+    display: inline-block;
+    background-color: var(--Color-Primario);
+    color: #fff;
+    padding: 0.4em 1em;
+    margin: 1.5rem 0;
+    border-radius: 999px;
+    font-size: 1.01rem;
+    font-weight: 600;
+    /* margin-bottom: 1rem; */
 }
 .curso-hero-info h1 {
     font-size: 2.75rem;   /*tamaño de la letra*/
@@ -65,14 +81,14 @@ main{
     font-size: 0.85rem;
     font-weight: 600;
     padding: 1.5rem 0.8rem;
-    color:#9c9c9c
+    color:#9c9c9c;
 
 }
 .curso-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    list-style: none;
+    /* list-style: none; */
 }
 
 .curso-meta li {
@@ -90,18 +106,8 @@ main{
     border-radius: 16px;
     display: block;
 }
-.tipo-de-curso {
-    display: inline-block;
-    background-color: var(--Color-Primario);
-    color: #fff;
-    padding: 0.4em 1em;
-    margin: 1.5rem 0;
-    border-radius: 999px;
-    font-size: 1.01rem;
-    font-weight: 600;
-    /* margin-bottom: 1rem; */
-}
-/**                                        ***/
+
+/**                 LAYOUT DE DOS COLUMNAS                       ***/
 .layout-courso{
     display: flex;
     gap: 2.5rem;
@@ -111,15 +117,68 @@ main{
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    
 
 }
+/*****        COLUMNA DE COMPRA           ***/
+
 .columna-compra{
     flex: 1;
-    position: sticky;
+    position: sticky;   /*BLOQUE ESTAICO*/
     top: 2rem;
-    align-self: flex-start;
+
+    
+    border-radius: 25px;
+    border: #084da7 1px solid;
+    padding: 1.5rem;
 }
+/* .columna-compra > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+} */
+
+ .columna-compra nav{
+    margin-bottom: 1.5rem;
+ }
+ .columna-compra li:hover{
+    background-color: var(--Colo-boton-opaco);
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+ }
+ .columna-compra a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0.8rem;
+    font-weight: 600;
+}
+/**        BLOQUE DONDE ESTA EL PRECIO Y DECUENTO         ***/
+.descuento{
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 999px;
+    border: 1px solid #084da7;
+    background-color: #51ca51;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Color-texto);
+}
+.precio-anterior {
+    display: inline-block;
+    color: #777;
+    font-size: 1rem;
+}
+.precio-actual {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.precio{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
 .tarjeta-compra{
     display: flex;
     flex-direction: column;
@@ -130,14 +189,131 @@ main{
     padding: 1.2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
-.precio{
-    font-size: 2rem;
-    font-weight: 800;
-}
 .boton-carrito {
     width: 100%;
     justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--Color-boton);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
 }
+.boton-carrito:hover{
+    background-color: var(--Color-Hover-hipervinculos);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+/*****        CONTENIDO IZQUIERDO           ***/
+/*          PARA QUIEN ESTA DIRIGIDO                  */
+
+.para-quien{
+    DISPLAY: flex;
+    flex-direction: row;
+    /* border: 1px solid #50a708; */
+    gap: 20px;
+    
+}
+.para-quien div,
+.para-quien img{
+    border: 1px solid #084da7;
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+.para-quien img{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    background-color: var(--Colo-boton-opaco);
+    border: 1px solid var(--Color-Borde);
+}
+.curso-seccion > div,
+.curso-seccion > ol{
+    padding: 2rem;
+    flex: 1 1 14rem;
+    background-color: #fff;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/**          QUE VAS A APRENDER           ***/
+/* .grid-aprendizajes{
+    display: grid;
+    
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+    gap: 20px;
+    border: 1px solid #084da7;
+} */
+    .item-aprendizaje,
+    .lista-temario,
+    .lista-requisitos{
+    background-color: #fff;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+    .item-aprendizaje h3,
+    .lista-temario  h3{
+    font-size: 1.05rem;
+    color: var(--Color-Primario);
+    margin-bottom: 0.5rem;
+}
+    .item-aprendizaje p,
+    .lista-temario  p{
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.6;
+}
+/* .grid-aprendizajes > .item-aprendizaje{
+    border: 1px solid #084da7;
+    border-radius: 12px;
+    padding: 2rem;
+    
+}
+.modulos-del-curso{
+    DISPLAY: flex;
+    flex-direction: column;
+    border: 1px solid #084da7;
+    
+} */
+ /**            REQUISITOS            **/
+.lista-requisitos li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0.8rem;
+}
+ /* .lista-temario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    gap: 0.7rem;
+}
+.lista-temario > li{
+    border: 1px solid #084da7;
+    
+    
+    border-radius: 12px;
+} */
+/* .lista-requisitos li{
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 0.95rem;
+    color: #475569;
+} */
+
+ 
 
 /*
 .contenedor-de-secciones{
