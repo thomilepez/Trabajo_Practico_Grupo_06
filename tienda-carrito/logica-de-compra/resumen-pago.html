@@ -28,7 +28,83 @@
     </ul>
     </nav>
 </header>
+<main>
 
+    <section class="cabecera-cursos">
+        <h1>Resumen de Pago</h1>
+        <p>Completá tus datos para abonar y habilitar tus cursos.</p>
+    </section>
+
+    <div class="aviso-sesion">
+        <p>¿Ya tenés una cuenta? <a href="../Usuario/iniciar-sesion.html">Iniciá sesión</a> para registrar la compra en tu perfil.</p>
+    </div>
+
+    <div class="layout-pago">
+
+        <section class="formulario-pago">
+            <form action="#" method="POST" class="formulario-registro">
+
+                <fieldset class="informacion-personal">
+                    <legend>Datos de Facturación</legend>
+
+                    <div class="campo">
+                        <label for="nombre-apellido">Nombre y Apellido:</label>
+                        <input type="text" id="nombre-apellido" name="nombre-apellido" required placeholder="Ej: Gabriel Edgardo Panik">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
+                    </div>
+
+                    <div class="campo">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" required placeholder="Ej: 11000777" inputmode="numeric">
+                    </div>
+                </fieldset>
+
+                <fieldset class="informacion-personal">
+                    <legend>Método de Pago</legend>
+
+                    <div class="campo-genero">
+                        <div class="campo-genero-radio">
+                            <input type="radio" id="tarjeta" name="metodo-pago" value="tarjeta" required checked>
+                            <label for="tarjeta">Tarjeta de Crédito / Débito</label>
+
+                            <input type="radio" id="transferencia" name="metodo-pago" value="transferencia" required>
+                            <label for="transferencia">Transferencia Bancaria</label>
+
+                            <input type="radio" id="mercadopago" name="metodo-pago" value="mercadopago" required>
+                            <label for="mercadopago">Mercado Pago</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="boton">Confirmar y Pagar</button>
+            </form>
+        </section>
+
+        <aside class="resumen-pedido">
+            <h2>Detalle del Pedido</h2>
+            <div class="desglose-resumen">
+                <div class="fila-resumen">
+                    <span>HTML5 y CSS3 desde Cero</span>
+                    <span>$14.999 ARS</span>
+                </div>
+                <div class="fila-resumen">
+                    <span>JavaScript Moderno</span>
+                    <span>$19.999 ARS</span>
+                </div>
+                <hr>
+                <div class="fila-resumen total">
+                    <strong>Total Final</strong>
+                    <strong>$34.998 ARS</strong>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+</main>
 
  <footer class="footer-principal"> 
 
