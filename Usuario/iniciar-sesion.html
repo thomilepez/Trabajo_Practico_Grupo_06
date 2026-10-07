@@ -10,38 +10,57 @@
 <body>
   
 <main>
-    
+    <section class="contenedor-descripcion-main">
+        <div class="SVG_LOGO_MAIN">
+            <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+        </div>
+        <div class="titulo-principal-main">
+            <h1>Aprede sin limites,<br><p class="texto-resaltado">a tu propio ritmo</p></h1>
+            <p class="descripcion">
+                E-Study es una plataforma de e-learning donde podés acceder
+                a cursos, materiales y herramientas para potenciar tus conocimientos.
+            </p>
+        </div>
+    </section>
     <section class="contenedor-inicio-de-sesion">
         <div class="SVG_LOGO">
-            <img src="../svg/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+            <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
         </div>
-    <h1>Iniciar sesion</h1>
-    
-    <form action="*" method="post">
-     
+
+        
+        <form action="*" method="post">
+            
+         <h2 class ="titulo-form" >Iniciar sesion</h2>
 
         <p>Tipo de cuenta</p> 
-                                  <!-- value para en el futuro poder tomar el dato para js-->
-    <div class = "contenedor-input-radio">
-        <label for="rol-alumno">Alumno</label>
-        <input type="radio" id="rol-alumno" name="rol" value="alumno" requiered>
-        <!-- value para en un futuro poder tomar el dato con js-->
-        <label for="rol-docente">Docente</label>
-        <input type="radio" id="rol-docente" name="rol" value="docente" required>
-    </div>    
-    
+     <div class="contenedor-input-radio">
+
+        
+             <label class ="cont-radio" for="rol-alumno">Alumno
+                 <input type="radio" id="rol-alumno" name="rol" value="alumno" required>
+                </label>
+            
+            
+            <!-- value para en un futuro poder tomar el dato con js-->
+          
+                <label class = "cont-radio" for="rol-docente">Docente
+                    <input type="radio" id="rol-docente" name="rol" value="docente" required>
+                </label>
+        
+        </div>                             <!-- value para en el futuro poder tomar el dato para js-->
+            
     
     <label for="email">Correo Electronico</label>
     <div class="contenedor-input-form">
-        <img class="icono-input" src ="../svg/Iconos-SVG/icono-email.svg" alt="Icono de correo electronico">
+        <img class="icono-input" src ="../svg's/Iconos-SVG/mail.svg" alt="Icono de correo electronico">
         <input class = "ipt-form" type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
     </div>
       
     <label for="contraseña">Contraseña</label>
     <div class="contenedor-input-form">
-        <img class="icono-input" src="../svg/Iconos-SVG/icono-candado-linea.svg" alt="Icono de candado">
+        <img class="icono-input" src="../svg's/Iconos-SVG/icono-candado-linea.svg" alt="Icono de candado">
         <input class = "ipt-form" type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
-        <img class="icono-input-ojo" src="../svg/Iconos-SVG/Icono-ojo-close.svg" alt="Icono de ojo">
+        <img class="icono-input-ojo" src="../svg's/Iconos-SVG/Icono-ojo-close.svg" alt="Icono de ojo">
     </div>
     
   <button class = "btn-form"type="submit" class="boton">Ingresar</button>
