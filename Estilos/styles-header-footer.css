@@ -196,6 +196,8 @@ img{
         text-align: center;
         font-size: 0.75rem;
         padding: 0.4rem 0.2rem;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .contenido-footer {
@@ -204,7 +206,7 @@ img{
         gap: 2rem;
         padding: 2rem 1.25rem;
     }
-
+    
     .footer-col {
         width: 100%;
     }
@@ -212,5 +214,14 @@ img{
     .nav-hipervinculos img {
         width: 1rem;
         height: 1rem;
+    }
+    footer{
+        font-size: 0.8rem;
+    } 
+    .logo-footer{
+        display: none;
+    }
+    footer > .footer-copyrigth{
+        font-size: 0.7rem;
     }
 }

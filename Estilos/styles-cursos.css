@@ -10,7 +10,7 @@
     --Color-Secundario: #1E293B;
     --Color-Fondo: #F8FAFC;
     --Color-texto: #1E293B;
-    --Color-boton: #3B82F6;
+    --Color-boton: #532af7;
     --Color-Hover-hipervinculos: #2563EB;
     --Colo-boton-opaco:#3b83f62f;
     --Color-Texto-header: #F8FAFC; 
@@ -197,7 +197,7 @@ body{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: var(--Color-boton);
+    background-color: #532af7;
     color: #fff;
     border: none;
     border-radius: 999px;
@@ -208,7 +208,7 @@ body{
 }
 
 .boton-carrito:hover {
-    background-color: var(--Color-Hover-hipervinculos);
+    background-color: #6D4AFF;
     transform: scale(1.02);
 }
 

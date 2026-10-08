@@ -12,6 +12,7 @@
     --Color-Fondo: #F8FAFC;
     --Color-texto: #1E293B;
     --Color-boton: #3B82F6;
+    --color-boton-carrito: #532af7;
     --Color-Hover-hipervinculos: #2563EB;
     --Color-Texto-header: #F8FAFC; 
     --Color-Borde: #E2E8F0;
@@ -41,6 +42,26 @@ img{
 }
 /***            ESTILO EN GENERAL           **/
 /**         SECCION DE INTRODUCCION        **/
+.boton-carrito {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-boton-carrito);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.boton-carrito:hover {
+    background-color: #6D4AFF;
+    transform: scale(1.02);
+}
+
 .introduccion{
     color:white;
     display: flex;
