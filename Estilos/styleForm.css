@@ -2,6 +2,7 @@
     --Color-Primario: #0F172A;
     --Color-Secundario: #1E293B;
     --Color-boton: #3B82F6;
+    --Color-Hover-hipervinculos: #2563EB;
 
 }
 *{
@@ -13,20 +14,21 @@ body{
     background-color: var(--Color-Primario);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     
-  
-
 }
 .SVG_LOGO_MAIN{
     display: none;
 
-    
 }
 main{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem 1rem;
     
 }
 
@@ -47,17 +49,16 @@ main{
 
 .contenedor-inicio-de-sesion {
     display: flex;
-    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--Color-Primario);
     color:white;
-    width: 18em;
+    width: 100%;
+    max-width: 22em;
     min-height: 30em;
     gap: 1rem;
-
-  
+    padding: 1rem;
    
 }
 /*LOGO SVG*/
@@ -83,29 +84,29 @@ main{
 
 .titulo-form{
     align-self: center;
-    justify-self: center;
-
-
+    margin-bottom: 0.5rem;
 }
 
 /*MODIFICACION DE COLORES DE INPUT RADIO*/
 .cont-radio{
-     display: flex;
+    display: flex;
     flex-direction: row;
-    gap: 1em;
-    padding: 3px;
+    gap: 0.75rem;
+    padding: 0.4rem 0.8rem;
     border:1px solid white;
-    border-radius: 11px;
+    border-radius: 0.7rem;
     width: 50%;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
 }
 .contenedor-input-radio{
     display: flex;
     flex-direction: row;
-    gap: 2em;
+    gap: 1.5em;
     justify-content: center;
-    
+    width: 100%;
 }
 
 input[type="radio"] {
@@ -134,19 +135,13 @@ input[type="radio"]:checked {
 
 input[type="radio"]::before{
 content: "";
-
 position: absolute;
-
 width: 0.45em;
 height: 0.45em;
-
 border-radius: 50%;
-
 background-color: white;
-
 top: 50%;
 left: 50%;
-
 transform: translate(-50%, -50%) scale(0);
 }
 
@@ -156,17 +151,13 @@ transform: translate(-50%, -50%) scale(1);
 
 /*FORMULARIO */
 
-
-
-
 form{
     display:flex;
     flex-direction: column;
-    gap:1em;
+    gap:1.2em;
     color: white;
     width: 100%;
     height: 100%;
-
 }
 
 
@@ -175,8 +166,8 @@ form{
    
    color: white;
    width: 100%;
-   padding: 0.5em;
-   padding-left: 3.6em;
+   padding: 0.6em;
+   padding-left: 2.8em;
    border: none;
    background: transparent;
    outline: none;
@@ -187,29 +178,34 @@ form{
 .ipt-form:-webkit-autofill:focus,
 .ipt-form:-webkit-autofill:active{
 
-
     -webkit-text-fill-color: white !important;
     caret-color: white;
     transition: background-color 99999s ease-in-out 0s;
 }
 
-.btn-form{
-    border : 0px;
+.btn-form,.formulario-registro .boton {
+    border : 0;
     border-radius: 0.8em;
     background-color: var(--Color-boton);
     color: white;
-    padding: 0.5em;
-    width: 50%;
+    padding: 0.7em;
+    width: 60%;
     align-self: center;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
 }
 
+.btn-form:hover,.formulario-registro .boton:hover {
+    background-color: var(--Color-Hover-hipervinculos);
+}
 
     /*ICONOS*/
 
 .contenedor-input-form{
 
     border-bottom: 1px solid white;
-    backdrop-filter: blur(20px);
     background-color: transparent;
     position: relative;
     width: 100%;
@@ -220,17 +216,49 @@ form{
     top: 50%;
     left: 0.5em;
     transform: translateY(-50%);
-    color: white;
+    width: 1.2rem;
 }
 
 .icono-input-ojo{
 
     position: absolute;
     top: 50%;
-    left: 15.5em;
+    right: 0.5em;
     transform: translateY(-50%);
-    color: white;
+    width: 1.2rem;
+    cursor: pointer;
 
+}
+
+.formulario-registro {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.formulario-registro .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.formulario-registro input {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.campo-genero-radio {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.4rem;
+    flex-wrap: wrap;
 }
 /* PANTALLA COMPUTADORA */
 
@@ -242,18 +270,15 @@ form{
         background-size: cover;
     }
     main{
-    
-         display: flex;
-         /* vertical */
         width: 100%;
-        min-height: 100vh;
+        min-height: calc(100vh - 10rem);
     }
     .contenedor-descripcion-main{
         display: flex;
         flex-direction: column; 
-        width: 80%;
+        width: 50%;
         color :white;
-        margin-left: 8em;
+        margin-left: 5em;
     }
 
     .titulo-principal-main{
@@ -263,78 +288,43 @@ form{
         max-width: 32em;
     }
 
-    h1{
-        font-size: 4em;
+    .titulo-principal-main h1{
+        font-size: 3.5rem;
     }
     .texto-resaltado{
         color: var(--Color-boton);
         
     }
     .descripcion{
-        font-size: 1.5em;
+        font-size: 1.25rem;
     }
 
     .contenedor-inicio-de-sesion {
     border-radius: 30px;
     border : 2px solid rgba(255,255,255,0.3);
-    width: 50em;
-    height: 100%;
-    max-height: 70%;
-    gap: 1rem;
+    width: 28rem;
+    max-width: 90%;
+    min-height: auto;
+    padding: 3rem 2rem;
     background: transparent;
     backdrop-filter: blur(20px);
    
     align-self: center;
-   margin-right: 3%;
-
-  
-   
+    margin-right: 5rem;
     }
 
     .SVG_LOGO_MAIN{
         display: flex;
-       
-        justify-content: center;
-    
-        width: 18%;
-        height: 26%;
-    
-
-
-       
+        width: 6rem;
+        height: auto;
+        margin-bottom: 1rem;
     }
 
     .SVG_LOGO{
     display: none;
-
     }
-
-    form{
-        width: 70%;
-        max-width: 46em;
-        gap:0px;
-        justify-content: space-around;
-    }
-
-.ipt-form   {
-
-        padding-left: 6.6em;
-        height: 3em;
-    }
-    .icono-input-ojo{
-    left: 25.5em ;
-
-    }
-.cont-radio{
-    border:none;
-}
 
 .cont-radio:hover{
-
     background-color: var(--Color-boton);
-    cursor: pointer;
-    
-
-  }    
-    
+  }       
 }
