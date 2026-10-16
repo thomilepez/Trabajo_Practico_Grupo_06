@@ -238,6 +238,11 @@ form{
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+.informacion-personal{
+    display: flex;
+    flex-direction: column;
+    gap:5px ;
+}
 
 .formulario-registro .campo {
     display: flex;
@@ -246,13 +251,13 @@ form{
     margin-bottom: 1rem;
 }
 
-.formulario-registro input {
+/*.formulario-registro input {
     padding: 0.6rem;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
-}
+}*/
 
 .campo-genero-radio {
     display: flex;
