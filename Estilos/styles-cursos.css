@@ -3,7 +3,7 @@
     --Color-Secundario: #1E293B;
     --Color-Fondo: #F8FAFC;
     --Color-texto: #1E293B;
-    --Color-boton: #532af7;
+    --Color-boton: #3B82F6;
     --Color-Hover-hipervinculos: #2563EB;
     --Colo-boton-opaco:#3b83f62f;
     --Color-Texto-header: #F8FAFC; 
@@ -18,14 +18,13 @@
 
 body{
     background-color: var(--Color-Fondo);
-    font-family: 'Poppins', sans-serif;
-    color: var(--Color-texto);
 }
-
-.contenedor-curso {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+li{
+    list-style: none;
+}
+main{
+    
+    padding: 0 2rem;
 }
 /***          HERO DEL CURSO              ****/
 .curso-hero {
@@ -33,7 +32,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     gap: 3rem;
-    padding: 2rem 0 3rem 0;
+    padding: 3rem 0;
 }
 .curso-hero-info {
     flex: 1 1 22rem;
@@ -43,45 +42,62 @@ body{
     flex: 1 1 20rem;
     
 }
-
+.tipo-de-curso {
+    display: inline-block;
+    background-color: var(--Color-Primario);
+    color: #fff;
+    padding: 0.4em 1em;
+    margin: 1.5rem 0;
+    border-radius: 999px;
+    font-size: 1.01rem;
+    font-weight: 600;
+    /* margin-bottom: 1rem; */
+}
 .curso-hero-info h1 {
-    font-size: 2.5rem;   /*tamaño de la letra*/
+    font-size: 2.75rem;   /*tamaño de la letra*/
     font-weight: 800;     /*tamaño de grosor*/
-    line-height: 1.2;
+    line-height: 1.15;
     color: var(--Color-Primario);
     margin-bottom: 1rem;
 }
 .curso-descripcion-corta {
     font-size: 1.05rem; 
     margin-bottom: 1.5rem;
-    color: #475569;
+    max-width: 34rem;
 }
+.text-info-pequeño-corto{
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 1.5rem 0.8rem;
+    color:#9c9c9c;
 
+}
 .curso-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    list-style: none;
+    /* list-style: none; */
 }
 
 .curso-meta li {
     border: 1px solid #084da7;
     border-radius: 999px;
-    padding: 0.4em 1em;
+    padding: 0.5em 1.1em;
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--Color-texto);
 }
 .curso-hero-media img {
     width: 100%;
-    height: 20rem;
+    height: 22rem;
     object-fit: cover;
     border-radius: 16px;
     display: block;
 }
 
 /**                 LAYOUT DE DOS COLUMNAS                       ***/
-.layout-curso{
+.layout-courso{
     display: flex;
     gap: 2.5rem;
     align-items: flex-start;
@@ -90,194 +106,247 @@ body{
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-}
-.curso-seccion {
-    scroll-margin-top: 6rem;
-}
+    
 
-.curso-seccion h2 {
-    font-size: 1.5rem;
-    color: var(--Color-Primario);
-    margin-bottom: 1.2rem;
 }
 /*****        COLUMNA DE COMPRA           ***/
 
 .columna-compra{
     flex: 1;
-    position: sticky;
+    position: sticky;   /*BLOQUE ESTAICO*/
     top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1,5rem;
+
+    
+    border-radius: 25px;
+    border: #084da7 1px solid;
+    padding: 1.5rem;
 }
 
-.menu-curso {
-    background-color: #fff;
-    border: 1px solid var(--Color-Borde);
-    border-radius: 16px;
-    padding: 1rem;
-}
+ .columna-compra nav{
+    margin-bottom: 1.5rem;
+ }
 
-.menu-curso ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.menu-curso li:hover {
-    background-color: var(--Color-boton-opaco);
+ .columna-compra li:hover{
+    background-color: var(--Colo-boton-opaco);
     transition: 0.2s ease-in-out;
-    border-radius: 8px;
-}
-
-.menu-curso a {
+    border-radius: 10px;
+ }
+ .columna-compra a{
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     padding: 0.6rem 0.8rem;
     font-weight: 600;
+}
+.curso-seccion > div.grid-aprendizajes{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+/**        BLOQUE DONDE ESTA EL PRECIO Y DECUENTO         ***/
+.descuento{
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 999px;
+    border: 1px solid #084da7;
+    background-color: #51ca51;
+    font-size: 14px;
+    font-weight: 600;
     color: var(--Color-texto);
-    text-decoration: none;
+}
+.precio-anterior {
+    display: inline-block;
+    color: #777;
+    font-size: 1rem;
+}
+.precio-actual {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.precio{
+    font-size: 2rem;
+    font-weight: 800;
 }
 
-.menu-curso img {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-.tarjeta-compra {
+.tarjeta-compra{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     background-color: var(--Color-Primario);
     color: var(--Color-Texto-header);
     border-radius: 16px;
-    padding: 1.5rem;
+    padding: 1.2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
-
-.descuento {
-    display: inline-block;
-    padding: 2px 12px;
-    border-radius: 999px;
-    background-color: #22c55e;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 0.5rem;
-}
-
-.precio-anterior {
-    color: #94a3b8;
-    font-size: 1rem;
-}
-
-.cuota {
-    font-size: 0.9rem;
-    color: #cbd5e1;
-}
-
-.precio {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #fff;
-}
-
 .boton-carrito {
     width: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #532af7;
+    background-color: var(--Color-boton);
     color: #fff;
     border: none;
     border-radius: 999px;
     padding: 0.9em;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
-
-.boton-carrito:hover {
-    background-color: #6D4AFF;
+.boton-carrito:hover{
+    background-color: var(--Color-Hover-hipervinculos);
     transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+/*****        CONTENIDO IZQUIERDO           ***/
+/*          PARA QUIEN ESTA DIRIGIDO                  */
+
+.para-quien{
+    DISPLAY: flex;
+    flex-direction: row;
+    /* border: 1px solid #50a708; */
+    gap: 20px;
+    
+}
+.para-quien div,
+.para-quien img{
+    border: 1px solid #084da7;
+    border-radius: 12px;
+    padding: 0.5rem;
 }
 
-.boton-carrito img {
-    width: 1.2rem;
-    height: 1.2rem;
+.para-quien img{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    background-color: var(--Colo-boton-opaco);
+    border: 1px solid var(--Color-Borde);
 }
-
-.grid-aprendizajes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+/**            que-vas-a-aprender              
+                modulos-del-curso
+                requisitos                     **/
+.curso-seccion > div,
+.curso-seccion > ol{
+    padding: 2rem;
+    flex: 1 1 14rem;
+    background-color: #fff;
+    border: 1px solid var(--Color-Borde);
+    /* border: 1px solid rgb(238, 255, 0); */
+    border-radius: 12px;
+    padding: 1.5rem; 
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
-
 .item-aprendizaje,
 .lista-temario,
-.lista-requisitos {
+.lista-requisitos{
     background-color: #fff;
     border: 1px solid var(--Color-Borde);
     /* border: 1px solid red; */
     border-radius: 12px;
     padding: 1.5rem;
-}
-
+}  
+/**        TEXTO DENTRO DE CADA TARGETA         **/
 .item-aprendizaje h3,
-.lista-temario h3 {
+.lista-temario  h3{
     font-size: 1.05rem;
     color: var(--Color-Primario);
     margin-bottom: 0.5rem;
 }
-
 .item-aprendizaje p,
-.lista-temario p {
+.lista-temario  p{
     font-size: 0.9rem;
     color: #475569;
     line-height: 1.6;
 }
 
-.lista-temario {
+ /**            REQUISITOS            **/
+.lista-requisitos li{
     display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    list-style: decimal;
-    padding-left: 2.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0.8rem;
 }
-
-.lista-requisitos {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    list-style: disc;
-    padding-left: 2.5rem;
-}
-
-.lista-requisitos li {
-    font-size: 0.95rem;
-    color: #475569;
-}
-
-@media (max-width: 900px) {
-    .layout-curso {
+/**          DISEÑO RESPONSIVE   :  TABLET   47em    **/
+@media (max-width: 992px) {
+    main {
+        padding: 0 1.8rem;   /* antes: 0 5rem */
+    }
+    .columna-compra {
+        position: static;    /* anula el sticky */
+        width: 100%;
+        
+    }
+    /***      CAMBIAMOS DE ROW A COL      ***/
+    .layout-courso {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .para-quien {
         flex-direction: column;
     }
-
-    .columna-compra {
+    .para-quien > div {
+        flex: auto;
         width: 100%;
-        position: static;
+    }
+    .curso-seccion > div.grid-aprendizajes {
+        grid-template-columns: 1fr;
+    }
+    
+
+}
+/**          DISEÑO RESPONSIVE   :  MOBILE   30em    **/
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 1.5rem;   /* antes: 0 5rem */
+    }
+    /**        PARTE DE ARRIBA         **/
+    .curso-hero {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
     }
 
-    .curso-hero {
-        flex-direction: column-reverse;
-        text-align: center;
+    .curso-hero-info h1 {
+        font-size: 2rem;      /* font-size: 2.75rem */
+    }
+
+    .curso-hero-media img {
+        height: 14rem;        /*  height: 22rem */
+    }
+    /***      CAMBIAMOS DE ROW A COL      ***/
+    .layout-courso {
+        flex-direction: column;
         gap: 1.5rem;
     }
 
-    .curso-meta {
-        justify-content: center;
+    .columna-compra {
+        position: static;    /* anula el sticky */
+        width: 100%;
+        
     }
+    .curso-seccion > div , 
+    .curso-seccion > ol{       /**espacion entre contenedor y targetas**/
+        padding: 0.5rem;
+    }
+    /*** SECCION PARA QUIEN ESTA DIRIGIDO****/
+    .para-quien {
+        flex-direction: column;
+    }
+    .para-quien > div {
+        flex: auto;      
+        width: 100%;
+    }
+    
+    /**    SECCION QUE ES LO QUE APRENDERAS     ****/
+    .curso-seccion > div.grid-aprendizajes {
+        grid-template-columns: 1fr;
+    }
+    /*     SECION DE COMPRA     **/
+    .tarjeta-compra {
+        padding: 1rem;
+    }
+    
 }

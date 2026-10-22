@@ -3,165 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
-    <link rel="stylesheet" href="../Estilos/styles-cursos.css">
     <title>Java</title>
+    <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
+    <link rel="stylesheet" href="../Estilos/styles-cursos.css">
 </head>
 <body>
 
-<header class="header-principal">
+    <header class="header-principal">
         <div class="SVG_LOGO">
             <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
         </div>
-    <nav class="navegacion-principal" aria-label="Navegación Principal"> 
-       <ul>
-        <!--header-->
-        <li><a class ="nav-hipervinculos" href="../index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
-        <li><a class ="nav-hipervinculos"href="../tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
-           <!-- boton de cambiar tema-->
+        <nav class="navegacion-principal" aria-label="Navegación Principal"> 
+            <ul>
+                <!--header-->
+                <li><a class="nav-hipervinculos" href="../index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
+                <li><a class="nav-hipervinculos" href="../tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
+                <!-- boton de cambiar tema-->
 
-              <!-- manejar login-->
-        <li><a class ="nav-hipervinculos" href="../Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
-        <li><a class ="nav-hipervinculos" href="../Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
-       <li><a class="nav-hipervinculos"  href="../Usuario/mis-cursos.html"> <img src="../svg's/Iconos-SVG/libro-abierto.svg" alt=""> Mis cursos</a></li>
-         <li><a class="nav-hipervinculos" href="../tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt=""> Carrito</a></li>   
-    </ul>
-    </nav>
-</header>
+                <!-- manejar login-->
+                <li><a class="nav-hipervinculos" href="../Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
+                <li><a class="nav-hipervinculos" href="../Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
+            
+                <li><a class="nav-hipervinculos" href="../tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="">Carrito</a></li>   
+            </ul>
+        </nav>
+    </header>
      
     <main class="contenedor-curso">
 
         <section class="curso-hero">
             <div class="curso-hero-info">
-                <h1>Java y POO</h1>
+                <p class="tipo-de-curso">Programación</p>
+                <h1>Programación<br>en Java</h1>
                 <p class="curso-descripcion-corta">
-                 Aprendé los fundamentos de Java desde cero, dominá la programación orientada a objetos, gestioná estructuras de datos y construí aplicaciones robustas y escalables listas para el mundo profesional.
+                    Aprendé Java desde cero: sintaxis, programación orientada a objetos, colecciones, manejo de excepciones y acceso a bases de datos para construir aplicaciones robustas y multiplataforma.
                 </p>
+                <p class="text-info-pequeño-corto">DETALLES DEL CURSO:</p>
                 <ul class="curso-meta">
-                    <li>Nivel:Principiante - Intermedio</li>
-                    <li>Duración: 32 horas</li>
+                    <li>Nivel: Principiante</li>
+                    <li>Duración: 45 horas</li>
                     <li>Modalidad: A tu propio ritmo</li>
                 </ul>
             </div>
             <figure class="curso-hero-media">
-                <img src="../imagenes/Programacion/JAVA" alt="Logo de java sobre fondo negro">
+                <img src="../imagenes/Java/Portada-Java.jpg" alt="Persona programando en una computadora con código Java en pantalla">
             </figure>
         </section>
-
-        <div class="layout-curso">
+        
+        <div class="layout-courso">
             <div class="columna-contenido">
-                <section class="curso-seccion" id="que-vas-a-aprender">
-            <h2>¿Qué vas a aprender?</h2>
-            <div class="grid-aprendizajes">
-                <article class="item-aprendizaje">
-                    <h3>Sintaxis y Tipado Estático</h3>
-                    <p>Variables, tipos de datos primitivos, operadores lógicos y estructuras de control de flujo.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Programación Orientada a Objetos</h3>
-                    <p>Clases, objetos, encapsulamiento, herencia, polimorfismo e interfaces aplicadas a proyectos reales.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Estructuras de Datos y Colecciones</h3>
-                    <p>
-                    Manejo eficiente de listas, conjuntos y mapas mediante el Java Collections Framework.
-                    </p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Manejo de Errores y Archivos</h3>
-                    <p>Captura y gestión de excepciones con try-catch, y lectura/escritura básica de archivos y flujos de datos.
-                    </p>
-                </article>
+                <p>Lleva tu carrera al próximo nivel con el curso de Programación en Java</p>
+                <p class="text-info-pequeño-corto" id="para-quien">PARA QUIÉN ESTÁ DIRIGIDO:</p>
+                <section class="curso-seccion para-quien">
+                    <div>
+                        <img src="../svg's/Iconos-SVG/maletin-oscuro.svg" alt="">
+                        <p>Principiantes que quieran aprender <b>programación desde cero</b> con uno de los lenguajes más demandados del mercado.</p>
+                    </div>
+                    <div>
+                        <img src="../svg's/Iconos-SVG/lampara-oscuro.svg" alt="">
+                        <p>Estudiantes y programadores que busquen <b>dominar la programación orientada a objetos</b> y mejorar su lógica.</p>
+                    </div>
+                    <div>
+                        <img src="../svg's/Iconos-SVG/cohete-oscuro.svg" alt="">
+                        <p>Personas que quieran <b>iniciar su camino profesional</b> en desarrollo backend, aplicaciones empresariales o Android.</p>
+                    </div>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="que-vas-a-aprender">QUÉ VAS A APRENDER:</p>
+                <section class="curso-seccion que-vas-a-aprender">
+                    <div class="grid-aprendizajes">
+                        <article class="item-aprendizaje">
+                            <h3>Fundamentos del Lenguaje</h3>
+                            <p>Sintaxis, variables, tipos de datos, operadores, estructuras de control y uso de la consola.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Programación Orientada a Objetos</h3>
+                            <p>Clases, objetos, encapsulamiento, herencia, polimorfismo, interfaces y clases abstractas.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Colecciones y Manejo de Errores</h3>
+                            <p>Listas, conjuntos y mapas, expresiones lambda, streams y manejo de excepciones con try-catch.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Archivos y Bases de Datos</h3>
+                            <p>Lectura y escritura de archivos, conexión con bases de datos mediante JDBC y operaciones CRUD.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="modulos-del-curso">CONTENIDO DEL CURSO:</p>
+                <section class="curso-seccion modulos-del-curso">
+                    <ol>
+                        <li class="lista-temario">
+                            <h3>Módulo 1: Introducción a Java y Lógica de Programación</h3>
+                            <p>Instalación del JDK y del entorno de desarrollo, estructura de un programa, variables, condicionales y ciclos.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 2: Programación Orientada a Objetos</h3>
+                            <p>Diseño de clases y objetos, constructores, herencia, polimorfismo, interfaces y buenas prácticas.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 3: Colecciones, Excepciones y Archivos</h3>
+                            <p>Uso de ArrayList, HashMap y otras colecciones, manejo de excepciones y persistencia en archivos.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 4: Bases de Datos y Proyecto Final</h3>
+                            <p>Conexión con una base de datos mediante JDBC y desarrollo paso a paso de una aplicación completa.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="requisitos">REQUISITOS:</p>
+                <section class="curso-seccion">
+                    <ul class="lista-requisitos">
+                        <li>
+                            <img src="../svg's/Iconos-SVG/monitor-oscuro.svg" alt="">
+                            Computadora con conexión a internet.
+                        </li>
+                        <li>
+                            <img src="../svg's/Iconos-SVG/paleta-ARTE-oscuro (1).svg" alt="">
+                            JDK instalado y un entorno de desarrollo (como IntelliJ IDEA, Eclipse, NetBeans o Visual Studio Code).
+                        </li>
+                        <li>
+                            <img src="../svg's/Iconos-SVG/sombrero-graduacion-oscuro.svg" alt="">
+                            No se requieren conocimientos previos de programación.
+                        </li>
+                    </ul>
+                </section>
             </div>
-        </section>
 
-        <section class="curso-seccion" id="modulos-del-curso">
-            <h2>Temario del Curso</h2>
-            <ol class="lista-temario">
-                <li>
-                    <h3>Módulo 1: Fundamentos del Lenguaje Java</h3>
-                    <p>Instalación del JDK y entorno de desarrollo (IDE), estructura de un programa Java, variables, condicionales y bucles.</p>
-                </li>
-                <li>
-                    <h3>Módulo 2: Paradigma Orientado a Objetos</h3>
-                    <p>Definición de clases, constructores, métodos, encapsulamiento mediante modificadores de acceso y modelado de entidades.</p>
-                </li>
-                <li>
-                    <h3>Módulo 3: Herencia, Polimorfismo e Interfaces</h3>
-                    <p>Reutilización de código, clases abstractas, sobrescritura de métodos, contratos con interfaces y modularización.</p>
-                </li>
-                <li>
-                    <h3>Módulo 4: Colecciones, Excepciones y Proyecto Final</h3>
-                    <p>ArrayList, HashMap, tratamiento de excepciones personalizadas y desarrollo de una aplicación integral por consola.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section class="curso-seccion" id="requisitos">
-            <h2>Requisitos</h2>
-            <ul class="lista-requisitos">
-                <li>Computadora (Windows, macOS o Linux) con conexión a internet estable</li>
-                <li>Permisos para instalar software (Java IDK con Eclipse).</li>
-                <li>No se requieren conocimientos previos en Java ni en otros lenguajes de programación.</li>
-            </ul>
-        </section>
-</div>
-
-        <aside class="columna-compra">
-            <nav class="menu-curso">
-                <ul>
-                    <li>
-                        <a href="#que-vas-a-aprender">
-                            <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
-                            Qué vas a aprender
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#modulos-del-curso">
-                            <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
-                            Contenido del curso
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#requisitos">
-                            <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
-                            Requisitos
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="tarjeta-compra">
-                <div class="info-precio">
-                    <span class="descuento">20% OFF</span>
-                    <p class="precio-anterior"><s>$27.499 ARS</s></p>
-                    <p class="cuota">Hasta 6 cuotas sin interés</p>
-                    <p class="precio">$21.999 ARS</p>
+            <aside class="columna-compra">
+                <nav class="menu-curso">
+                    <ul>
+                        <li>
+                            <a href="#para-quien"> 
+                                <img src="../svg's/Iconos-SVG/user-verificado-oscuro.svg" alt="">
+                                Para quién está dirigido
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#que-vas-a-aprender">
+                                <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
+                                Qué vas a aprender
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#modulos-del-curso">
+                                <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
+                                Contenido del curso
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#requisitos">
+                                <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
+                                Requisitos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tarjeta-compra">
+                    <div class="info-precio">
+                        <span class="descuento">20% OFF</span>
+                        <p class="precio-anterior"><s>$42.499 ARS</s></p>
+                        <p class="cuota">Hasta 6 cuotas sin interés de</p>
+                        <p class="precio">$5.667</p>
+                        <p class="precio-final">Precio final: $33.999 ARS</p>
+                    </div>
+                    
+                    <div class="acciones-compra">
+                        <button type="button" class="boton-carrito" data-id="java" data-nombre="java" data-precio="33999">
+                            <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="Carrito de compra">
+                            Añadir al carrito
+                        </button>
+                    </div>
                 </div>
-                
-                <div class="acciones-compra">
-                    <button type="button" class="boton-carrito" data-id="java" data-nombre="Java POO" data-precio="21999">
-                        <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="Carrito de compra">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </aside>
-    </div>
+            </aside>
+        </div>
+
     </main>
+
 <footer class="footer-principal"> 
 
-<div class="contenido-footer">
-            <div class="logo-footer">
-                <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
-            </div>
+    <div class="contenido-footer">
+        <div class="logo-footer">
+            <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+        </div>
 
         <section class="footer-col">
             <h3>Nuestras Redes</h3>
             <ul class="lista-redes">
-                  <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
+                <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
                 <li><a href="../redes-sociales/instagram.html">Instagram</a></li>
                 <li><a href="../redes-sociales/facebook.html">Facebook</a></li>
                 <li><a href="../redes-sociales/tiktok.html">Tik-Tok</a></li>

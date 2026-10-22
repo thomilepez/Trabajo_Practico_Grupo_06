@@ -3,163 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
+    <title>HTML5 y CSS3</title>
+    <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
     <link rel="stylesheet" href="../Estilos/styles-cursos.css">
-    <title>HTML y CSS</title>
 </head>
 <body>
 
-<header class="header-principal">
+    <header class="header-principal">
         <div class="SVG_LOGO">
             <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
         </div>
-    <nav class="navegacion-principal" aria-label="Navegación Principal"> 
-       <ul>
-        <!--header-->
-        <li><a class ="nav-hipervinculos" href="../index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
-        <li><a class ="nav-hipervinculos"href="../tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
-           <!-- boton de cambiar tema-->
+        <nav class="navegacion-principal" aria-label="Navegación Principal"> 
+            <ul>
+                <!--header-->
+                <li><a class="nav-hipervinculos" href="../index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
+                <li><a class="nav-hipervinculos" href="../tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
+                <!-- boton de cambiar tema-->
 
-              <!-- manejar login-->
-        <li><a class ="nav-hipervinculos" href="../Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
-        <li><a class ="nav-hipervinculos" href="../Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
-       <li><a class="nav-hipervinculos"  href="../Usuario/mis-cursos.html"> <img src="../svg's/Iconos-SVG/libro-abierto.svg" alt=""> Mis cursos</a></li>
-         <li><a class="nav-hipervinculos" href="../tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt=""> Carrito</a></li>   
-    </ul>
-    </nav>
-</header>
+                <!-- manejar login-->
+                <li><a class="nav-hipervinculos" href="../Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
+                <li><a class="nav-hipervinculos" href="../Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
+            
+                <li><a class="nav-hipervinculos" href="../tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="">Carrito</a></li>   
+            </ul>
+        </nav>
+    </header>
      
     <main class="contenedor-curso">
 
         <section class="curso-hero">
             <div class="curso-hero-info">
-                <h1>HTML5 y CSS3 desde Cero</h1>
+                <p class="tipo-de-curso">Desarrollo Web</p>
+                <h1>HTML5<br>y CSS3</h1>
                 <p class="curso-descripcion-corta">
-                    Aprendé a maquetar sitios web modernos, accesibles y adaptables a cualquier pantalla utilizando las últimas características del estándar web.
+                    Aprendé a construir páginas web desde cero: estructura con HTML5 semántico, estilos con CSS3, maquetación con Flexbox y Grid y diseño responsive para que tus sitios se vean bien en cualquier dispositivo.
                 </p>
+                <p class="text-info-pequeño-corto">DETALLES DEL CURSO:</p>
                 <ul class="curso-meta">
                     <li>Nivel: Principiante</li>
-                    <li>Duración: 25 horas</li>
+                    <li>Duración: 40 horas</li>
                     <li>Modalidad: A tu propio ritmo</li>
                 </ul>
             </div>
             <figure class="curso-hero-media">
-                <img src="../imagenes/Programacion/Html-Css.jpg" alt="Logo de HTML5 y CSS3 con lineas de codigo detras">
+                <img src="../imagenes/HTML5-CSS3/Portada-HTML5-CSS3.jpg" alt="Código HTML y CSS en un editor junto a una página web en un navegador">
             </figure>
         </section>
-    
-        <div class="layout-curso">
+        
+        <div class="layout-courso">
             <div class="columna-contenido">
-                <section class="curso-seccion" id="que-vas-a-aprender">
-                    <h2>¿Qué vas a aprender?</h2>
-            <div class="grid-aprendizajes">
-                <article class="item-aprendizaje">
-                    <h3>Estructura Semántica</h3>
-                    <p>Uso adecuado de etiquetas HTML5 para accesibilidad y SEO.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Layouts Modernos</h3>
-                    <p>Diseño de interfaces con Flexbox y CSS Grid.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Diseño Responsivo</h3>
-                    <p>Adaptación a celulares, tablets y escritorios con Media Queries.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Buenas Prácticas</h3>
-                    <p>Organización de estilos y metodologías de nombrado.</p>
-                </article>
+                <p>Lleva tu carrera al próximo nivel con el curso de HTML5 y CSS3</p>
+                <p class="text-info-pequeño-corto" id="para-quien">PARA QUIÉN ESTÁ DIRIGIDO:</p>
+                <section class="curso-seccion para-quien">
+                    <div>
+                        <img src="../svg's/Iconos-SVG/maletin-oscuro.svg" alt="">
+                        <p>Principiantes que quieran aprender a <b>crear páginas web desde cero</b> sin necesidad de experiencia previa.</p>
+                    </div>
+                    <div>
+                        <img src="../svg's/Iconos-SVG/lampara-oscuro.svg" alt="">
+                        <p>Diseñadores y creadores de contenido que busquen <b>dar vida a sus diseños</b> con código propio.</p>
+                    </div>
+                    <div>
+                        <img src="../svg's/Iconos-SVG/cohete-oscuro.svg" alt="">
+                        <p>Aspirantes a desarrolladores que quieran <b>iniciar su camino profesional</b> en el desarrollo web frontend.</p>
+                    </div>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="que-vas-a-aprender">QUÉ VAS A APRENDER:</p>
+                <section class="curso-seccion que-vas-a-aprender">
+                    <div class="grid-aprendizajes">
+                        <article class="item-aprendizaje">
+                            <h3>HTML5 Semántico</h3>
+                            <p>Etiquetas semánticas, enlaces, imágenes, listas, tablas, formularios y buenas prácticas de accesibilidad.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Estilos con CSS3</h3>
+                            <p>Selectores, modelo de caja, tipografía, colores, variables CSS, sombras, degradados y transiciones.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Maquetación con Flexbox y Grid</h3>
+                            <p>Distribución de elementos en filas, columnas y cuadrículas para crear layouts flexibles y ordenados.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Diseño Responsive</h3>
+                            <p>Media queries, enfoque mobile first, unidades relativas e imágenes adaptables a cualquier pantalla.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="modulos-del-curso">CONTENIDO DEL CURSO:</p>
+                <section class="curso-seccion modulos-del-curso">
+                    <ol>
+                        <li class="lista-temario">
+                            <h3>Módulo 1: Fundamentos de HTML5</h3>
+                            <p>Estructura de un documento, etiquetas semánticas, texto, enlaces, imágenes, listas, tablas y multimedia.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 2: Formularios y Accesibilidad</h3>
+                            <p>Campos y tipos de entrada, validación nativa, atributos ARIA y buenas prácticas de SEO básico.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 3: Fundamentos de CSS3</h3>
+                            <p>Cómo vincular CSS al HTML, selectores, cascada, especificidad, modelo de caja, texto, color y fondos.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 4: Layouts, Responsive y Proyecto Final</h3>
+                            <p>Flexbox, Grid, media queries, transiciones y desarrollo paso a paso de un sitio web completo y adaptable.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="requisitos">REQUISITOS:</p>
+                <section class="curso-seccion">
+                    <ul class="lista-requisitos">
+                        <li>
+                            <img src="../svg's/Iconos-SVG/monitor-oscuro.svg" alt="">
+                            Computadora con conexión a internet.
+                        </li>
+                        <li>
+                            <img src="../svg's/Iconos-SVG/paleta-ARTE-oscuro (1).svg" alt="">
+                            Editor de código (como Visual Studio Code) y un navegador web actualizado.
+                        </li>
+                        <li>
+                            <img src="../svg's/Iconos-SVG/sombrero-graduacion-oscuro.svg" alt="">
+                            No se requieren conocimientos previos de programación ni de diseño.
+                        </li>
+                    </ul>
+                </section>
             </div>
-        </section>
 
-        <section class="curso-seccion" id="modulos-del-curso">
-            <h2>Temario del Curso</h2>
-            <ol class="lista-temario">
-                <li>
-                    <h3>Módulo 1: Introducción y fundamentos de la Web</h3>
-                    <p>Estructura de un documento HTML, etiquetas básicas, enlaces e imágenes.</p>
-                </li>
-                <li>
-                    <h3>Módulo 2: Estilos básicos con CSS</h3>
-                    <p>Selectores, modelo de caja (box model), colores, tipografía y unidades de medida.</p>
-                </li>
-                <li>
-                    <h3>Módulo 3: Maquetación avanzada</h3>
-                    <p>Alineaciones complejas con Flexbox y grillas bidimensionales con CSS Grid.</p>
-                </li>
-                <li>
-                    <h3>Módulo 4: Responsive Web Design y Proyecto Final</h3>
-                    <p>Breakpoints, mobile-first y desarrollo de un sitio web completo desde cero.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section class="curso-seccion" id="requisitos">
-            <h2>Requisitos</h2>
-            <ul class="lista-requisitos">
-                <li>Computadora con conexión a internet.</li>
-                <li>Editor de código instalado (como Visual Studio Code).</li>
-                <li>No se requieren conocimientos previos de programación.</li>
-            </ul>
-        </section>
+            <aside class="columna-compra">
+                <nav class="menu-curso">
+                    <ul>
+                        <li>
+                            <a href="#para-quien"> 
+                                <img src="../svg's/Iconos-SVG/user-verificado-oscuro.svg" alt="">
+                                Para quién está dirigido
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#que-vas-a-aprender">
+                                <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
+                                Qué vas a aprender
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#modulos-del-curso">
+                                <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
+                                Contenido del curso
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#requisitos">
+                                <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
+                                Requisitos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tarjeta-compra">
+                    <div class="info-precio">
+                        <span class="descuento">20% OFF</span>
+                        <p class="precio-anterior"><s>$34.999 ARS</s></p>
+                        <p class="cuota">Hasta 6 cuotas sin interés de</p>
+                        <p class="precio">$4.667</p>
+                        <p class="precio-final">Precio final: $27.999 ARS</p>
+                    </div>
+                    
+                    <div class="acciones-compra">
+                        <button type="button" class="boton-carrito" data-id="html5-css3" data-nombre="html5-css3" data-precio="27999">
+                            <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="Carrito de compra">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </aside>
         </div>
 
-        <aside class="columna-compra">
-            <nav class="menu-curso">
-                <ul>
-                    <li>
-                        <a href="#que-vas-a-aprender">
-                            <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
-                            Qué vas a aprender
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#modulos-del-curso">
-                            <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
-                            Contenido del curso
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#requisitos">
-                            <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
-                            Requisitos
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="tarjeta-compra">
-                <div class="info-precio">
-                    <span class="descuento">20% OFF</span>
-                    <p class="precio-anterior"><s>$18.999 ARS</s></p>
-                    <p class="cuota">Hasta 6 cuotas sin interés</p>
-                    <p class="precio">$14.999 ARS</p>
-                </div>
-                
-                <div class="acciones-compra">
-                    <button type="button" class="boton-carrito" data-id="html-css" data-nombre="HTML5 y CSS3" data-precio="14999">
-                        <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="Carrito de compra">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </aside>
-    </div>
-
     </main>
+
 <footer class="footer-principal"> 
 
-<div class="contenido-footer">
-            <div class="logo-footer">
-                <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
-            </div>
+    <div class="contenido-footer">
+        <div class="logo-footer">
+            <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+        </div>
 
         <section class="footer-col">
             <h3>Nuestras Redes</h3>
             <ul class="lista-redes">
-                  <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
+                <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
                 <li><a href="../redes-sociales/instagram.html">Instagram</a></li>
                 <li><a href="../redes-sociales/facebook.html">Facebook</a></li>
                 <li><a href="../redes-sociales/tiktok.html">Tik-Tok</a></li>

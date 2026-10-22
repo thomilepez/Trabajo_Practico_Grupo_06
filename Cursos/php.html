@@ -3,165 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
-    <link rel="stylesheet" href="../Estilos/styles-cursos.css">
     <title>PHP</title>
+    <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
+    <link rel="stylesheet" href="../Estilos/styles-cursos.css">
 </head>
 <body>
 
-<header class="header-principal">
+    <header class="header-principal">
         <div class="SVG_LOGO">
             <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
         </div>
-    <nav class="navegacion-principal" aria-label="Navegación Principal"> 
-       <ul>
-        <!--header-->
-        <li><a class ="nav-hipervinculos" href="../index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
-        <li><a class ="nav-hipervinculos"href="../tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
-        <li><a class ="nav-hipervinculos"href="../Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
-           <!-- boton de cambiar tema-->
+        <nav class="navegacion-principal" aria-label="Navegación Principal"> 
+            <ul>
+                <!--header-->
+                <li><a class="nav-hipervinculos" href="../index.html"> <img src="../svg's/Iconos-SVG/home-2-line.svg" alt=""> Inicio</a></li>
+                <li><a class="nav-hipervinculos" href="../tienda-carrito/catalogo-cursos.html"> <img src="../svg's/Iconos-SVG/outline-book.svg" alt="">Cursos</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/sobrenosotros.html"> <img src="../svg's/Iconos-SVG/users.svg" alt="">Sobre Nosotros</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/docentes.html"> <img src="../svg's/Iconos-SVG/graduation-cap.svg" alt="">Nuestros Docentes</a></li>
+                <li><a class="nav-hipervinculos" href="../Institucion/contacto.html"> <img src="../svg's/Iconos-SVG/mail.svg" alt="">Contacto</a></li>
+                <!-- boton de cambiar tema-->
 
-              <!-- manejar login-->
-        <li><a class ="nav-hipervinculos" href="../Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
-        <li><a class ="nav-hipervinculos" href="../Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
-       <li><a class="nav-hipervinculos"  href="../Usuario/mis-cursos.html"> <img src="../svg's/Iconos-SVG/libro-abierto.svg" alt=""> Mis cursos</a></li>
-         <li><a class="nav-hipervinculos" href="../tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt=""> Carrito</a></li>   
-    </ul>
-    </nav>
-</header>
+                <!-- manejar login-->
+                <li><a class="nav-hipervinculos" href="../Usuario/iniciar-sesion.html"> <img src="../svg's/Iconos-SVG/square-arrow-right-enter.svg" alt="">Iniciar Sesion</a></li>
+                <li><a class="nav-hipervinculos" href="../Usuario/usuario.html"> <img src="../svg's/Iconos-SVG/user.svg" alt="">Mi Perfil</a></li>
+            
+                <li><a class="nav-hipervinculos" href="../tienda-carrito/carrito.html"> <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="">Carrito</a></li>   
+            </ul>
+        </nav>
+    </header>
      
     <main class="contenedor-curso">
 
         <section class="curso-hero">
             <div class="curso-hero-info">
-                <h1>PHP y Desarrollo Web Backend</h1>
+                <p class="tipo-de-curso">Desarrollo Web</p>
+                <h1>PHP</h1>
                 <p class="curso-descripcion-corta">
-                 Aprendé a construir aplicaciones web dinámicas desde el lado del servidor, gestioná peticiones HTTP, conectá bases de datos relacionales con PDO y desarrollá sistemas backend seguros y estructurados.
+                    Aprendé a programar el lado del servidor con PHP: sintaxis, formularios, sesiones, conexión con MySQL y programación orientada a objetos para crear sitios web dinámicos y sistemas con base de datos.
                 </p>
+                <p class="text-info-pequeño-corto">DETALLES DEL CURSO:</p>
                 <ul class="curso-meta">
-                    <li>Nivel:Principiante - Intermedio</li>
-                    <li>Duración: 28 horas</li>
+                    <li>Nivel: Intermedio</li>
+                    <li>Duración: 40 horas</li>
                     <li>Modalidad: A tu propio ritmo</li>
                 </ul>
             </div>
             <figure class="curso-hero-media">
-                <img src="../imagenes/Programacion/lenguaje-php.jpg" alt="Logo de php con lineas de codigo detras">
+                <img src="../imagenes/PHP/Portada-PHP.jpg" alt="Código PHP en un editor sobre fondo oscuro">
             </figure>
         </section>
-
-        <div class="layout-curso">
+        
+        <div class="layout-courso">
             <div class="columna-contenido">
-                <section class="curso-seccion" id="que-vas-a-aprender">
-            <h2>¿Qué vas a aprender?</h2>
-            <div class="grid-aprendizajes">
-                <article class="item-aprendizaje">
-                    <h3>Fundamentos y Sintaxis del Servidor</h3>
-                    <p>Variables, tipos de datos, estructuras de control, funciones y superglobales ($_GET, $_POST, $_SESSION).</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Interacción con Bases de Datos</h3>
-                    <p>Conexión segura mediante PDO, consultas preparadas SQL para evitar inyecciones y operaciones CRUD completas.</p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Arquitectura y Modularidad</h3>
-                    <p>
-                    Separación de lógica y presentación, buenas prácticas con programación orientada a objetos (POO) y manejo de sesiones de usuario.
-                    </p>
-                </article>
-                <article class="item-aprendizaje">
-                    <h3>Seguridad y Manejo de Errores</h3>
-                    <p>Sanitización y validación de datos de entrada, hashing de contraseñas, control de excepciones y cabeceras HTTP.
-                    </p>
-                </article>
+                <p>Lleva tu carrera al próximo nivel con el curso de PHP</p>
+                <p class="text-info-pequeño-corto" id="para-quien">PARA QUIÉN ESTÁ DIRIGIDO:</p>
+                <section class="curso-seccion para-quien">
+                    <div>
+                        <img src="../svg's/Iconos-SVG/maletin-oscuro.svg" alt="">
+                        <p>Desarrolladores frontend que quieran <b>dar el salto al backend</b> y crear sitios web dinámicos.</p>
+                    </div>
+                    <div>
+                        <img src="../svg's/Iconos-SVG/lampara-oscuro.svg" alt="">
+                        <p>Estudiantes de programación que busquen <b>aprender a trabajar con bases de datos</b> y formularios.</p>
+                    </div>
+                    <div>
+                        <img src="../svg's/Iconos-SVG/cohete-oscuro.svg" alt="">
+                        <p>Personas que quieran <b>iniciar su camino profesional</b> en desarrollo web y ampliar sus oportunidades laborales.</p>
+                    </div>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="que-vas-a-aprender">QUÉ VAS A APRENDER:</p>
+                <section class="curso-seccion que-vas-a-aprender">
+                    <div class="grid-aprendizajes">
+                        <article class="item-aprendizaje">
+                            <h3>Fundamentos de PHP</h3>
+                            <p>Sintaxis, variables, arreglos, estructuras de control, funciones e inclusión de archivos.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Formularios y Sesiones</h3>
+                            <p>Envío de datos con GET y POST, validación, cookies, sesiones y sistema de inicio de sesión.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Bases de Datos con MySQL</h3>
+                            <p>Conexión con PDO, consultas preparadas y operaciones CRUD de forma segura.</p>
+                        </article>
+                        <article class="item-aprendizaje">
+                            <h3>Programación Orientada a Objetos y Seguridad</h3>
+                            <p>Clases y objetos en PHP, organización del código y protección contra inyección SQL y XSS.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="modulos-del-curso">CONTENIDO DEL CURSO:</p>
+                <section class="curso-seccion modulos-del-curso">
+                    <ol>
+                        <li class="lista-temario">
+                            <h3>Módulo 1: Introducción a PHP</h3>
+                            <p>Instalación del entorno de desarrollo, sintaxis básica, variables, condicionales, ciclos y funciones.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 2: Formularios, Cookies y Sesiones</h3>
+                            <p>Recepción y validación de datos, manejo de cookies y sesiones y control de acceso de usuarios.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 3: PHP y Bases de Datos MySQL</h3>
+                            <p>Diseño de tablas, conexión con PDO, consultas preparadas y operaciones de alta, baja y modificación.</p>
+                        </li>
+                        <li class="lista-temario">
+                            <h3>Módulo 4: POO, Seguridad y Proyecto Final</h3>
+                            <p>Clases y objetos, buenas prácticas de seguridad y desarrollo paso a paso de una aplicación web completa.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <p class="text-info-pequeño-corto" id="requisitos">REQUISITOS:</p>
+                <section class="curso-seccion">
+                    <ul class="lista-requisitos">
+                        <li>
+                            <img src="../svg's/Iconos-SVG/monitor-oscuro.svg" alt="">
+                            Computadora con conexión a internet.
+                        </li>
+                        <li>
+                            <img src="../svg's/Iconos-SVG/paleta-ARTE-oscuro (1).svg" alt="">
+                            Editor de código (como Visual Studio Code) y un servidor local como XAMPP o Laragon.
+                        </li>
+                        <li>
+                            <img src="../svg's/Iconos-SVG/sombrero-graduacion-oscuro.svg" alt="">
+                            Conocimientos básicos de HTML y de lógica de programación.
+                        </li>
+                    </ul>
+                </section>
             </div>
-        </section>
 
-        <section class="curso-seccion" id="modulos-del-curso">
-            <h2>Temario del Curso</h2>
-            <ol class="lista-temario">
-                <li>
-                    <h3>Módulo 1: Introducción a PHP y Entorno Local</h3>
-                    <p>Configuración del servidor local (XAMPP / Laragon / Docker), ciclo de vida de una petición HTTP, sintaxis básica e incrustación de PHP en HTML.</p>
-                </li>
-                <li>
-                    <h3>Módulo 2: Formularios, Sesiones y Estado</h3>
-                    <p>Procesamiento de datos enviados por formularios, persistencia temporal mediante cookies y sesiones para autenticación de usuarios.</p>
-                </li>
-                <li>
-                    <h3>Módulo 3: Base de Datos Relacional y PDO</h3>
-                    <p>Modelado básico de datos, conexión robusta con PDO, consultas SELECT, INSERT, UPDATE, DELETE y sentencias preparadas seguras.</p>
-                </li>
-                <li>
-                    <h3>Módulo 4: Proyecto Integrador Backend</h3>
-                    <p>Desarrollo de un sistema funcional con login de usuarios, panel administrativo protegido y persistencia completa en base de datos.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section class="curso-seccion" id="requisitos">
-            <h2>Requisitos</h2>
-            <ul class="lista-requisitos">
-                <li>Computadora con conexión a internet y editor de código instalado</li>
-                <li>Herramienta de servidor local instalada o permisos para instalarla (XAMPP, Laragon o entorno similar con soporte para PHP 8+ y MySQL).</li>
-                <li>Conocimientos básicos previos de HTML y nociones elementales de SQL o bases de datos.</li>
-            </ul>
-        </section>
+            <aside class="columna-compra">
+                <nav class="menu-curso">
+                    <ul>
+                        <li>
+                            <a href="#para-quien"> 
+                                <img src="../svg's/Iconos-SVG/user-verificado-oscuro.svg" alt="">
+                                Para quién está dirigido
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#que-vas-a-aprender">
+                                <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
+                                Qué vas a aprender
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#modulos-del-curso">
+                                <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
+                                Contenido del curso
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#requisitos">
+                                <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
+                                Requisitos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tarjeta-compra">
+                    <div class="info-precio">
+                        <span class="descuento">20% OFF</span>
+                        <p class="precio-anterior"><s>$42.499 ARS</s></p>
+                        <p class="cuota">Hasta 6 cuotas sin interés de</p>
+                        <p class="precio">$5.667</p>
+                        <p class="precio-final">Precio final: $33.999 ARS</p>
+                    </div>
+                    
+                    <div class="acciones-compra">
+                        <button type="button" class="boton-carrito" data-id="php" data-nombre="php" data-precio="33999">
+                            <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="Carrito de compra">
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+            </aside>
         </div>
 
-        <aside class="columna-compra">
-            <nav class="menu-curso">
-                <ul>
-                    <li>
-                        <a href="#que-vas-a-aprender">
-                            <img src="../svg's/Iconos-SVG/foco-oscuro.svg" alt="">
-                            Qué vas a aprender
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#modulos-del-curso">
-                            <img src="../svg's/Iconos-SVG/libro-oscuro.svg" alt="">
-                            Contenido del curso
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#requisitos">
-                            <img src="../svg's/Iconos-SVG/requisitos-oscuro.svg" alt="">
-                            Requisitos
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="tarjeta-compra">
-                <div class="info-precio">
-                    <span class="descuento">20% OFF</span>
-                    <p class="precio-anterior"><s>$21.249 ARS</s></p>
-                    <p class="cuota">Hasta 6 cuotas sin interés</p>
-                    <p class="precio">$16.999 ARS</p>
-                </div>
-                
-                <div class="acciones-compra">
-                    <button type="button" class="boton-carrito" data-id="php" data-nombre="php-principiantes" data-precio="16999">
-                        <img src="../svg's/Iconos-SVG/shopping-cart.svg" alt="Carrito de compra">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </aside>
-    </div>
     </main>
+
 <footer class="footer-principal"> 
 
-<div class="contenido-footer">
-            <div class="logo-footer">
-                <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
-            </div>
+    <div class="contenido-footer">
+        <div class="logo-footer">
+            <img src="../svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
+        </div>
 
         <section class="footer-col">
             <h3>Nuestras Redes</h3>
             <ul class="lista-redes">
-                  <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
+                <!-- hay que hardcodear los links a paginas web estaticas donde estaran las imagenes falsas simulando ser las redes sociales-->
                 <li><a href="../redes-sociales/instagram.html">Instagram</a></li>
                 <li><a href="../redes-sociales/facebook.html">Facebook</a></li>
                 <li><a href="../redes-sociales/tiktok.html">Tik-Tok</a></li>
