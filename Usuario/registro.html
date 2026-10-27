@@ -37,21 +37,22 @@
     <!--<a href="" class="boton-google">Inciar sesion con Google</a>-->
       <!-- lo dejo para luego crear un inicio de sesion y registro con google -->
        
-    <form action="#" method="POST" class="formulario-registro">
+    <form  action="#" method="POST" class="formulario-registro" novalidate>
     <section class="informacion-personal">
 
  <div class="contenedor-input-form">
 
      <label for="nombre-apellido">Nombre y Apellido:</label>
-     <input class = "ipt-form" type="text" id="nombre-apellido" name="nombre-apellido" required placeholder="Ej: Gabriel Edgardo Panik">
+     <p id ="error-Nombre"></p>
+     <input class = "ipt-form" type="text" id="nombre-apellido" name="nombre-apellido" placeholder="Ej: Gabriel Edgardo Panik">
 </div>
     
 
       
      <label for="email">E-mail:</label>
       <div class="contenedor-input-form">
-
-      <input class = "ipt-form" type="email" id="email" name="email" required placeholder="Ej: thomaslepez777@gmail.com">
+        <p id ="error-Email"></p>
+      <input id ="imput-Email" class = "ipt-form" type="email" id="email" name="email"  placeholder="Ej: thomaslepez777@gmail.com">
       </div>
                                <!-- value para en el futuro poder tomar el dato para js-->
     
@@ -60,13 +61,13 @@
         <div class="campo-genero">
     <p class="titulo-genero"> Genero:</p>
     <div class="campo-genero-radio">                             
-     <input type="radio" id="masculino" name="genero"  value="masculino" required>
+     <input type="radio" id="masculino" name="genero"  value="masculino" >
      <label for="masculino">Masculino</label>
                                                                 <!-- value para en el futuro poder tomar el dato para js-->
-      <input type="radio" id="femenino" name="genero"  value="femenino" required>
+      <input type="radio" id="femenino" name="genero"  value="femenino" >
      <label for="femenino">Femenino</label>
                                                             <!-- value para en el futuro poder tomar el dato para js-->                                                  
-    <input type="radio" id="no-definido" name="genero"  value="no-definido" required>
+    <input type="radio" id="no-definido" name="genero"  value="no-definido">
      <label for="no-definido">Prefiero no decirlo</label>
     </div>
     </div>
@@ -74,23 +75,26 @@
     
     <label for="dni">DNI:</label>
     <div class="contenedor-input-form">
-    <input class = "ipt-form"type="text" id="dni" name="dni" required placeholder="Ej: 11000777" inputmode="numeric">
+    <p id ="error-DNI"></p>
+    <input class = "ipt-form"type="text" id="dni" name="dni"  placeholder="Ej: 11000777" inputmode="numeric">
     <!-- accesibilidad al usar inputmode (en celulares se abre el teclado numerico) -->
     </div>
 
 
     <label for="fecha-nacimiento">Fecha de nacimiento:</label>
-    <div class="contenedor-input-form">
-        <input class ="ipt-form" type="date" id="fecha-nacimiento" name="fecha-nacimiento" max="2026-12-31" required>
+    <div id = "form-fecha" class="contenedor-input-form">
+        <p id = "error-fecha"></p>
+        <input class ="ipt-form" type="date" id="fecha-nacimiento" name="fecha-nacimiento" max="2026-12-31" >
     </div>
     
    
    
       <label for="contraseña">Contraseña</label>
     <div class="contenedor-input-form">
-        <img class="icono-input" src="../svg's/Iconos-SVG/icono-candado-linea.svg" alt="Icono de candado">
-        <input class = "ipt-form" type="password" id="password" name="contraseña" placeholder="Ingrese su contraseña" required>
-        <img id ="ojo" class="icono-input-ojo" src="../svg's/Iconos-SVG/Icono-ojo-close.svg" alt="Icono de ojo">
+        <p id ="error-password" class="imput-error" ></p>
+        <img id = "candado" class="icono-input" src="../svg's/Iconos-SVG/whide/candado.svg" alt="Icono de candado">
+        <input class = "ipt-form" type="password" id="password" name="contraseña" placeholder="Ingrese su contraseña" >
+        <img id ="ojo" class="icono-input-ojo" src="../svg's/Iconos-SVG/whide/no-ojo.svg" alt="Icono de ojo">
     </div>
     
     <button type="submit" class="boton">Crear cuenta</button>
