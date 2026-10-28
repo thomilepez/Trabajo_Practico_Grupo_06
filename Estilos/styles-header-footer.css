@@ -1,19 +1,18 @@
 /***        variables COLOR     ***/
 :root{
-    /*--Color-Primario: #4170EB;
-    --Color-Secundario: #F6F3C4;
-    --Color-texto: #1a1a1a;
-    --Color-Fondo: #f5f5f5;
-    --Color-Hover-hipervinculos: #1e409a;
-    */
-
     --Color-Primario: #0F172A;
     --Color-Secundario: #1E293B;
-    --Color-Fondo: #F8FAFC;
-    --Color-texto: #1E293B;
+    --Color-Fondo: #F8FAFC;    
+    --Color-texto: #1E293B;     
     --Color-boton: #3B82F6;
     --Color-Hover-hipervinculos: #2563EB;
     --Color-Texto-header: #F8FAFC; 
+}
+
+body.tema-oscuro {
+    --Color-Fondo: #020617;  
+    --Color-texto: #F8FAFC; 
+    --Color-Primario: #090e1a;  
 }
 
 *{
@@ -24,6 +23,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: var(--Color-texto);
+    background-color: var(--Color-Fondo);
     line-height: 1.6;       /* Espacio entre líneas */
 }
 ul{
@@ -123,6 +123,15 @@ img{
     color: var(--Color-Texto-header);
     margin-top: 3rem;
 }
+
+.btn-tema {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
 .contenido-footer {
     display: flex;
     flex-wrap: wrap;
