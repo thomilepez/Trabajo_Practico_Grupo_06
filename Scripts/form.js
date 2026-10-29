@@ -48,13 +48,14 @@ if(formularioRegistro !== null ){
 
 
 function validarRegistro(event){
+let esValido = true;
 
     //Validacion Nombre
 
     if(inputNombre.value.trim() === ""){
         event.preventDefault();
         errorNombre.textContent = "El campo nombre no puede estar vacio";
-
+        esValido = false;
     }else{
 
         errorNombre.textContent = "";
@@ -67,85 +68,84 @@ function validarRegistro(event){
     if(inputEmail.value.trim() === "")  {
         event.preventDefault(); 
         errorEmail.textContent = "El campo email no puede estar vacio"; 
+        esValido = false;
+
     }else if(!expresionRegularEmail.test(inputEmail.value.trim())){
        
         event.preventDefault();
         errorEmail.textContent = "Email invalido";
-
+        esValido = false;
     }else{
 
           errorEmail.textContent = "";
     }
 
     const validacionNumero = /[^0-9]/;
-
-
     //Validacion DNI
-
-
     if(imputDni.value.trim() === "" ){
-
+        event.preventDefault()
         errorDNI.textContent = "El campo DNI no puede estar vacio";
-
+        esValido = false;
 
     }else if(validacionNumero.test(imputDni.value.trim())){
-
+        event.preventDefault()
         errorDNI.textContent = "No se permiten letras";
-
+        esValido = false;
 
     }else if(imputDni.value.length !== 8 ){
 
+        event.preventDefault()
         errorDNI.textContent = "DNI invalido ";
+        esValido = false;
 
     }else {
-
-        errorDNI.textContent = "";
-            
+        errorDNI.textContent = "";  
     }
 
-
-
-
     //Validacion Fecha
-
-
- 
-
     if(fechaIngresada.value === ""){
 
         event.preventDefault();
         errorFecha.textContent = "El campo fecha no puede estar vacio";
-
+        esValido = false;
     }else{
 
         const fechaDeNacimiento = new Date(fechaIngresada.value);
         const hoy = new Date();
-
         const fechaMinima = new Date(hoy.getFullYear()-16 , hoy.getMonth() , hoy.getDate());
         const fechaMinimaPermitida = new Date (1945 , 0 , 1);
 
         if(fechaDeNacimiento > fechaMinima ){
-            
             event.preventDefault();
             errorFecha.textContent ="Debes tener o ser mayor de 16 años de edad";
+            esValido = false;
 
         }else if (fechaDeNacimiento < fechaMinimaPermitida){
             event.preventDefault();
             errorFecha.textContent = "La fecha no puede ser anterior al año 1945";
-
-
+            esValido = false;
         }else{
-
             errorFecha.textContent ="";
-
         }
-
-
-
-
 }
 
+if(esValido){
+    event.preventDefault();
 
+    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
+    const nuevousuario = {
+        nombre: inputNombre.value.trim(),
+        email: inputEmail.value.trim(),
+        dni: imputDni.value.trim(),
+        password: contraseniaIngresada.value.trim(),
+        rol: "alumno"
+    };
+
+    usuarios.push(nuevousuario);
+localStorage.setItem('usuarios', JSON.stringify(usuarios))
+localStorage.setItem('usuarioActivo', JSON.stringify(nuevousuario))
+window.location.href = "usuario.html"
+}
 }
 
 function validarContrasenia(){
@@ -189,10 +189,23 @@ function verContraseña(){
     }else{
         password.type = "password" ;
         ojo.src ="../svg's/Iconos-SVG/whide/no-ojo.svg";
-    }
-
-       
+    }   
 
 }
 
+function validarInicioSesion(event){
+    event.preventDefault();
+    document.getElementById('email').value.trim()
+    document.getElementById('password').value.trim()
+
+    const rolSeleccionado = document.querySelector('input[name="rol"]:checked')?.value;
+
+    if(!rolSeleccionado){
+        textContent="Rol no seleccionado";
+        localStorage.usuarios;
+        const usuarios= JSON.parse(localStorage.getItem('usuarios'))
+    }
+}
+if(ojo){
  ojo.addEventListener("click", verContraseña );
+ }
