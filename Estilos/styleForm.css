@@ -265,6 +265,16 @@ form{
     margin-top: 0.4rem;
     flex-wrap: wrap;
 }
+
+
+#error-inicio-sesion{
+    display: flex;
+    color:red;
+    align-self: center;
+}
+
+
+
 /* PANTALLA COMPUTADORA */
 
 @media screen and (min-width: 1024px) {
