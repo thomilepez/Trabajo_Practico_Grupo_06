@@ -5,56 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
-    <link rel="stylesheet" href="../Estilos/styles.css">
+    <link rel="stylesheet" href="../Estilos/style-sobre-nosotros.css">
 </head>
 <body>
- <header id="header-contenedor" class="header-principal"></header>
+ 
+    <header id="header-contenedor" class="header-principal"></header>
+ 
     <main>
-      
-        <section class="Itroducción"> 
-            <h1>Sobre Nosotros</h1>
-            <p>Bienvenidos a E-Study, un espacio educativo pensado para acercar el mundo de la programación
-            y el desarrollo web de manera clara, práctica y accesible.
-            Conoce quiénes somos, qué nos motiva y cuál es nuestra propuesta de valor.</p>
+ 
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-texto">
+                <h1>Sobre Nosotros</h1>
+                <p>Bienvenidos a E-Study, un espacio educativo pensado para acercar el mundo de la programación y el desarrollo web de manera clara, práctica y accesible. Conocé quiénes somos, qué nos motiva y cuál es nuestra propuesta de valor.</p>
+                <a class="boton-azul" href="../tienda-carrito/catalogo-cursos.html">Ver cursos</a>
+                <a class="boton-borde" href="#historia">Nuestra historia</a>
+            </div>
+            <div class="hero-imagen">
+                <img src="../imagenes/hero/mensaje.png" alt="Ventana de editor con el código: Aprende escribiendo código desde el primer día">
+            </div>
         </section>
-        
-        <section class="historia">
+ 
+        <!-- NUESTRA HISTORIA -->
+        <section class="historia" id="historia">
             <h2>Nuestra Historia</h2>
-            <p>E-Study nació como un proyecto impulsado por cuatro desarrolladores que compartían la necesidad
-                de contar con un espacio de aprendizaje sin intermediarios.
-                Decidimos construir esta plataforma desde sus cimientos escribiendo cada línea de código para
-                demostrar que con bases sólidas y trabajo en equipo es posible crear soluciones digitales reales desde cero.</p>
+            <p>E-Study nació como un proyecto impulsado por <strong>cuatro desarrolladores</strong> que compartían la necesidad de contar con un espacio de aprendizaje sin intermediarios.</p>
+            <p>Decidimos construir esta plataforma desde sus cimientos escribiendo cada línea de código para demostrar que con bases sólidas y trabajo en equipo es posible crear soluciones digitales reales desde cero.</p>
         </section>
-
+ 
+        <!-- NUESTROS VALORES -->
         <section class="valores">
-        <h2>Nuestros valores</h2>
-           <ul>
-            <li>Práctica desde el primer día: La teoría cobra sentido cuando se escribe código y se resuelven problemas concretos.</li>
-            <li>Claridad y transparencia: Explicaciones directas, código limpio y contenido accesible para cualquier persona que quiera iniciarse en tecnología.</li>
-            <li>Colaboración continua: Fomentamos el aprendizaje entre pares y el intercambio constante de dudas y experiencias.</li>
-            <li>Compromiso con la calidad: Cuidamos la estructura pedagógica y los estándares web tanto en nuestras clases como en la plataforma misma.</li>
-           </ul>
+            <h2>Nuestros valores</h2>
+            <div class="lista-valores">
+                <article class="valor">
+                    <img src="../svg's/Iconos-SVG/black/code.svg" alt="">
+                    <h3>Práctica desde el primer día</h3>
+                    <p>La teoría cobra sentido cuando se escribe código y se resuelven problemas concretos.</p>
+                </article>
+                <article class="valor">
+                    <img src="../svg's/Iconos-SVG/black/foco.svg" alt="">
+                    <h3>Claridad y transparencia</h3>
+                    <p>Explicaciones directas, código limpio y contenido accesible para cualquier persona que quiera iniciarse en tecnología.</p>
+                </article>
+                <article class="valor">
+                    <img src="../svg's/Iconos-SVG/black/grupo-users.svg" alt="">
+                    <h3>Colaboración continua</h3>
+                    <p>Fomentamos el aprendizaje entre pares y el intercambio constante de dudas y experiencias.</p>
+                </article>
+                <article class="valor">
+                    <img src="../svg's/Iconos-SVG/black/escudo-check.svg" alt="">
+                    <h3>Compromiso con la calidad</h3>
+                    <p>Cuidamos la estructura pedagógica y los estándares web tanto en nuestras clases como en la plataforma misma.</p>
+                </article>
+            </div>
         </section>
-
-        <section class="elegirnos">
-        <h2>¿Por qué elegir E-Study?</h2>
-    <p>A diferencia de las plataformas tradicionales con cursos pregrabados masivos y despersonalizados,
-    en E-Study aprendes directamente con los mismos programadores que diseñaron, estructuraron y
-    crearon este sitio web. No somos una academia corporativa:
-    somos desarrolladores enseñando las herramientas exactas que usamos a diario, con soporte cercano y un temario actualizado al mercado real.</p>
+ 
+        <!-- POR QUÉ ELEGIR E-STUDY -->
+        <section class="por-que">
+            <h2>¿Por qué elegir E-Study?</h2>
+            <p>A diferencia de las plataformas tradicionales, aprendés directamente con quienes diseñaron, estructuraron y crearon este sitio web.</p>
+ 
+            <div class="comparacion">
+                <div class="comparar-no">
+                    <h3>Plataformas tradicionales</h3>
+                    <ul>
+                        <li><img src="../svg's/Iconos-SVG/black/circle-x.svg" alt="No incluye:"> Cursos pregrabados masivos</li>
+                        <li><img src="../svg's/Iconos-SVG/black/circle-x.svg" alt="No incluye:"> Contenido despersonalizado</li>
+                        <li><img src="../svg's/Iconos-SVG/black/circle-x.svg" alt="No incluye:"> Academia corporativa</li>
+                        <li><img src="../svg's/Iconos-SVG/black/circle-x.svg" alt="No incluye:"> Temarios que tardan en actualizarse</li>
+                    </ul>
+                </div>
+                <div class="comparar-si">
+                    <h3>E-Study</h3>
+                    <ul>
+                        <li><img src="../svg's/Iconos-SVG/whide/circle-check.svg" alt="Incluye:"> Aprendés con los mismos programadores que crearon la plataforma</li>
+                        <li><img src="../svg's/Iconos-SVG/whide/circle-check.svg" alt="Incluye:"> Desarrolladores enseñando las herramientas que usan a diario</li>
+                        <li><img src="../svg's/Iconos-SVG/whide/circle-check.svg" alt="Incluye:"> Soporte cercano</li>
+                        <li><img src="../svg's/Iconos-SVG/whide/circle-check.svg" alt="Incluye:"> Temario actualizado al mercado real</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-
-
-
-        <section class="cierre">
-        <h2>Descubre nuestros cursos</h2>
-            <p>Explora nuestras propuestas académicas,
-                domina las herramientas más demandadas y da tus primeros pasos en el desarrollo web junto a nosotros.</p>
-               <a href="../catalogo-cursos.html">Ver Cursos</a>
-            </section>
+ 
+        <!-- DESCUBRE NUESTROS CURSOS -->
+        <section class="llamado">
+            <div>
+                <h2>Descubre nuestros cursos</h2>
+                <p>Explora nuestras propuestas académicas, domina las herramientas más demandadas y da tus primeros pasos en el desarrollo web junto a nosotros.</p>
+            </div>
+            <a href="../tienda-carrito/catalogo-cursos.html">Ver cursos</a>
+        </section>
+ 
     </main>
+ 
 <footer id="footer-contenedor" class="footer-principal"></footer>
-
-<script src="/Scripts/cargaComponentes.js"></script>
+ 
 </body>
 </html>

@@ -1,0 +1,217 @@
+:root{
+    --Color-Primario: #0F172A;
+    --Color-Secundario: #1E293B;
+    --Color-Fondo: #F8FAFC;
+    --Color-texto: #1E293B;
+    --Color-boton: #3B82F6;
+    --Color-Hover-hipervinculos: #2563EB;
+    --Colo-boton-opaco: #3b83f62f;
+    --Color-Texto-header: #F8FAFC;
+    --Color-Borde: #E2E8F0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Color-Fondo);
+}
+li{
+    list-style: none;
+}
+
+/***                  TEXTOS DE LA PAGINA              ****/
+main{
+    line-height: 1.6;
+    color: var(--Color-texto);
+}
+main h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+main h3{
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+main p{
+    margin-bottom: 1rem;
+}
+
+/***                   HERO              ***/
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 8%;
+    background-color: var(--Color-Primario);
+    color: var(--Color-Texto-header);
+}
+.hero-texto{
+    flex: 1 1 22rem;
+}
+.hero-texto h1{
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+}
+.hero-imagen{
+    flex: 1 1 20rem;
+}
+.hero-imagen img{
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+/*             BOTONES DEL HERO              ****/
+.boton-azul{
+    display: inline-block;
+    padding: 0.8em 1.6em;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--Color-boton);
+    color: #fff;
+}
+.boton-azul:hover{
+    background-color: var(--Color-Hover-hipervinculos);
+}
+.boton-borde{
+    display: inline-block;
+    padding: 0.8em 1.6em;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--Color-Texto-header);
+    color: var(--Color-Texto-header);
+}
+.boton-borde:hover{
+    background-color: var(--Color-Secundario);
+}
+
+/***              NUESTRA HISTORIA              */
+.historia{
+    margin: 3rem 8%;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--Color-boton);
+}
+.historia p{
+    max-width: 45rem;
+}
+
+/*                  NUESTROS VALORES              ****/
+.valores{
+    padding: 3rem 8%;
+    background-color: #fff;
+}
+.valores h2{
+    text-align: center;
+}
+.lista-valores{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.valor{
+    flex: 1 1 14rem;
+    background-color: var(--Color-Fondo);
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.valor img{
+    width: 3rem;
+    height: 3rem;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: var(--Colo-boton-opaco);
+}
+
+/***                POR QUE ELEGIR E-STUDY              */
+.por-que{
+    padding: 3rem 8%;
+}
+.por-que h2{
+    text-align: center;
+}
+.por-que > p{
+    max-width: 40rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+.comparacion{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 56rem;
+    margin: 0 auto;
+}
+.comparar-no,
+.comparar-si{
+    flex: 1 1 20rem;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.comparar-no{
+    background-color: #fff;
+    border: 1px solid var(--Color-Borde);
+}
+.comparar-si{
+    background-color: var(--Color-Primario);
+    color: var(--Color-Texto-header);
+}
+.comparar-no li,
+.comparar-si li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0;
+}
+.comparar-no li img,
+.comparar-si li img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/*        DESCUBRE NUESTROS CURSOS      ****/
+.llamado{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 8%;
+    margin: 2rem;
+    border-radius: 12px;
+    background-color: var(--Color-boton);
+    color: #fff;
+}
+.llamado div{
+    flex: 1 1 22rem;
+}
+.llamado a{
+    padding: 0.8em 1.6em;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--Color-Primario);
+    color: #fff;
+}
+.llamado a:hover{
+    background-color: var(--Color-Secundario);
+}
+
+/**                   DISEÑO RESPONSIVE   :  MOBILE   30em    **/
+@media (max-width: 480px) {
+    .hero-texto h1{
+        font-size: 2rem;
+    }
+    main h2{
+        font-size: 1.6rem;
+    }
+}
