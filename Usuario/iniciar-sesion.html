@@ -29,17 +29,17 @@
         </div>
 
         
-        <form class="formulario-inicioSesion"  action="*" method="post">
+        <form class="formulario-inicioSesion"  action="*" method="post" novalidate>
             
          <h2 class ="titulo-form" >Iniciar sesion</h2>
 
         <p>Tipo de cuenta</p> 
-     <div class="contenedor-input-radio">
-
-        
+        <p id = error-Seleccion-Rol></p>
+             <div class="contenedor-input-radio">
+                
              <label class ="cont-radio" for="rol-alumno">Alumno
                  <input type="radio" id="rol-alumno" name="rol" value="alumno" required>
-                </label>
+            </label>
             
             
             <!-- value para en un futuro poder tomar el dato con js-->
@@ -63,7 +63,7 @@
         <input class = "ipt-form" type="password" id="password" name="contraseña" placeholder="Ingrese su contraseña" required>
         <img id ="ojo" class="icono-input-ojo" src="../svg's/Iconos-SVG/whide/no-ojo.svg" alt="Icono de ojo">
     </div>
-    
+   <p id ="error-inicio-sesion"></p> 
   <button class = "btn-form"type="submit" class="boton">Ingresar</button>
 
   <p>Si no tenes usuario <a href="registro.html">registrate acá</a>.</p>

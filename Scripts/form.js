@@ -37,6 +37,11 @@ if(formularioRegistro !== null ){
 }
 
 
+if(formularioInicioSesion !== null){
+
+    formularioInicioSesion.addEventListener("submit" , validarInicioSesion);
+
+}
 
 //exeption 
 
@@ -127,12 +132,20 @@ let esValido = true;
         }else{
             errorFecha.textContent ="";
         }
+
+
+       if(!validarContrasenia()){
+        event.preventDefault();
+        esValido =false ;
+       } 
+
+
 }
 
 if(esValido){
     event.preventDefault();
 
-    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
+    const usuarios = JSON.parse(localStorage.getItem('usuarios') ) || [];
     const nuevousuario = {
         nombre: inputNombre.value.trim(),
         email: inputEmail.value.trim(),
@@ -142,9 +155,9 @@ if(esValido){
     };
 
     usuarios.push(nuevousuario);
-localStorage.setItem('usuarios', JSON.stringify(usuarios))
-localStorage.setItem('usuarioActivo', JSON.stringify(nuevousuario))
-window.location.href = "usuario.html"
+localStorage.setItem('usuarios', JSON.stringify(usuarios));
+localStorage.setItem('usuarioActivo', JSON.stringify(nuevousuario));
+window.location.href = "../index.html";
 }
 }
 
@@ -159,24 +172,27 @@ function validarContrasenia(){
             
             errorPassword.textContent ="Complete el campo contraseña";
             ojo.style.top = "75%" ;  
-            candado.style.top ="75%";  
+            candado.style.top ="75%";
+            return false ;  
 
         }else if(!expresionDeConstraseniaCaracterEspecial.test(contraseniaIngresada.value.trim())){
           
             errorPassword.textContent = "La contraseña debe contener al menos 1 caracter especial";
              ojo.style.top = "75%" ;    
-               candado.style.top ="75%";  
+               candado.style.top ="75%";
+               return false ;  
         }else if(contraseniaIngresada.value.length < 8 ){
 
         
             errorPassword.textContent = "La contraseña debe tener minimo 8 caracteres";
              ojo.style.top = "75%" ;    
-               candado.style.top ="75%";  
+               candado.style.top ="75%";
+               return false ;  
         }else{
 
             errorPassword.textContent = "";
-             ojo.style.top = "75%" ;    
-               candado.style.top ="75%";  
+            return true ;
+             
         }
 
     }
@@ -193,18 +209,54 @@ function verContraseña(){
 
 }
 
+//DATOS DE SESION 
+
+
+
 function validarInicioSesion(event){
     event.preventDefault();
-    document.getElementById('email').value.trim()
-    document.getElementById('password').value.trim()
+    
+    const  emailSesion = document.getElementById('email').value.trim()
+    const contraseniaSesion = document.getElementById('password').value.trim()
+    //Etiquetas p 
+    const errorInicio = document.getElementById("error-inicio-sesion");
+    const msjRolNoSeleccionado = document.getElementById("error-Seleccion-Rol");
 
-    const rolSeleccionado = document.querySelector('input[name="rol"]:checked')?.value;
+    const rolSeleccionado = document.querySelector('input[name="rol"]:checked');
 
     if(!rolSeleccionado){
-        textContent="Rol no seleccionado";
-        localStorage.usuarios;
-        const usuarios= JSON.parse(localStorage.getItem('usuarios'))
+        event.preventDefault();
+        msjRolNoSeleccionado.textContent="Rol no seleccionado";
+        return ;
+     //   localStorage.usuarios;
+       // const usuarios= JSON.parse(localStorage.getItem('usuarios'))
     }
+
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [] ;
+
+    
+    const usuarioEncontrado = usuarios.find(usuarios => usuarios.email === emailSesion && usuarios.password === contraseniaSesion);
+
+        if(!usuarioEncontrado){
+
+            if(usuarioEncontrado.rol === rolSeleccionado.value){
+
+                localStorageStorage.setItem("usuarioActivo" ,JSON.stringify(usuarioEncontrado));
+               window.location.href = "../index.html";
+            }else{
+                event.preventDefault();
+                errorInicio.textContent ="El rol no coincide con el usuario";
+
+            }
+
+        }else{
+            event.preventDefault();
+            errorInicio.textContent ="Email o contraseña incorrecta";
+        }
+    
+
+        
+
 }
 if(ojo){
  ojo.addEventListener("click", verContraseña );
