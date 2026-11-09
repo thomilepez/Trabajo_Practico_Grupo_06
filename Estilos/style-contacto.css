@@ -28,7 +28,6 @@ body{
     flex-wrap: wrap;
     
     align-items: center;
-    border: 3px solid var(--Color-Borde);
 }
 .titulo-contacto{
     text-align: center;
@@ -38,8 +37,6 @@ body{
 .targetas-contacto{
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
-    border: 3px solid var(--Color-Borde);
     gap: 1.5rem;
 
 }
@@ -95,6 +92,15 @@ body{
 .main-principal a:hover{
     color: var(--Color-Hover-hipervinculos);
     text-decoration: underline;
+}
+@media (max-width: 784px) {
+    .targetas-contacto{
+        flex-direction: column;
+    }
+    .whatsapp-contacto,
+    .email-contacto{
+        padding: 2rem;
+    }
 }
 @media (max-width: 480px) {
     .main-principal h1{
