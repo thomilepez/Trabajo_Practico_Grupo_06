@@ -1,0 +1,110 @@
+:root{
+    --Color-Primario: #0F172A;
+    --Color-Secundario: #1E293B;
+    --Color-Fondo: #F8FAFC;
+    --Color-texto: #1E293B;
+    --Color-boton: #3B82F6;
+    --Color-Hover-hipervinculos: #2563EB;
+    --Colo-boton-opaco: #3b83f62f;
+    --Color-Texto-header: #F8FAFC;
+    --Color-Borde: #E2E8F0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Color-Fondo);
+}
+
+/***          CONTENEDOR PRINCIPAL              ****/
+.main-principal{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    border: 3px solid var(--Color-Borde);
+}
+.titulo-contacto{
+    text-align: center;
+    margin: 3rem 0;
+    
+}
+.targetas-contacto{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    border: 3px solid var(--Color-Borde);
+    gap: 1.5rem;
+
+}
+
+.whatsapp-contacto,
+.email-contacto{
+    width: 100%;
+    min-height: 250px;
+    box-sizing: border-box;
+    
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    text-align: center;
+    padding: 2rem 4rem;
+}
+.whatsapp-contacto:hover,
+.email-contacto:hover{
+    border-color: var(--Color-boton);
+    transition: 0.2s ease-in-out;
+    .svg-whatsapp,
+    .email-svg{
+        background-color: rgb(131, 153, 250);
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.main-principal h1{
+    font-size: 2.75rem;
+    color: var(--Color-Primario);
+    margin-bottom: 0.5rem;
+}
+.main-principal h2{
+    font-size: 1.5rem;
+    color: var(--Color-Primario);
+    margin-bottom: 1rem;
+} 
+.svg-whatsapp,
+.email-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    background-color: var(--Colo-boton-opaco);
+}
+.main-principal a{
+    color: var(--Color-boton);
+    font-weight: 600;
+    text-decoration: none;
+}
+.main-principal a:hover{
+    color: var(--Color-Hover-hipervinculos);
+    text-decoration: underline;
+}
+@media (max-width: 480px) {
+    .main-principal h1{
+        font-size: 2rem;
+    }
+    .whatsapp-contacto,
+    .email-contacto{
+        padding: 1.5rem;
+    }
+    .targetas-contacto{
+        flex-direction: column;
+    }
+}
