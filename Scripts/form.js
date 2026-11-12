@@ -151,7 +151,8 @@ if(esValido){
         email: inputEmail.value.trim(),
         dni: imputDni.value.trim(),
         password: contraseniaIngresada.value.trim(),
-        rol: "alumno"
+        rol: "alumno",
+        carrito:[]
     };
 
     usuarios.push(nuevousuario);
@@ -215,6 +216,8 @@ function verContraseña(){
 
 function validarInicioSesion(event){
     event.preventDefault();
+
+      
     
     const  emailSesion = document.getElementById('email').value.trim()
     const contraseniaSesion = document.getElementById('password').value.trim()
@@ -237,11 +240,12 @@ function validarInicioSesion(event){
     
     const usuarioEncontrado = usuarios.find(usuarios => usuarios.email === emailSesion && usuarios.password === contraseniaSesion);
 
-        if(!usuarioEncontrado){
+   
+        if(usuarioEncontrado){
 
             if(usuarioEncontrado.rol === rolSeleccionado.value){
-
-                localStorageStorage.setItem("usuarioActivo" ,JSON.stringify(usuarioEncontrado));
+               
+                localStorage.setItem("usuarioActivo" ,JSON.stringify(usuarioEncontrado));
                window.location.href = "../index.html";
             }else{
                 event.preventDefault();

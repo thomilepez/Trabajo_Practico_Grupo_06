@@ -10,73 +10,36 @@
 <body>
  <header id="header-contenedor" class="header-principal"></header>
 <main>
-<section class="cabecera-cursos">
+    <section class="cabecera-cursos">
         <h1>Carrito de Compras</h1>
         <p>Revisá tus cursos seleccionados antes de avanzar al pago.</p>
     </section>
 
     <div class="layout-carrito">
 
-        <section class="listado-cursos">
-
-            <article class="tarjeta curso" data-id="css-html">
-                <div class="portada-curso">
-                    <img src="../imagenes/Programacion/Html-Css.jpg" alt="Logo de HTML5 y CSS3">
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h2>HTML5 y CSS3 desde Cero</h2>
-                    <p class="descripcion-curso">Aprendé a maquetar sitios web modernos.</p>
-                    <span class="precio-curso">$14.999 ARS</span>
-                    <div class="botones-curso">
-                        <a href="#" class="boton-eliminar">Eliminar</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="tarjeta curso" data-id="javascript">
-                <div class="portada-curso">
-                    <img src="../imagenes/Programacion/JavaScript.jpg" alt="Logo de JavaScript">
-                </div>
-                <div class="tarjeta-cuerpo">
-                    <h2>JavaScript Moderno</h2>
-                    <p class="descripcion-curso">Dominá el lenguaje esencial de la web.</p>
-                    <span class="precio-curso">$19.999 ARS</span>
-                    <div class="botones-curso">
-                        <a href="#" class="boton-eliminar">Eliminar</a>
-                    </div>
-                </div>
-            </article>
-
+        <section class="listado-cursos" id = "contenedor-carrito">
+            
         </section>
+    
 
-        <aside class="resumen-pedido">
-            <h2>Resumen de Compra</h2>
-            <div class="desglose-resumen">
-                <div class="fila-resumen">
-                    <span>HTML5 y CSS3 desde Cero</span>
-                    <span>$14.999 ARS</span>
-                </div>
-                <div class="fila-resumen">
-                    <span>JavaScript Moderno</span>
-                    <span>$19.999 ARS</span>
-                </div>
-                <hr>
-                <div class="fila-resumen total">
-                    <strong>Total a Pagar</strong>
-                    <strong>$34.998 ARS</strong>
-                </div>
-            </div>
+        <aside  class="resumen-pedido" >
 
-            <div class="botones-curso">
-                <a href="logica-de-compra/resumen-pago.html" class="boton-curso">Continuar al Pago</a>
-                <a href="catalogo-cursos.html" class="boton-curso">Seguir explorando</a>
-            </div>
+                <h2>Resumen de Compra</h2>
+                 <div class="desglose-resumen" id="resumen-carrito">
+                   
+                 </div>
+
         </aside>
+
+
+
+        <!-- se cambio la class de resumen-carrito por el id  -->
+        
 
     </div>
 </main>
 <footer id="footer-contenedor" class="footer-principal"></footer>
-
-<script src="/Scripts/cargaComponentes.js"></script>
+<script src="../Scripts/cargaComponentes.js"></script>
+<script src="../Scripts/carrito.js"></script>
 </body>
 </html>
