@@ -1,7 +1,12 @@
         <div class="SVG_LOGO">
             <img src="/svg's/Logo-SVG/gemini-svg.svg" alt="Logo de E-Study (Persona abriendo un libro de forma minimalista)">
         </div>
-    <nav class="navegacion-principal" aria-label="Navegación Principal"> 
+
+        <button id="btn-hamburguesa" class="btn-hamburguesa" aria-label="Abrir menú de navegación">
+    <img src="/svg's/Iconos-SVG/whide/menu.svg" alt="Menú">
+</button>
+
+    <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación Principal"> 
         <ul>
                 <!--header-->
                 <li><a class="nav-hipervinculos" href="/index.html"> <img src="/svg's/Iconos-SVG/whide/home.svg" alt=""> Inicio</a></li>
@@ -10,8 +15,9 @@
                 <li><a class="nav-hipervinculos" href="/Institucion/docentes.html"> <img src="/svg's/Iconos-SVG/whide/graducion-gorro.svg" alt="">Nuestros Docentes</a></li>
                 <li><a class="nav-hipervinculos" href="/Institucion/contacto.html"> <img src="/svg's/Iconos-SVG/whide/carta.svg" alt="">Contacto</a></li>
                 <!-- manejar login-->
-                <li><a class="nav-hipervinculos" href="/Usuario/iniciar-sesion.html"> <img src="/svg's/Iconos-SVG/whide/login.svg" alt="">Iniciar Sesión</a></li>
-                <li><a class="nav-hipervinculos" href="/Usuario/usuario.html"> <img src="/svg's/Iconos-SVG/whide/user.svg" alt="">Mi Perfil</a></li>
+                <li id="menu-iniciar-sesion"><a class="nav-hipervinculos" href="/Usuario/iniciar-sesion.html"> <img src="/svg's/Iconos-SVG/whide/login.svg" alt="">Iniciar Sesión</a></li>
+                <li id="menu-perfil" class="oculto"><a class="nav-hipervinculos" href="/Usuario/usuario.html"> <img src="/svg's/Iconos-SVG/whide/user.svg" alt="">Mi Perfil</a></li>
+                <li id="menu-mis-cursos" class="oculto"><a class="nav-hipervinculos" href="/Usuario/mis-cursos.html"><img src="/svg's/Iconos-SVG/whide/libro-abierto.svg" alt="">Mis Cursos</a></li>
                 <li><button id="btn-tema" class="nav-hipervinculos btn-tema" aria-label="Alternar tema"><img id="icono-tema" src="/svg's/Iconos-SVG/whide/luna.svg" alt="Luna">Tema</button></li>
 
 

@@ -1,13 +1,9 @@
 //Forms
 const formularioRegistro = document.querySelector(".formulario-registro");
 const formularioInicioSesion = document.querySelector(".formulario-inicioSesion");
-
-
-
 const password = document.getElementById("password");
 const ojo = document.getElementById("ojo");
 const candado = document.getElementById("candado");
-
 const contenedorFechaForm = document.getElementById("form-fecha");
 
 //imputs
@@ -17,9 +13,6 @@ const imputDni = document.getElementById("dni");
 const fechaIngresada = document.getElementById("fecha-nacimiento"); 
 const contraseniaIngresada = document.getElementById("password");
 
-
-
-
 //msj de error
 
 const errorNombre = document.getElementById("error-Nombre");
@@ -28,7 +21,6 @@ const errorDNI = document.getElementById("error-DNI");
 const errorFecha = document.getElementById("error-fecha");
 const errorPassword = document.getElementById("error-password");
 
-
 if(formularioRegistro !== null ){
 
     formularioRegistro.addEventListener("submit" , validarRegistro );
@@ -36,21 +28,12 @@ if(formularioRegistro !== null ){
     contraseniaIngresada.addEventListener("keyup" , validarContrasenia);
 }
 
-
 if(formularioInicioSesion !== null){
 
     formularioInicioSesion.addEventListener("submit" , validarInicioSesion);
 
 }
-
 //exeption 
-
-
-
-
-
-
-
 
 function validarRegistro(event){
 let esValido = true;
@@ -145,20 +128,29 @@ let esValido = true;
 if(esValido){
     event.preventDefault();
 
-    const usuarios = JSON.parse(localStorage.getItem('usuarios') ) || [];
+    const codigoIngresado = document.getElementById("codigo-invitacion")?.value.trim() || "";
+    const CLAVE_DOCENTE = "PROFE2026"; // Tu clave secreta
+
+    // Determinamos el rol según el código secreto
+    let rolAsignado = "alumno";
+    if (codigoIngresado === CLAVE_DOCENTE) {
+        rolAsignado = "docente";
+    }
+
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     const nuevousuario = {
         nombre: inputNombre.value.trim(),
         email: inputEmail.value.trim(),
         dni: imputDni.value.trim(),
         password: contraseniaIngresada.value.trim(),
-        rol: "alumno",
-        carrito:[]
+        rol: rolAsignado, // <--- Acá se guarda dinámicamente
+        carrito: []
     };
 
     usuarios.push(nuevousuario);
-localStorage.setItem('usuarios', JSON.stringify(usuarios));
-localStorage.setItem('usuarioActivo', JSON.stringify(nuevousuario));
-window.location.href = "../index.html";
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    localStorage.setItem('usuarioActivo', JSON.stringify(nuevousuario));
+    window.location.href = "../index.html";
 }
 }
 

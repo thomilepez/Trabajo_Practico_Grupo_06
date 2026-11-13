@@ -1,7 +1,6 @@
 if(localStorage.getItem('tema')==='oscuro'){
     document.body.classList.add('tema-oscuro')
 }
-
 document.addEventListener('DOMContentLoaded',()=>{
 
  const contenedorHeader = document.getElementById('header-contenedor');
@@ -11,6 +10,29 @@ document.addEventListener('DOMContentLoaded',()=>{
     .then(respuesta => respuesta.text())
     .then(html =>{
         contenedorHeader.innerHTML =html
+
+            const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
+            const menuIniciarSesion = document.getElementById('menu-iniciar-sesion');
+            const menuPerfil = document.getElementById('menu-perfil');
+            const menuMisCursos = document.getElementById('menu-mis-cursos');
+            const btnHamburguesa = document.getElementById('btn-hamburguesa');
+            const navegacionPrincipal = document.getElementById('navegacion-principal');
+
+            if (btnHamburguesa && navegacionPrincipal) {
+             btnHamburguesa.addEventListener('click', () => {
+           navegacionPrincipal.classList.toggle('activo');
+             });
+}
+
+            if (usuarioActivo) {
+                if (menuIniciarSesion) menuIniciarSesion.classList.add('oculto');
+                if (menuPerfil) menuPerfil.classList.remove('oculto');
+                if (menuMisCursos) menuMisCursos.classList.remove('oculto');
+            } else {
+                if (menuIniciarSesion) menuIniciarSesion.classList.remove('oculto');
+                if (menuPerfil) menuPerfil.classList.add('oculto');
+                if (menuMisCursos) menuMisCursos.classList.add('oculto');
+            }
 
         const btnTema = document.getElementById('btn-tema')
         const iconoTema = document.getElementById('icono-tema')

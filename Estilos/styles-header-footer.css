@@ -162,6 +162,24 @@ img{
     font-size: 0.85rem;
 }
 
+.oculto {
+    display: none !important;
+}
+
+.btn-hamburguesa {
+    display: none; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.btn-hamburguesa img {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: block;
+}
+
 @media (max-width: 1024px) {
     .header-principal {
         flex-direction: column;
@@ -188,25 +206,51 @@ img{
 
 @media (max-width: 768px) {
     .header-principal {
-        padding: 0.75rem 0.5rem;
+        justify-content: space-between; 
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
         height: auto;
     }
 
-    .navegacion-principal ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    .btn-hamburguesa {
+        display: block; 
+    }
+
+    .navegacion-principal {
         width: 100%;
-        gap: 0.4rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+        background-color: var(--Color-Primario);
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navegacion-principal.activo {
+        max-height: 500px; 
+    }
+
+    .navegacion-principal ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.25rem;
+        padding: 0.5rem 0 1rem 0;
+        grid-template-columns: none; 
     }
 
     .nav-hipervinculos {
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
-        text-align: center;
-        font-size: 0.75rem;
-        padding: 0.4rem 0.2rem;
-        flex-direction: column;
-        justify-content: center;
+        text-align: left;
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+        flex-direction: row;
+    }
+
+    .nav-hipervinculos img {
+        width: 1.25rem;
+        height: 1.25rem;
     }
 
     .contenido-footer {
@@ -220,17 +264,15 @@ img{
         width: 100%;
     }
 
-    .nav-hipervinculos img {
-        width: 1rem;
-        height: 1rem;
-    }
-    footer{
+    footer {
         font-size: 0.8rem;
     } 
-    .logo-footer{
+
+    .logo-footer {
         display: none;
     }
-    footer > .footer-copyrigth{
+
+    footer > .footer-copyrigth {
         font-size: 0.7rem;
     }
 }
