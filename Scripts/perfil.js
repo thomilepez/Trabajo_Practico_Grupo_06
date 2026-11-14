@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // 2. Cargar los datos dinámicamente en el DOM
     const spanNombre = document.getElementById("perfil-nombre");
     const spanEmail = document.getElementById("perfil-email");
     const spanDni = document.getElementById("perfil-dni");
