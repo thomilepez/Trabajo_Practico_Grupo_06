@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="descripcion-curso">${curso.descripcion}</p>
                 <span class="precio-curso">$${curso.precio.toLocaleString("es-AR")} ARS</span>
                 <div class="botones-curso">
-                    <a href="../Cursos/detalle.html?id=${curso.id}" class="boton-curso">Ver más</a>
+                    <!-- Usamos /Cursos/Detalle-curso.html para asegurar que siempre encuentre el archivo exacto -->
+                    <a href="/Cursos/Detalle-curso.html?id=${curso.id}" class="boton-curso">Ver más</a>
                     <button type="button" class="boton-carrito" data-id="${curso.id}">
                         <img src="../svg's/Iconos-SVG/whide/carrito-compras.svg" alt="Carrito de compra">
                     </button>
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         contenedorCatalogo.appendChild(articulo);
     });
+
     document.querySelectorAll(".listado-cursos .boton-carrito").forEach(btn => {
         btn.addEventListener("click", (e) => {
             const idCurso = e.currentTarget.dataset.id;

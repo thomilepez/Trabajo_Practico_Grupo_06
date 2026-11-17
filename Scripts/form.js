@@ -144,7 +144,8 @@ if(esValido){
         dni: imputDni.value.trim(),
         password: contraseniaIngresada.value.trim(),
         rol: rolAsignado, // <--- Acá se guarda dinámicamente
-        carrito: []
+        carrito: [],
+        cursosComprados: []
     };
 
     usuarios.push(nuevousuario);

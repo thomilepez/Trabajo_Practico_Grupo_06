@@ -120,14 +120,18 @@ const catalogoCursosDetalle = [
         duracion: "32 horas"
     }
 ];
-
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const cursoId = params.get("id");
     const curso = catalogoCursosDetalle.find(c => c.id === cursoId);
 
     if (!curso) {
-        document.querySelector(".contenedor-curso").innerHTML = "<h2>Curso no encontrado</h2><p>El curso que buscás no existe o fue removido.</p>";
+        document.querySelector(".contenedor-curso").innerHTML = `
+            <div class="error-curso">
+                <h2>Curso no encontrado</h2>
+                <p>El curso que buscás no existe o fue removido.</p>
+            </div>
+        `;
         return;
     }
 
@@ -140,9 +144,39 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("curso-nivel").textContent = `Nivel: ${curso.nivel}`;
     document.getElementById("curso-duracion").textContent = `Duración: ${curso.duracion}`;
 
-    const btnComprar = document.getElementById("btn-comprar-detalle");
-    btnComprar.dataset.id = curso.id;
-    btnComprar.addEventListener("click", () => {
-        agregarAlCarrito(curso.id);
-    });
+    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+    const contenedorAcciones = document.getElementById("contenedor-acciones-compra");
+
+    if (contenedorAcciones) {
+        const cursosComprados = usuarioActivo && usuarioActivo.cursosComprados ? usuarioActivo.cursosComprados : [];
+        const yaComprado = cursosComprados.includes(curso.id);
+
+        if (yaComprado) {
+            contenedorAcciones.innerHTML = `
+                <a href="../Cursos/mis-clases.html?id=${curso.id}" class="boton-curso-adquirido">
+                    <img src="../svg's/Iconos-SVG/whide/play.svg" alt="Icono de reproducción">
+                    Ir a mis clases
+                </a>
+            `;
+        } else {
+            contenedorAcciones.innerHTML = `
+                <button type="button" class="boton-carrito" id="btn-comprar-detalle">
+                    <img src="../svg's/Iconos-SVG/whide/carrito-compras.svg" alt="Carrito de compra">
+                    Añadir al carrito
+                </button>
+            `;
+
+            const btnComprar = document.getElementById("btn-comprar-detalle");
+            if (btnComprar) {
+                btnComprar.dataset.id = curso.id;
+                btnComprar.addEventListener("click", () => {
+                    if (typeof agregarAlCarrito === "function") {
+                        agregarAlCarrito(curso.id);
+                    } else {
+                        console.log("Curso agregado al carrito:", curso.id);
+                    }
+                });
+            }
+        }
+    }
 });

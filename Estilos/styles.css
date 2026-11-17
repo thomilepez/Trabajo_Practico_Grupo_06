@@ -453,7 +453,6 @@ img{
     text-transform: uppercase;
 }
 
-/* redes sociales */
 body.pagina-red-social {
     background-color: #000;
     font-family: sans-serif;
@@ -487,6 +486,56 @@ body.pagina-red-social {
 
 .contenedor-mockup .img-celular {
     display: none;
+}
+
+.boton-curso-adquirido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.boton-curso-adquirido:hover {
+    background-color: #218838;
+}
+
+.boton-curso-adquirido img {
+    width: 20px;
+    height: 20px;
+}
+
+.sin-cursos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sin-cursos h2 {
+    margin-bottom: 10px;
+}
+
+.sin-cursos p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.sin-cursos .boton-curso {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.error-curso {
+    text-align: center;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
 }
 
 @media (max-width: 1024px) {
