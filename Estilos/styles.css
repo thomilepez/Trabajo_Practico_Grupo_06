@@ -660,18 +660,15 @@ body.pagina-red-social {
     padding: 1.5rem;
 }
 
-
 /* ==========================================================
-   9. SIN ASIGNAR
+9. alerta y carrito
    ========================================================== */
-
-/***        BOTON CARRITO (no aparece en ninguna de tus listas) ***/
 .boton-carrito {
     justify-content: center;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: var(--color-boton-carrito);
+    background-color: var(--Color-boton-carrito);
     color: #fff;
     border: none;
     border-radius: 7px;
@@ -686,6 +683,35 @@ body.pagina-red-social {
     transform: scale(1.02);
 }
 
+.alerta-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 99999; /* Asegura que esté por encima de headers, modales y componentes */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    pointer-events: none; /* Evita que bloquee clics en la interfaz si está apareciendo/desapareciendo */
+}
+
+.alerta-flotante.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alerta-flotante.exito {
+    background-color: #16a34a !important; 
+}
+
+.alerta-flotante.advertencia {
+    background-color: #ea580c !important; 
+}
 
 /* ==========================================================
    10. RESPONSIVE

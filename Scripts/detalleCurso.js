@@ -19,7 +19,7 @@ const catalogoCursosDetalle = [
         nivel: "Principiante",
         duracion: "35 horas"
     },
-{
+    {
         id: "html5-css3",
         nombre: "HTML5 y CSS3",
         descripcion: "Aprendé a construir páginas web desde cero: estructura con HTML5 semántico, estilos con CSS3, maquetación con Flexbox y Grid y diseño responsive para que tus sitios se vean bien en cualquier dispositivo.",
@@ -53,7 +53,7 @@ const catalogoCursosDetalle = [
         id: "java",
         nombre: "Programación en Java",
         descripcion: "Aprendé Java desde cero: sintaxis, programación orientada a objetos, colecciones, manejo de excepciones y acceso a bases de datos para construir aplicaciones robustas y multiplataforma.",
-        imagen: "../imagenes/Programacion/JAVA",
+        imagen: "../imagenes/Programacion/JAVA.jpg",
         alt: "Persona programando en una computadora con código Java en pantalla",
         precio: 33999,
         nivel: "Principiante",
@@ -120,6 +120,7 @@ const catalogoCursosDetalle = [
         duracion: "32 horas"
     }
 ];
+
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const cursoId = params.get("id");
@@ -148,7 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedorAcciones = document.getElementById("contenedor-acciones-compra");
 
     if (contenedorAcciones) {
-        const cursosComprados = usuarioActivo && usuarioActivo.cursosComprados ? usuarioActivo.cursosComprados : [];
+        const cursosComprados = (usuarioActivo && Array.isArray(usuarioActivo.cursosComprados)) 
+            ? usuarioActivo.cursosComprados 
+            : [];
+            
         const yaComprado = cursosComprados.includes(curso.id);
 
         if (yaComprado) {
@@ -160,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         } else {
             contenedorAcciones.innerHTML = `
-                <button type="button" class="boton-carrito" id="btn-comprar-detalle">
+                <button type="button" class="boton-carrito" id="btn-comprar-detalle" data-id="${curso.id}">
                     <img src="../svg's/Iconos-SVG/whide/carrito-compras.svg" alt="Carrito de compra">
                     Añadir al carrito
                 </button>
@@ -168,12 +172,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const btnComprar = document.getElementById("btn-comprar-detalle");
             if (btnComprar) {
-                btnComprar.dataset.id = curso.id;
                 btnComprar.addEventListener("click", () => {
-                    if (typeof agregarAlCarrito === "function") {
-                        agregarAlCarrito(curso.id);
+                    const idCurso = btnComprar.getAttribute("data-id");
+                    
+                    if (typeof window.agregarAlCarrito === "function") {
+                        window.agregarAlCarrito(idCurso);
                     } else {
-                        console.log("Curso agregado al carrito:", curso.id);
+                        console.error("La función agregarAlCarrito no está disponible globalmente.");
                     }
                 });
             }

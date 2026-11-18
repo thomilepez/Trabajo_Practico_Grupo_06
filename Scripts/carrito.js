@@ -8,7 +8,7 @@ function agregarAlCarrito(idCurso) {
     const enCarrito = carrito.find(item => item.id === idCurso);
 
     if (enCarrito) {
-        alert("Este curso ya está en tu carrito.");
+        mostrarNotificacion("Este curso ya está en tu carrito.", "advertencia");
     } else {
         carrito.push({
             id: cursoEncontrado.id,
@@ -17,7 +17,7 @@ function agregarAlCarrito(idCurso) {
             imagen: cursoEncontrado.imagen
         });
         guardarYActualizar();
-        alert(`¡"${cursoEncontrado.nombre}" se agregó al carrito!`);
+        mostrarNotificacion(`¡"${cursoEncontrado.nombre}" se agregó al carrito!`, "exito");
     }
 }
 
@@ -70,3 +70,20 @@ function eliminarDelCarrito(idCurso) {
 document.addEventListener("DOMContentLoaded", () => {
     renderizarCarrito();
 });
+
+function mostrarNotificacion(mensaje, tipo = "exito") {
+    const alertaExistente = document.querySelector(".alerta-flotante");
+    if (alertaExistente) alertaExistente.remove();
+
+    const alerta = document.createElement("div");
+    alerta.className = `alerta-flotante ${tipo}`;
+    alerta.textContent = mensaje;
+
+    document.body.appendChild(alerta);
+    setTimeout(() => alerta.classList.add("visible"), 10);
+
+    setTimeout(() => {
+        alerta.classList.remove("visible");
+        setTimeout(() => alerta.remove(), 300);
+    }, 3000);
+}
