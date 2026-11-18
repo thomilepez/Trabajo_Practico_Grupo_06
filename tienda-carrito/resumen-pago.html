@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Pago</title>
+    <link rel="stylesheet" href="Estilos/styles-header-footer.css">
+    <link rel="stylesheet" href="Estilos/styles.css">
+</head>
+<body>
+   <header id="header-contenedor" class="header-principal"></header>
+
+<main>
+
+    <section class="cabecera-cursos">
+        <h1>Finalizar Compra</h1>
+        <p>Verificá tus datos, elegí el medio de pago y completá tu inscripción.</p>
+    </section>
+
+    <div class="layout-pago">
+
+        <section class="formulario-pago">
+            <form id="form-pago" class="formulario-registro formulario-pago-estilo">
+
+                <fieldset class="informacion-personal fieldset-pago">
+                    <legend class="legend-pago">Datos de Facturación</legend>
+
+                    <div class="campo campo-pago">
+                        <label for="nombre-apellido">Nombre y Apellido:</label>
+                        <input type="text" id="nombre-apellido" name="nombre-apellido" required class="input-pago">
+                    </div>
+
+                    <div class="campo campo-pago">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required class="input-pago">
+                    </div>
+
+                    <div class="campo campo-pago">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" required inputmode="numeric" class="input-pago">
+                    </div>
+                </fieldset>
+
+                <!-- DATOS DE PAGO / TARJETA (Nuevos y obligatorios a rellenar) -->
+                <fieldset class="informacion-personal fieldset-pago">
+                    <legend class="legend-pago">Método de Pago y Verificación</legend>
+
+                    <div class="campo campo-pago">
+                        <label for="numero-tarjeta">Número de Tarjeta (Simulado):</label>
+                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" required placeholder="4532 •••• •••• 8920" maxlength="16" inputmode="numeric" class="input-pago">
+                    </div>
+
+                    <div class="grupo-tarjeta">
+                        <div class="campo campo-pago" style="flex: 1;">
+                            <label for="vencimiento">Vencimiento (MM/AA):</label>
+                            <input type="text" id="vencimiento" name="vencimiento" required placeholder="12/28" maxlength="5" class="input-pago">
+                        </div>
+                        <div class="campo campo-pago" style="flex: 1;">
+                            <label for="cvv">CVV:</label>
+                            <input type="password" id="cvv" name="cvv" required placeholder="123" maxlength="4" inputmode="numeric" class="input-pago">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="boton-curso boton-pago-submit">Confirmar y Pagar</button>
+            </form>
+        </section>
+
+        <aside class="resumen-pedido">
+            <h2>Detalle del Pedido</h2>
+            <div class="desglose-resumen">
+            </div>
+        </aside>
+
+    </div>
+</main>
+<footer id="footer-contenedor" class="footer-principal"></footer>
+
+<script src="Scripts/cargaComponentes.js"></script>
+<script src="Scripts/resumenPago.js"></script>
+</body>
+</html>

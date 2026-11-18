@@ -170,13 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </button>
             `;
 
-            const btnComprar = document.getElementById("btn-comprar-detalle");
+           const btnComprar = document.getElementById("btn-comprar-detalle");
             if (btnComprar) {
                 btnComprar.addEventListener("click", () => {
-                    const idCurso = btnComprar.getAttribute("data-id");
-                    
                     if (typeof window.agregarAlCarrito === "function") {
-                        window.agregarAlCarrito(idCurso);
+                        window.agregarAlCarrito(curso.id);
                     } else {
                         console.error("La función agregarAlCarrito no está disponible globalmente.");
                     }

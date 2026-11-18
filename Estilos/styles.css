@@ -691,13 +691,13 @@ body.pagina-red-social {
     padding: 14px 22px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    z-index: 99999; /* Asegura que esté por encima de headers, modales y componentes */
+    z-index: 99999;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.95rem;
     font-family: 'Poppins', sans-serif;
-    pointer-events: none; /* Evita que bloquee clics en la interfaz si está apareciendo/desapareciendo */
+    pointer-events: none; 
 }
 
 .alerta-flotante.visible {
@@ -713,6 +713,7 @@ body.pagina-red-social {
     background-color: #ea580c !important; 
 }
 
+<<<<<<< Updated upstream
 
 /*===============================
 Carrusel 
@@ -761,10 +762,97 @@ Carrusel
 
 .indicadores-carrusel button.activo {
     background-color: var(--Color-boton);
+=======
+.item-carrito {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--Color-Fondo-Tarjeta, #fff);
+    border: 1px solid var(--Color-Borde);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.item-carrito img {
+    border-radius: 8px;
+}
+
+.item-carrito div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex-grow: 1;
+}
+
+.item-carrito h3 {
+    font-size: 1.1rem;
+    color: var(--Color-Texto-Titulos);
+}
+
+.item-carrito p {
+    font-weight: 600;
+    color: var(--Color-Texto-Base);
+>>>>>>> Stashed changes
 }
 
 /* ==========================================================
-   10. RESPONSIVE
+10. PAGINA DE PAGO / RESUMEN DE PAGO
+   ========================================================== */
+.formulario-pago-estilo {
+    background: var(--Color-Fondo-Tarjeta, #fff);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--Color-Borde);
+}
+
+.fieldset-pago {
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.legend-pago {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--Color-Texto-Titulos);
+}
+
+.campo-pago {
+    margin-bottom: 1rem;
+}
+
+.campo-pago label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-pago {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 6px;
+    background-color: var(--Color-Fondo, #F8FAFC);
+    color: var(--Color-Texto-Base);
+    font-family: 'Poppins', sans-serif;
+}
+
+.grupo-tarjeta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boton-pago-submit {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   11. RESPONSIVE
    ========================================================== */
 
 /***        TABLET        ***/

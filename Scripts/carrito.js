@@ -1,9 +1,12 @@
-
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-function agregarAlCarrito(idCurso) {
+
+window.agregarAlCarrito = function(idCurso) {
     const cursoEncontrado = catalogoCursosDetalle.find(c => c.id === idCurso);
     
-    if (!cursoEncontrado) return;
+    if (!cursoEncontrado) {
+        console.error("No se encontró el curso con ID:", idCurso);
+        return;
+    }
 
     const enCarrito = carrito.find(item => item.id === idCurso);
 
@@ -46,11 +49,11 @@ function renderizarCarrito() {
         const divItem = document.createElement("div");
         divItem.classList.add("item-carrito");
         divItem.innerHTML = `
-            <img src="${item.imagen}" alt="${item.nombre}" style="width: 80px; height: 50px; object-fit: cover;">
+            <img src="${item.imagen}" alt="${item.nombre}" style="width: 80px; height: 50px; object-fit: cover; border-radius: 6px;">
             <div>
                 <h3>${item.nombre}</h3>
                 <p>$${item.precio.toLocaleString("es-AR")} ARS</p>
-                <button type="button" onclick="eliminarDelCarrito('${item.id}')">Eliminar</button>
+                <button type="button" class="boton-eliminar" onclick="eliminarDelCarrito('${item.id}')">Eliminar</button>
             </div>
         `;
         contenedorCarrito.appendChild(divItem);
@@ -58,8 +61,15 @@ function renderizarCarrito() {
 
     resumenCarrito.innerHTML = `
         <p>Total a pagar: <strong>$${total.toLocaleString("es-AR")} ARS</strong></p>
-        <button type="button" class="boton-pagar">Avanzar al pago</button>
+        <button type="button" class="boton-curso" id="btn-avanzar-pago">Avanzar al pago</button>
     `;
+
+    const btnPagar = document.getElementById("btn-avanzar-pago");
+    if (btnPagar) {
+        btnPagar.addEventListener("click", () => {
+            window.location.href = "../tienda-carrito/resumen-pago.html";
+        });
+    }
 }
 
 function eliminarDelCarrito(idCurso) {
@@ -73,17 +83,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function mostrarNotificacion(mensaje, tipo = "exito") {
     const alertaExistente = document.querySelector(".alerta-flotante");
-    if (alertaExistente) alertaExistente.remove();
+    if (alertaExistente) {
+        alertaExistente.remove();
+    }
 
     const alerta = document.createElement("div");
     alerta.className = `alerta-flotante ${tipo}`;
     alerta.textContent = mensaje;
 
     document.body.appendChild(alerta);
-    setTimeout(() => alerta.classList.add("visible"), 10);
-
+    setTimeout(() => {
+        alerta.classList.add("visible");
+    }, 50);
     setTimeout(() => {
         alerta.classList.remove("visible");
-        setTimeout(() => alerta.remove(), 300);
+        setTimeout(() => {
+            if (alerta.parentNode) {
+                alerta.remove();
+            }
+        }, 300);
     }, 3000);
 }
