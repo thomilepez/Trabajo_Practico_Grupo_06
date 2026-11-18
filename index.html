@@ -18,35 +18,21 @@
     </section>
 
 
-   <section class = "CURSOS-Recomendados">
-        <h2>Explora Cursos Recomendados</h2>
-        <article class="contenedor-img-curso">
-            <img src="./imagenes/Diseño/Portada-Diseño.jpg" alt="Se ve una cabeza con anteojos sobre un fondo celeste y dice Diseño Grafico">
-            <h3>Diseño Gráfico</h3>
-            <p>Aprende a crear piezas visuales atractivas y comunica ideas de forma creativa y profesional.</p>
-            <a href="Cursos/Detalle-curso.html?id=diseno-grafico" class="btn-cursos-masInfo">Más información</a>
-        </article>
-        <article class="contenedor-img-curso">
-            <img src="imagenes/Programacion/BDD.jpg" alt="Una computadora de servidor con elementos que salen de forma relacionada entre sí con un aura azul.">            
-            <h3>Base de datos, SQL</h3>
-            <p>Desarrolla habilidades para crear tablas relacionales con SQL y hacer bases de datos funcionales.</p>
-            <a href="Cursos/Detalle-curso.html?id=sql" class="btn-cursos-masInfo">Más información</a>
-        </article>
+  <section class="CURSOS-Recomendados">
+    <h2>Explora Cursos Recomendados</h2>
 
-        <article class="contenedor-img-curso">
-            <img src="imagenes/Programacion/JavaScript.jpg" alt="Logo de Javascript con elementos de codigo detrás.">
-            <h3>Javascript desde cero</h3>
-            <p>Domina Javascript de forma sencilla para poder empezar a meter dinamismo a tus paginas web.</p>
-            <a href="Cursos/Detalle-curso.html?id=javascript" class="btn-cursos-masInfo">Más Información</a>
-        </article>
+    <div class="carrusel">
 
-        <article class="contenedor-img-curso">
-            <img src="imagenes/Programacion/Html-Css.jpg" alt="logo de HTML y CSS unidos por una esfera azul y roja con líneas de código detrás">
-            <h3>Paginas Web, HTML y CSS</h3>
-            <p>Aprende a utilizar las herramientas esenciales para crear paginas web desde cero.</p>
-            <a href="Cursos/Detalle-curso.html?id=html5-css3" class="btn-cursos-masInfo">Más Información</a>
-        </article>
-    </section>
+        <div class="ventana-carrusel">
+            <div id="contenedor-cursos" class="contenedor-cursos">
+                <!-- Cursos generados con JavaScript -->
+            </div>
+        </div>
+
+        <div id="indicadores-carrusel" class="indicadores-carrusel"></div>
+
+    </div>
+</section>
 
     <section class="CURSOS-Nuevos">
         <h2>Explorá Nuevas Especialidades</h2>
@@ -119,5 +105,7 @@
 <footer id="footer-contenedor" class="footer-principal"></footer>
 
 <script src="/Scripts/cargaComponentes.js"></script>
+<script src="Scripts/catalogoCursos.js"></script>
+<script src="Scripts/carrusel.js"></script>
 </body>
 </html>
