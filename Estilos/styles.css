@@ -713,7 +713,6 @@ body.pagina-red-social {
     background-color: #ea580c !important; 
 }
 
-<<<<<<< Updated upstream
 
 /*===============================
 Carrusel 
@@ -762,7 +761,7 @@ Carrusel
 
 .indicadores-carrusel button.activo {
     background-color: var(--Color-boton);
-=======
+}
 .item-carrito {
     display: flex;
     align-items: center;
@@ -794,7 +793,6 @@ Carrusel
 .item-carrito p {
     font-weight: 600;
     color: var(--Color-Texto-Base);
->>>>>>> Stashed changes
 }
 
 /* ==========================================================
