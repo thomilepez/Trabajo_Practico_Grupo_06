@@ -31,7 +31,7 @@
 
 
 
-   
+
 /* ==========================================================
    1. VARIABLES DE COLOR
    ========================================================== */
@@ -492,7 +492,34 @@ img{
     background-color: var(--Color-Hover-hipervinculos);
 }
 
-
+.valores{
+    padding: 3rem 8%;
+    background-color: #fff;
+}
+.valores h2, .valores p{
+    text-align: center;
+}
+.lista-valores{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.valor{
+    flex: 1 1 14rem;
+    background-color: var(--Color-Fondo);
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.valor img{
+    width: 3rem;
+    height: 3rem;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: var(--Colo-boton-opaco);
+}
 /* ==========================================================
    5. DOCENTES
    ========================================================== */
