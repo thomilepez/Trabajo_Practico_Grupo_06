@@ -1,16 +1,52 @@
-/***        variables COLOR     ***/
+/* ==========================================================
+
+   index.html ................. seccion 4
+   docentes.html .............. secciones 3.6 y 5
+   preguntas-frecuentes.html .. secciones 3.6 y 6
+   redes sociales ............. seccion 7
+   resumen-pago.html .......... secciones 3.1 y 3.5
+   carrito.html ............... secciones 3.1, 3.2, 3.3, 3.5
+   catalogo-cursos.html ....... secciones 3.1, 3.2, 3.3
+   mis-cursos.html ............ secciones 3.1, 3.2, 3.3, 3.4
+   usuario.html ............... secciones 3.1, 3.3 y 8
+
+   INDICE
+   1. VARIABLES DE COLOR
+   2. RESET Y REGLAS GLOBALES
+   3. ESTILOS COMPARTIDOS ENTRE VARIAS PAGINAS
+      3.1 Cabecera de pagina de cursos
+      3.2 Listado de cursos (grilla)
+      3.3 Tarjeta de curso y sus botones
+      3.4 Estados (curso adquirido / sin cursos / error)
+      3.5 Carrito y resumen de pago
+      3.6 Encabezado simple y secciones de texto
+   4. INDEX
+   5. DOCENTES
+   6. PREGUNTAS FRECUENTES
+   7. REDES SOCIALES
+   8. USUARIO (perfil)
+   9. SIN ASIGNAR (no aparece en ninguna lista)
+   10. RESPONSIVE (tablet y mobile)
+   ========================================================== */
+
+
+
+   
+/* ==========================================================
+   1. VARIABLES DE COLOR
+   ========================================================== */
 :root{
-/* Fondos */
+    /* Fondos */
     --Color-Fondo: #F8FAFC;
     --Color-Fondo-Header: #0F172A;
     --Color-Fondo-Tarjeta: #ffffff;
-    
+
     /* Textos */
     --Color-Texto-Base: #1E293B;
     --Color-Texto-Titulos: #0F172A;
     --Color-Texto-Secundario: #475569;
-    --Color-Texto-header: #F8FAFC; 
-    
+    --Color-Texto-header: #F8FAFC;
+
     /* Interfaz y Botones */
     --Color-boton: #3B82F6;
     --Color-boton-carrito: #532af7;
@@ -18,6 +54,7 @@
     --Color-Borde: #E2E8F0;
 }
 
+/***        TEMA OSCURO        ***/
 body.tema-oscuro {
     --Color-Fondo: #020617;
     --Color-Fondo-Header: #0F172A;
@@ -28,7 +65,10 @@ body.tema-oscuro {
     --Color-Borde: #334155;
 }
 
-/**         RESET / REGLAS GLOBALES         ***/
+
+/* ==========================================================
+   2. RESET Y REGLAS GLOBALES
+   ========================================================== */
 *{
     margin: 0;
     padding: 0;
@@ -41,145 +81,30 @@ body{
     background-color: var(--Color-Fondo);
     line-height: 1.6;       /* Espacio entre líneas */
 }
+
 ul{
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: inherit;
 }
+
 img{
     max-width: 100%;        /*NO desborda del contenedor*/
     display: block;
 }
-/***            ESTILO EN GENERAL           **/
-/**         SECCION DE INTRODUCCION        **/
-.boton-carrito {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--color-boton-carrito);
-    color: #fff;
-    border: none;
-    border-radius: 7px;
-    padding: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.boton-carrito:hover {
-    background-color: #6D4AFF;
-    transform: scale(1.02);
-}
-
-.introduccion{
-    color:white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto 3rem auto;
-    padding: 0 1rem;
-    width: 100%;
-    height: 18em;
-    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../imagenes/imagen-hero-main-2.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.introduccion h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.introduccion p{
-   max-width: 50em;
-    font-size: 1.1rem;
-}
 
 
-.CURSOS-Recomendados h2, .CURSOS-Nuevos h2{
-    grid-column: 1 / -1;
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
-    color: var(--Color-Primario);
-}
+/* ==========================================================
+   3. ESTILOS COMPARTIDOS ENTRE VARIAS PAGINAS
+   ========================================================== */
 
-
-.CURSOS-Recomendados,
-.CURSOS-Nuevos{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap:2rem;
-    margin: 0 auto 3rem auto;
-    max-width: 75rem; 
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-}
-
-.CURSOS-Recomendados h2,
-.CURSOS-Nuevos h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-    color: var(--Color-Primario);
-}
-
-.contenedor-img-curso {
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--Color-Borde);
-    transition: transform 0.3s ease;
-}
-
-.contenedor-img-curso:hover {
-    transform: translateY(-4px);
-}
-
-.contenedor-img-curso > img {
-    width: 100%;
-    height: 11em;
-    object-fit: cover;
-}
-
-.contenedor-img-curso h3 {
-    padding: 0.8rem 1rem 0.2rem;
-    font-size: 1.15rem;
-    color: var(--Color-Primario);
-}
-
-.contenedor-img-curso p {
-    padding: 0 1rem;
-    font-size: 0.9rem;
-    color: #64748b;
-    flex-grow: 1;
-}
-
-.btn-cursos-masInfo {
-    display: block;
-    border: none;
-    border-radius: 8px;
-    padding: 0.6em;
-    background-color: var(--Color-boton);
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    margin: 1rem;
-    transition: background-color 0.2s ease;
-}
-
-.btn-cursos-masInfo:hover {
-    background-color: var(--Color-Hover-hipervinculos);
-}
-
+/* ----------------------------------------------------------
+   3.1 CABECERA DE PAGINA DE CURSOS
+   Usan: resumen-pago, carrito, catalogo-cursos, mis-cursos, usuario
+   ---------------------------------------------------------- */
 .cabecera-cursos {
     text-align: center;
     padding: 3rem 1.5rem 1.5rem;
@@ -193,6 +118,10 @@ img{
     margin-bottom: 0.5rem;
 }
 
+/* ----------------------------------------------------------
+   3.2 LISTADO DE CURSOS (grilla)
+   Usan: carrito, catalogo-cursos, mis-cursos
+   ---------------------------------------------------------- */
 .listado-cursos {
     width: 100%;
     max-width: 75rem;
@@ -203,6 +132,13 @@ img{
     gap: 2rem;
 }
 
+/* ----------------------------------------------------------
+   3.3 TARJETA DE CURSO Y SUS BOTONES
+   usuario (tarjeta-cuerpo, botones-curso, boton-eliminar,boton-curso) 
+   y las tarjetas que arma el JS en 
+   catalogo-cursos, carrito y mis-cursos (tarjeta curso, portada-curso,
+   descripcion-curso, precio-curso: no estan en tus listas)
+   ---------------------------------------------------------- */
 .tarjeta.curso {
     background-color: #ffffff;
     border: 1px solid var(--Color-Borde);
@@ -262,6 +198,7 @@ img{
     margin-top: auto;
 }
 
+/***        BOTON DE CURSO (ver / comprar)        ***/
 .boton-curso {
     display: inline-flex;
     justify-content: center;
@@ -284,6 +221,7 @@ img{
     background-color: var(--Color-Hover-hipervinculos);
 }
 
+/***        BOTON ELIMINAR        ***/
 .boton-eliminar {
     display: inline-flex;
     justify-content: center;
@@ -304,6 +242,69 @@ img{
     background-color: #dc2626;
 }
 
+/* ----------------------------------------------------------
+   3.4 ESTADOS (no estan en tus listas: probablemente los crea
+   el JS en mis-cursos, catalogo-cursos o carrito)
+   ---------------------------------------------------------- */
+
+/***        BOTON CURSO ADQUIRIDO        ***/
+.boton-curso-adquirido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.boton-curso-adquirido:hover {
+    background-color: #218838;
+}
+
+.boton-curso-adquirido img {
+    width: 20px;
+    height: 20px;
+}
+
+/***        SIN CURSOS / ERROR        ***/
+.sin-cursos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sin-cursos h2 {
+    margin-bottom: 10px;
+}
+
+.sin-cursos p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.sin-cursos .boton-curso {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.error-curso {
+    text-align: center;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+}
+
+/* ----------------------------------------------------------
+   3.5 CARRITO Y RESUMEN DE PAGO
+   Usan: carrito (layout-carrito)
+   resumen-pago (layout-pago);
+   resumen-pedido y desglose-resumen los usan las dos
+   ---------------------------------------------------------- */
 .layout-carrito,
 .layout-pago {
     width: 100%;
@@ -316,6 +317,7 @@ img{
     align-items: start;
 }
 
+/***        RESUMEN DEL PEDIDO        ***/
 .resumen-pedido {
     background-color: #ffffff;
     border: 1px solid var(--Color-Borde);
@@ -350,32 +352,19 @@ img{
     border-top: 1px solid var(--Color-Borde);
 }
 
-.layout-perfil {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
+/* ----------------------------------------------------------
+   3.6 ENCABEZADO SIMPLE Y SECCIONES DE TEXTO
+   Usan: 
+   docentes y 
+   preguntas-frecuentes
+   ---------------------------------------------------------- */
 
-.seccion-datos-usuario,
-.panel-rol {
-    background: #fff;
-    border: 1px solid var(--Color-Borde);
-    border-radius: 12px;
-    padding: 1.5rem;
-}
-
+/* esta regla aplica a las dos paginas: .seccion-docentes cambia el ancho en la seccion 5 */
 .seccion-preguntas,
 .seccion-docentes {
     max-width: 50rem;
     margin: 0 auto;
     padding: 2rem 1.5rem;
-}
-
-.seccion-docentes {
-    max-width: 75rem;
 }
 
 .encabezado-simple {
@@ -389,6 +378,155 @@ img{
     margin-bottom: 0.5rem;
 }
 
+
+/* ==========================================================
+   4. INDEX
+   ========================================================== */
+
+/***        SECCION DE INTRODUCCION        ***/
+.introduccion{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+    width: 100%;
+    height: 18em;
+    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../imagenes/imagen-hero-main-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.introduccion h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.introduccion p{
+    max-width: 50em;
+    font-size: 1.1rem;
+}
+
+/***        CURSOS RECOMENDADOS Y NUEVOS        ***/
+.CURSOS-Recomendados h2,
+.CURSOS-Nuevos h2{
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--Color-Primario);
+}
+
+.CURSOS-Recomendados,
+.CURSOS-Nuevos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap:2rem;
+    margin: 0 auto 3rem auto;
+    max-width: 75rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* (esta regla esta repetida: es igual a la primera de este bloque) */
+.CURSOS-Recomendados h2,
+.CURSOS-Nuevos h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--Color-Primario);
+}
+
+/***        TARJETA DE CURSO DEL INICIO        ***/
+.contenedor-img-curso {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--Color-Borde);
+    transition: transform 0.3s ease;
+}
+
+.contenedor-img-curso:hover {
+    transform: translateY(-4px);
+}
+
+.contenedor-img-curso > img {
+    width: 100%;
+    height: 11em;
+    object-fit: cover;
+}
+
+.contenedor-img-curso h3 {
+    padding: 0.8rem 1rem 0.2rem;
+    font-size: 1.15rem;
+    color: var(--Color-Primario);
+}
+
+.contenedor-img-curso p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    flex-grow: 1;
+}
+
+.btn-cursos-masInfo {
+    display: block;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6em;
+    background-color: var(--Color-boton);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-cursos-masInfo:hover {
+    background-color: var(--Color-Hover-hipervinculos);
+}
+
+
+/* ==========================================================
+   5. DOCENTES
+   ========================================================== */
+.seccion-docentes {
+    max-width: 75rem;
+}
+
+.grilla-docentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-docente {
+    background-color: #ffffff;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.especialidad {
+    font-size: 0.85rem;
+    color: var(--Color-boton);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   6. PREGUNTAS FRECUENTES
+   ========================================================== */
 .bloque-dudas {
     display: flex;
     flex-direction: column;
@@ -430,29 +568,10 @@ img{
     margin-top: 1rem;
 }
 
-.grilla-docentes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: 1.5rem;
-}
 
-.tarjeta-docente {
-    background-color: #ffffff;
-    border: 1px solid var(--Color-Borde);
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.especialidad {
-    font-size: 0.85rem;
-    color: var(--Color-boton);
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
+/* ==========================================================
+   7. REDES SOCIALES
+   ========================================================== */
 body.pagina-red-social {
     background-color: #000;
     font-family: sans-serif;
@@ -473,6 +592,7 @@ body.pagina-red-social {
     text-decoration: underline;
 }
 
+/***        IMAGENES (escritorio / celular)        ***/
 .contenedor-mockup img {
     width: 100%;
     max-width: 100%;
@@ -488,79 +608,92 @@ body.pagina-red-social {
     display: none;
 }
 
-.boton-curso-adquirido {
+
+/* ==========================================================
+   8. USUARIO (perfil)
+   Clases de usuario.html: cabecera-cursos (3.1), layout-perfil,
+   seccion-datos-usuario, panel-rol, y las de tarjeta/botones (3.3)
+   (sin estilos todavia: panel-alumno, panel-docente;
+   .oculto esta en styles-header-footer.css)
+   ========================================================== */
+.layout-perfil {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.seccion-datos-usuario,
+.panel-rol {
+    background: #fff;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+
+/* ==========================================================
+   9. SIN ASIGNAR
+   ========================================================== */
+
+/***        BOTON CARRITO (no aparece en ninguna de tus listas) ***/
+.boton-carrito {
+    justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 12px;
-    background-color: #28a745;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
+    gap: 0.5rem;
+    background-color: var(--color-boton-carrito);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-.boton-curso-adquirido:hover {
-    background-color: #218838;
+.boton-carrito:hover {
+    background-color: #6D4AFF;
+    transform: scale(1.02);
 }
 
-.boton-curso-adquirido img {
-    width: 20px;
-    height: 20px;
-}
 
-.sin-cursos {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 40px 20px;
-}
+/* ==========================================================
+   10. RESPONSIVE
+   ========================================================== */
 
-.sin-cursos h2 {
-    margin-bottom: 10px;
-}
-
-.sin-cursos p {
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.sin-cursos .boton-curso {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.error-curso {
-    text-align: center;
-    padding: 60px 20px;
-    grid-column: 1 / -1;
-}
-
+/***        TABLET        ***/
 @media (max-width: 1024px) {
+    /* carrito y resumen-pago */
     .layout-carrito,
     .layout-pago {
         grid-template-columns: 1fr;
     }
 }
 
+/***        MOBILE        ***/
 @media (max-width: 768px) {
+    /* index */
     .introduccion {
         height: auto;
         padding: 3rem 1rem;
     }
 
+    /* index, paginas con cabecera-cursos, docentes y preguntas-frecuentes */
     .introduccion h1,
     .cabecera-cursos h1,
     .encabezado-simple h1 {
         font-size: 1.75rem;
     }
 
+    /* carrito, catalogo-cursos y mis-cursos */
     .listado-cursos {
         grid-template-columns: 1fr;
     }
 
+    /* tarjetas de curso (usuario y listados) */
     .botones-curso {
         flex-direction: column;
     }
@@ -570,6 +703,7 @@ body.pagina-red-social {
         width: 100%;
     }
 
+    /* redes sociales */
     .contenedor-mockup .img-escritorio {
         display: none;
     }
