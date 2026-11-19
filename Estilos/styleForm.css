@@ -18,6 +18,15 @@ body{
     justify-content: space-between;
     
 }
+
+.mainRegistro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    
+}
+
+
 .SVG_LOGO_MAIN{
     display: none;
 
