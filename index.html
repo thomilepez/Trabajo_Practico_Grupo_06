@@ -21,16 +21,20 @@
   <section class="CURSOS-Recomendados">
     <h2>Explora Cursos Recomendados</h2>
 
-    <div class="carrusel">
+ <div class="carrusel" tabindex="0" aria-label="Carrusel de cursos recomendados">
+        <div class="carrusel-track-wrapper">
+            <button type="button" id="btn-carrusel-prev" class="btn-carrusel" aria-label="Curso anterior">‹</button>
 
-        <div class="ventana-carrusel">
-            <div id="contenedor-cursos" class="contenedor-cursos">
-                <!-- Cursos generados con JavaScript -->
+            <div class="ventana-carrusel">
+                <div id="contenedor-cursos" class="contenedor-cursos">
+                    <!-- Cursos generados con JavaScript -->
+                </div>
             </div>
+
+            <button type="button" id="btn-carrusel-next" class="btn-carrusel" aria-label="Curso siguiente">›</button>
         </div>
 
         <div id="indicadores-carrusel" class="indicadores-carrusel"></div>
-
     </div>
 </section>
 
