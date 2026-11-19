@@ -11,54 +11,59 @@
  <header id="header-contenedor" class="header-principal"></header>
 <main>
 
-    <section class="cabecera-cursos">
-        <h1>Mi Perfil</h1>
-        <p>Administrá tus datos y consultá tus accesos en la plataforma.</p>
-    </section>
-
-    <div class="layout-perfil">
-
-        <section class="seccion-datos-usuario">
-            <h2>Datos de la Cuenta</h2>
-            <div class="tarjeta-cuerpo">
-                <p><strong>Nombre y Apellido:</strong> <span id="perfil-nombre">-</span></p>
-                <p><strong>E-mail:</strong> <span id="perfil-email">-</span></p>
-                <p><strong>DNI:</strong> <span id="perfil-dni">-</span></p>
-                <p><strong>Tipo de Cuenta:</strong> <span id="perfil-rol">-</span></p>
-                <div class="botones-curso">
-                    <button id="btn-cerrar-sesion" class="boton-eliminar">Cerrar Sesión</button>
-           </div>
-            </div>
+        <section class="cabecera-cursos">
+            <h1>Mi Perfil</h1>
+            <p>Administrá tus datos y consultá tus accesos en la plataforma.</p>
         </section>
 
-        <!-- Panel de Alumno -->
-        <section class="panel-rol panel-alumno">
-            <h2>Panel de Alumno</h2>
-            <div class="tarjeta-cuerpo">
-              <p>Tenés tus cursos en curso registrados.</p>
-                <div class="botones-curso">
-                    <a href="mis-cursos.html" class="boton-curso">Ver mis cursos</a>
+        <div class="layout-perfil">
+
+            <section class="seccion-datos-usuario">
+                <h2>Datos de la Cuenta</h2>
+                <div class="tarjeta-cuerpo">
+                    <p><strong>Nombre y Apellido:</strong> <span id="perfil-nombre">-</span></p>
+                    <p><strong>E-mail:</strong> <span id="perfil-email">-</span></p>
+                    <p><strong>DNI:</strong> <span id="perfil-dni">-</span></p>
+                    <p><strong>Tipo de Cuenta:</strong> <span id="perfil-rol">-</span></p>
+                    <div class="botones-curso">
+                        <button type="button" id="btn-alternar-rol" class="boton-curso oculto">Cambiar a vista Alumno</button>
+                        <button type="button" id="btn-cerrar-sesion" class="boton-eliminar">Cerrar Sesión</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Panel de Docente / Admin -->
-       <section id="panel-docente" class="panel-rol panel-docente oculto">
-            <h2>Funciones de Docente / Administración</h2>
-            <div class="tarjeta-cuerpo">
-                <p>Herramientas de gestión académica y control de contenidos.</p>
-                <div class="botones-curso">
-                    <a href="../tienda-carrito/catalogo-cursos.html" class="boton-curso">Gestionar Catálogo</a>
-                    <a href="../Institucion/docentes.html" class="boton-curso">Ver Panel Docente</a>
+            <section id="panel-alumno" class="panel-rol panel-alumno">
+                <h2>Panel de Alumno</h2>
+                <div class="tarjeta-cuerpo">
+                    <p>Consultá tus capacitaciones adquiridas y materiales de estudio.</p>
+                    <div class="botones-curso">
+                        <a href="mis-cursos.html" class="boton-curso">Ver mis cursos</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
 
-</main>
-<footer id="footer-contenedor" class="footer-principal"></footer>
+            <section id="panel-docente" class="panel-rol panel-docente oculto">
+                <h2>Funciones de Docente / Administración</h2>
+                <div class="tarjeta-cuerpo">
+                    <p>Herramientas de gestión académica y control del catálogo de cursos.</p>
+                    <div class="botones-curso">
+                        <a href="../tienda-carrito/catalogo-cursos.html" class="boton-curso">Gestionar Catálogo</a>
+                        <a href="mis-cursos.html" class="boton-curso">Ver Mis Cursos</a>
+                    </div>
+                </div>
+            </section>
 
-<script src="/Scripts/cargaComponentes.js"></script>
-<script src="/Scripts/perfil.js"></script>
-</body>
+            <section class="seccion-datos-usuario">
+                <h2>Mis Cursos Favoritos</h2>
+                <div class="listado-cursos" id="perfil-favoritos-cursos"></div>
+            </section>
+
+        </div>
+
+    </main>
+    <footer id="footer-contenedor" class="footer-principal"></footer>
+
+    <script src="../Scripts/cargaComponentes.js"></script>
+    <script src="../Scripts/catalogoCursos.js"></script>
+    <script src="../Scripts/perfil.js"></script>
 </html>

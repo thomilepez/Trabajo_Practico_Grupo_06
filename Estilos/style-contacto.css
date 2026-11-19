@@ -1,15 +1,36 @@
+
 :root{
-    --Color-Primario: #0F172A;
-    --Color-Secundario: #1E293B;
+    /* Fondos */
     --Color-Fondo: #F8FAFC;
-    --Color-texto: #1E293B;
+    --Color-Fondo-Tarjeta: #ffffff;
+
+    /* Textos */
+    --Color-Texto-Base: #1E293B;
+    --Color-Texto-Titulos: #0F172A;
+    --Color-Texto-Secundario: #475569;
+    --Color-Texto-header: #fafcf8;
+    --Color-Rasaltar : #3B82F6;
+
+    /* Interfaz y Botones */
     --Color-boton: #3B82F6;
+    --Color-boton-carrito: #532af7;
     --Color-Hover-hipervinculos: #2563EB;
-    --Colo-boton-opaco: #3b83f62f;
-    --Color-Texto-header: #F8FAFC;
     --Color-Borde: #E2E8F0;
+    --Color-Boton-Opaco: #a2c4fa;
 }
 
+/***        TEMA OSCURO        ***/
+body.tema-oscuro {
+    /* --Color-Fondo: #020617; */
+    --Color-Fondo: #0A111E;
+    /* --Color-Fondo-Tarjeta: #1E293B; */
+    --Color-Fondo-Tarjeta: #121E36;
+    --Color-Texto-Base: #F8FAFC;
+    --Color-Texto-Titulos: #F1F5F9;
+    --Color-Texto-Secundario: #94A3B8;
+    /* --Color-Borde: #084da7; */
+    --Color-Borde: #233554;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -65,12 +86,12 @@ body{
 
 .main-principal h1{
     font-size: 2.75rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin-bottom: 0.5rem;
 }
 .main-principal h2{
     font-size: 1.5rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin-bottom: 1rem;
 } 
 .svg-whatsapp,
@@ -82,7 +103,7 @@ body{
     height: 4rem;
     margin: 0 auto 1rem auto;
     border-radius: 50%;
-    background-color: var(--Colo-boton-opaco);
+    background-color: var(--Color-Boton-Opaco);
 }
 .main-principal a{
     color: var(--Color-boton);

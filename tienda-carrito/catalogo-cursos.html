@@ -16,12 +16,100 @@
         <p>Explorá nuestra oferta académica y encontrá la especialización ideal para tu carrera.</p>
     </section>
 
-    <div class="barra-catalogo" aria-label="Opciones de visualización">
+   <div class="barra-catalogo" aria-label="Opciones de visualización">
+        <button type="button" id="btn-agregar-curso" class="boton-curso oculto">
+            + Agregar curso
+        </button>
+
         <div class="selector-vista">
             <button type="button" id="btn-vista-grilla" class="btn-vista activo" aria-pressed="true">Grilla</button>
             <button type="button" id="btn-vista-lista" class="btn-vista" aria-pressed="false">Lista</button>
         </div>
     </div>
+
+    <section class="listado-cursos" id="contenedor-catalogo">
+    </section>
+
+    <dialog id="modal-curso" class="modal-curso">
+        <form id="form-curso" method="dialog" class="form-curso-docente">
+            <h2 id="modal-curso-titulo">Nuevo curso</h2>
+            <input type="hidden" id="curso-id-original" />
+
+            <label class="campo-form">
+                <span>Nombre del curso</span>
+                <input type="text" id="curso-nombre" required placeholder="Ej: Html desde cero" />
+            </label>
+
+            <label class="campo-form">
+                <span>Descripción</span>
+                <textarea id="curso-descripcion" rows="3" required placeholder="Breve descripción del curso..."></textarea>
+            </label>
+
+            <div class="fila-dos-campos">
+                <label class="campo-form">
+                    <span>Precio (ARS)</span>
+                    <input type="number" id="curso-precio" min="0" step="1" required placeholder="24999" />
+                </label>
+
+                <label class="campo-form">
+                    <span>Nivel</span>
+                    <input type="text" id="curso-nivel" required placeholder="Principiante / Intermedio" />
+                </label>
+            </div>
+
+            <div class="fila-dos-campos">
+                <label class="campo-form">
+                    <span>Duración</span>
+                    <input type="text" id="curso-duracion" required placeholder="Ej: 30 horas" />
+                </label>
+
+                <label class="campo-form">
+                    <span>Texto alternativo imagen (alt)</span>
+                    <input type="text" id="curso-alt" placeholder="Opcional (se genera automático)" />
+                </label>
+            </div>
+
+            <label class="campo-form">
+                <span>Ruta o URL de imagen</span>
+                <input type="text" id="curso-imagen" required placeholder="../imagenes/Programacion/JavaScript.jpg" />
+            </label>
+
+            <div class="bloque-dinamico">
+                <div class="bloque-dinamico-header">
+                    <span>¿A quién está dirigido? (dirigido)</span>
+                    <button type="button" class="btn-agregar-item" data-target="lista-dirigido" data-placeholder="Ej: Estudiantes de desarrollo web...">
+                        + Agregar
+                    </button>
+                </div>
+                <div id="lista-dirigido" class="lista-items-dinamicos"></div>
+            </div>
+
+            <div class="bloque-dinamico">
+                <div class="bloque-dinamico-header">
+                    <span>¿Qué aprenderás? (aprendizajes)</span>
+                    <button type="button" class="btn-agregar-item" data-target="lista-aprendizajes" data-placeholder="Ej: Manipular el DOM y eventos...">
+                        + Agregar
+                    </button>
+                </div>
+                <div id="lista-aprendizajes" class="lista-items-dinamicos"></div>
+            </div>
+
+            <div class="bloque-dinamico">
+                <div class="bloque-dinamico-header">
+                    <span>Temario / Módulos (modulos)</span>
+                    <button type="button" class="btn-agregar-item" data-target="lista-modulos" data-placeholder="Ej: Módulo 1: Introducción...">
+                        + Agregar
+                    </button>
+                </div>
+                <div id="lista-modulos" class="lista-items-dinamicos"></div>
+            </div>
+
+            <div class="botones-curso modal-acciones">
+                <button type="button" id="btn-cancelar-modal" class="boton-eliminar">Cancelar</button>
+                <button type="submit" class="boton-curso">Guardar curso</button>
+            </div>
+        </form>
+    </dialog>
 
     <section class="listado-cursos" id="contenedor-catalogo">
     </section>

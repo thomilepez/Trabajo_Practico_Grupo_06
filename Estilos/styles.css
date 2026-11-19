@@ -798,6 +798,153 @@ body.pagina-red-social {
     display: none;
 }
 
+/* ----------------------------------------------------------
+   MODAL DOCENTE Y CAMPOS DINAMICOS
+   ---------------------------------------------------------- */
+.modal-curso {
+    margin: auto;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 38rem;
+    width: 94%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--Color-Fondo-Tarjeta);
+    color: var(--Color-Texto-Base);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-curso::backdrop {
+    background-color: rgba(2, 6, 23, 0.65);
+}
+
+.form-curso-docente {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--Color-Texto-Titulos);
+}
+
+.campo-form input,
+.campo-form textarea,
+.fila-item-dinamico input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 6px;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.fila-dos-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .fila-dos-campos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bloque-dinamico {
+    border: 1px solid var(--Color-Borde);
+    border-radius: 8px;
+    padding: 0.85rem;
+    background-color: var(--Color-Fondo);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.bloque-dinamico-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--Color-Texto-Titulos);
+}
+
+.btn-agregar-item {
+    border: none;
+    border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    background-color: var(--Color-boton);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-agregar-item:hover {
+    background-color: var(--Color-Hover-hipervinculos);
+}
+
+.lista-items-dinamicos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fila-item-dinamico {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-quitar-item {
+    border: none;
+    border-radius: 6px;
+    padding: 0.45rem 0.65rem;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.btn-quitar-item:hover {
+    background-color: #dc2626;
+}
+
+/* Quitar flechas de spinner en input number */
+.campo-form input[type="number"]::-webkit-outer-spin-button,
+.campo-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.campo-form input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.campo-form select {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 6px;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
 
 /* ==========================================================
    8. USUARIO (perfil)
