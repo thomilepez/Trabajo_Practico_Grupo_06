@@ -148,7 +148,7 @@ h1,h2,h3{
    descripcion-curso, precio-curso: no estan en tus listas)
    ---------------------------------------------------------- */
 .tarjeta.curso {
-    background-color: #ffffff;
+    background-color:  var(--Color-Fondo-Tarjeta);
     border: 1px solid var(--Color-Borde);
     border-radius: 12px;
     overflow: hidden;
@@ -184,19 +184,19 @@ h1,h2,h3{
 
 .tarjeta-cuerpo h2 {
     font-size: 1.2rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
 }
 
 .descripcion-curso {
     font-size: 0.95rem;
-    color: #475569;
+    color: var(--Color-Texto-Secundario);
     flex-grow: 1;
 }
 
 .precio-curso {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin: 0.5rem 0;
 }
 
