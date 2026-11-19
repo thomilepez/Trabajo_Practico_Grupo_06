@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen de Pago</title>
-    <link rel="stylesheet" href="Estilos/styles-header-footer.css">
-    <link rel="stylesheet" href="Estilos/styles.css">
+    <link rel="stylesheet" href="../Estilos/styles-header-footer.css">
+    <link rel="stylesheet" href="../Estilos/styles.css">
 </head>
 <body>
    <header id="header-contenedor" class="header-principal"></header>
@@ -41,28 +41,86 @@
                     </div>
                 </fieldset>
 
-                <!-- DATOS DE PAGO / TARJETA (Nuevos y obligatorios a rellenar) -->
-                <fieldset class="informacion-personal fieldset-pago">
-                    <legend class="legend-pago">Método de Pago y Verificación</legend>
+<fieldset class="informacion-personal fieldset-pago">
+                    <legend class="legend-pago">Método de Pago</legend>
 
-                    <div class="campo campo-pago">
-                        <label for="numero-tarjeta">Número de Tarjeta (Simulado):</label>
-                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" required placeholder="4532 •••• •••• 8920" maxlength="16" inputmode="numeric" class="input-pago">
+                    <div class="selector-metodos" role="radiogroup" aria-label="Elegí un medio de pago">
+                        <label class="opcion-metodo activa">
+                            <input type="radio" name="metodo-pago" value="tarjeta" checked>
+                            <span>Tarjeta</span>
+                        </label>
+                        <label class="opcion-metodo">
+                            <input type="radio" name="metodo-pago" value="qr">
+                            <span>Código QR</span>
+                        </label>
+                        <label class="opcion-metodo">
+                            <input type="radio" name="metodo-pago" value="transferencia">
+                            <span>Transferencia / Alias</span>
+                        </label>
+                        <label class="opcion-metodo">
+                            <input type="radio" name="metodo-pago" value="efectivo">
+                            <span>Efectivo (Pago Fácil)</span>
+                        </label>
                     </div>
 
-                    <div class="grupo-tarjeta">
-                        <div class="campo campo-pago" style="flex: 1;">
-                            <label for="vencimiento">Vencimiento (MM/AA):</label>
-                            <input type="text" id="vencimiento" name="vencimiento" required placeholder="12/28" maxlength="5" class="input-pago">
+                    <div id="mensaje-pago" class="mensaje-pago oculto" role="alert"></div>
+
+                    <div id="panel-tarjeta" class="panel-metodo">
+                        <div class="campo campo-pago">
+                            <label for="numero-tarjeta">Número de Tarjeta (Simulado):</label>
+                            <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="4532 •••• •••• 8920" maxlength="19" inputmode="numeric" class="input-pago">
                         </div>
-                        <div class="campo campo-pago" style="flex: 1;">
-                            <label for="cvv">CVV:</label>
-                            <input type="password" id="cvv" name="cvv" required placeholder="123" maxlength="4" inputmode="numeric" class="input-pago">
+
+                        <div class="grupo-tarjeta">
+                            <div class="campo campo-pago" style="flex: 1;">
+                                <label for="vencimiento">Vencimiento (MM/AA):</label>
+                                <input type="text" id="vencimiento" name="vencimiento" placeholder="12/28" maxlength="5" class="input-pago">
+                            </div>
+                            <div class="campo campo-pago" style="flex: 1;">
+                                <label for="cvv">CVV:</label>
+                                <input type="password" id="cvv" name="cvv" placeholder="123" maxlength="4" inputmode="numeric" autocomplete="cc-csc" class="input-pago">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-qr" class="panel-metodo oculto">
+                        <div class="caja-qr">
+                            <p>Escaneá este código desde tu billetera virtual (Mercado Pago, MODO, Ualá):</p>
+                            <div id="contenedor-qr" class="qr-visual"></div>
+                            <small id="referencia-qr" class="texto-secundario"></small>
+                        </div>
+                    </div>
+
+                    <div id="panel-transferencia" class="panel-metodo oculto">
+                        <div class="datos-bancarios">
+                            <p>Realizá la transferencia por el total exacto a la siguiente cuenta:</p>
+                            <div class="dato-copiable">
+                                <span><strong>Alias:</strong> ESTUDY.CURSOS.AR</span>
+                                <button type="button" class="btn-copiar" data-copiar="ESTUDY.CURSOS.AR">Copiar</button>
+                            </div>
+                            <div class="dato-copiable">
+                                <span><strong>CBU:</strong> 0000003100094827163542</span>
+                                <button type="button" class="btn-copiar" data-copiar="0000003100094827163542">Copiar</button>
+                            </div>
+                            <div class="campo campo-pago" style="margin-top: 12px;">
+                                <label for="comprobante-transferencia">Número de operación / referencia:</label>
+                                <input type="text" id="comprobante-transferencia" placeholder="Ej: 98412034" class="input-pago">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-efectivo" class="panel-metodo oculto">
+                        <div class="caja-efectivo">
+                            <p>Presentá este código en cualquier sucursal de <strong>Pago Fácil</strong> o <strong>Rapipago</strong>:</p>
+                            <div class="codigo-cupon" id="codigo-pago-facil"></div>
+                            <button type="button" class="btn-copiar" id="btn-copiar-cupon">Copiar código</button>
+                            <small class="texto-secundario">Válido por 48 horas. Tu inscripción se acreditará al confirmar.</small>
                         </div>
                     </div>
                 </fieldset>
 
-                <button type="submit" class="boton-curso boton-pago-submit">Confirmar y Pagar</button>
+                <button type="submit" id="btn-submit-pago" class="boton-curso boton-pago-submit">Confirmar y Pagar</button>
+
             </form>
         </section>
 
@@ -73,10 +131,19 @@
         </aside>
 
     </div>
+
+    <div id="modal-exito-pago" class="modal-overlay oculto" role="dialog" aria-modal="true">
+        <div class="modal-contenido">
+            <div class="icono-exito">✓</div>
+            <h2>¡Pago verificado con éxito!</h2>
+            <p id="texto-detalle-exito">Tus cursos ya están disponibles en tu cuenta.</p>
+            <button type="button" id="btn-ir-cursos" class="boton-curso">Ir a Mis Cursos</button>
+        </div>
+    </div>
 </main>
 <footer id="footer-contenedor" class="footer-principal"></footer>
 
-<script src="Scripts/cargaComponentes.js"></script>
-<script src="Scripts/resumenPago.js"></script>
+<script src="../Scripts/cargaComponentes.js"></script>
+<script src="../Scripts/resumenPago.js"></script>
 </body>
 </html>

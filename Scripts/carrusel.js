@@ -5,7 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let indiceActual = 0;
 
-    const cantidadVisible = 4;
+    function obtenerCantidadVisible() {
+
+    if (window.innerWidth <= 768) {
+        return 1;
+    }
+
+    if (window.innerWidth <= 1024) {
+        return 2;
+    }
+
+    return 4;
+}
 
     // Generar las tarjetas de los cursos
     catalogoCursosDetalle.forEach(curso => {
@@ -34,15 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Calcular cuántas posiciones puede tener el carrusel
+    let cantidadVisible = obtenerCantidadVisible();
     const cantidadPosiciones = catalogoCursosDetalle.length - cantidadVisible + 1;
 
-    // Crear los puntitos
+    // Crear los puntitos 
     for (let i = 0; i < cantidadPosiciones; i++) {
 
         const punto = document.createElement("button");
 
         punto.type = "button";
-        punto.setAttribute("aria-label", `Mostrar desde el curso ${i + 1}`);
+        punto.setAttribute("aria-label", ` ${i + 1}`);
 
         if (i === 0) {
             punto.classList.add("activo");

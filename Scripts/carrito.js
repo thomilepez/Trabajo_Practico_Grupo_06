@@ -1,15 +1,26 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+window.cursoYaAdquirido = function(idCurso) {
+    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActivo"));
+    if (!usuarioActual || !Array.isArray(usuarioActual.cursosComprados)) {
+        return false;
+    }
+    return usuarioActual.cursosComprados.some(id => String(id) === String(idCurso));
+};
+
 window.agregarAlCarrito = function(idCurso) {
-    const cursoEncontrado = catalogoCursosDetalle.find(c => c.id === idCurso);
-    
+    if (cursoYaAdquirido(idCurso)) {
+        mostrarNotificacion("Ya tenés este curso adquirido en tu cuenta.", "advertencia");
+        return;
+    }
+
+    const cursoEncontrado = catalogoCursosDetalle.find(c => String(c.id) === String(idCurso));
     if (!cursoEncontrado) {
         console.error("No se encontró el curso con ID:", idCurso);
         return;
     }
 
-    const enCarrito = carrito.find(item => item.id === idCurso);
-
+    const enCarrito = carrito.find(item => String(item.id) === String(idCurso));
     if (enCarrito) {
         mostrarNotificacion("Este curso ya está en tu carrito.", "advertencia");
     } else {
@@ -22,7 +33,7 @@ window.agregarAlCarrito = function(idCurso) {
         guardarYActualizar();
         mostrarNotificacion(`¡"${cursoEncontrado.nombre}" se agregó al carrito!`, "exito");
     }
-}
+};
 
 function guardarYActualizar() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -32,6 +43,12 @@ function guardarYActualizar() {
 function renderizarCarrito() {
     const contenedorCarrito = document.getElementById("contenedor-carrito");
     const resumenCarrito = document.getElementById("resumen-carrito");
+    const carritoFiltrado = carrito.filter(item => !cursoYaAdquirido(item.id));
+
+    if (carritoFiltrado.length !== carrito.length) {
+    carrito = carritoFiltrado;
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+     }
 
     if (!contenedorCarrito || !resumenCarrito) return;
 
@@ -103,4 +120,12 @@ function mostrarNotificacion(mensaje, tipo = "exito") {
             }
         }, 300);
     }, 3000);
+}
+
+function cursoYaAdquirido(idCurso) {
+    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActivo"));
+    if (!usuarioActual || !Array.isArray(usuarioActual.cursosComprados)) {
+        return false;
+    }
+    return usuarioActual.cursosComprados.some(id => String(id) === String(idCurso));
 }

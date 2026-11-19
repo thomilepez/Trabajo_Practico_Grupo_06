@@ -53,7 +53,7 @@ const catalogoCursosDetalle = [
         id: "java",
         nombre: "Programación en Java",
         descripcion: "Aprendé Java desde cero: sintaxis, programación orientada a objetos, colecciones, manejo de excepciones y acceso a bases de datos para construir aplicaciones robustas y multiplataforma.",
-        imagen: "../imagenes/Programacion/JAVA.jpg",
+        imagen: "../imagenes/Programacion/JAVA.png",
         alt: "Persona programando en una computadora con código Java en pantalla",
         precio: 33999,
         nivel: "Principiante",
