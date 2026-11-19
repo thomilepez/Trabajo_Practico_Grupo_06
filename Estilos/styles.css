@@ -46,12 +46,14 @@
     --Color-Texto-Titulos: #0F172A;
     --Color-Texto-Secundario: #475569;
     --Color-Texto-header: #F8FAFC;
+    --Color-Rasaltar : #3B82F6;
 
     /* Interfaz y Botones */
     --Color-boton: #3B82F6;
     --Color-boton-carrito: #532af7;
     --Color-Hover-hipervinculos: #2563EB;
     --Color-Borde: #E2E8F0;
+    --Color-Boton-Opaco: #a2c4fa;
 }
 
 /***        TEMA OSCURO        ***/
@@ -62,7 +64,7 @@ body.tema-oscuro {
     --Color-Texto-Base: #F8FAFC;
     --Color-Texto-Titulos: #F1F5F9;
     --Color-Texto-Secundario: #94A3B8;
-    --Color-Borde: #334155;
+    --Color-Borde: #084da7;
 }
 
 
@@ -97,6 +99,12 @@ img{
 }
 
 
+p{
+    color: var(--Color-Texto-Secundario);
+}
+h1,h2,h3{
+    color: var(--Color-Texto-Titulos);
+}
 /* ==========================================================
    3. ESTILOS COMPARTIDOS ENTRE VARIAS PAGINAS
    ========================================================== */
@@ -374,7 +382,7 @@ img{
 
 .encabezado-simple h1 {
     font-size: 2.25rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin-bottom: 0.5rem;
 }
 
@@ -450,6 +458,9 @@ img{
     overflow: hidden;
     border: 1px solid var(--Color-Borde);
     transition: transform 0.3s ease;
+    background-color: var(--Color-Fondo);
+    
+
 }
 
 .contenedor-img-curso:hover {
@@ -465,7 +476,6 @@ img{
 .contenedor-img-curso h3 {
     padding: 0.8rem 1rem 0.2rem;
     font-size: 1.15rem;
-    color: var(--Color-Primario);
 }
 
 .contenedor-img-curso p {
@@ -494,7 +504,7 @@ img{
 
 .valores{
     padding: 3rem 8%;
-    background-color: #fff;
+    background-color: var(--Color-Fondo);
 }
 .valores h2, .valores p{
     text-align: center;
@@ -518,7 +528,7 @@ img{
     padding: 0.7rem;
     margin-bottom: 1rem;
     border-radius: 10px;
-    background-color: var(--Colo-boton-opaco);
+    background-color: var(--Color-Boton-Opaco);
 }
 /* ==========================================================
    5. DOCENTES
@@ -529,23 +539,33 @@ img{
 
 .grilla-docentes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap: 1.5rem;
 }
 
 .tarjeta-docente {
-    background-color: #ffffff;
+    background-color: var(--Color-Fondo);
     border: 1px solid var(--Color-Borde);
     border-radius: 12px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: 100%
+}
+
+.docente-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.docente-descripcion {
+    margin-top: auto; /* Empuja el párrafo al fondo de la tarjeta en todas las columnas */
 }
 
 .especialidad {
     font-size: 0.85rem;
-    color: var(--Color-boton);
+    color: var(--Color-Rasaltar);
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -787,7 +807,6 @@ Carrusel
 
 .item-carrito h3 {
     font-size: 1.1rem;
-    color: var(--Color-Texto-Titulos);
 }
 
 .item-carrito p {

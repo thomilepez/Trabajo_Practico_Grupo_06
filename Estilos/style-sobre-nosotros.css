@@ -1,14 +1,14 @@
-:root{
+/* :root{
     --Color-Primario: #0F172A;
     --Color-Secundario: #1E293B;
     --Color-Fondo: #F8FAFC;
     --Color-texto: #1E293B;
     --Color-boton: #3B82F6;
     --Color-Hover-hipervinculos: #2563EB;
-    --Colo-boton-opaco: #3b83f62f;
+    --Colo-boton-opaco: #a2c4fa;
     --Color-Texto-header: #F8FAFC;
-    --Color-Borde: #E2E8F0;
-}
+    --Color-Borde: #084da7;
+} */
 
 *{
     box-sizing: border-box;
