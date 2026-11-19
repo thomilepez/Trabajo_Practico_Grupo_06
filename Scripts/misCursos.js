@@ -4,8 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "iniciar-sesion.html";
         return;
     }
+
     const contenedorCursos = document.getElementById("listado-mis-cursos");
     if (!contenedorCursos) return;
+
+    if (typeof catalogoCursosDetalle === "undefined") {
+        console.error("catalogoCursosDetalle no está definido. Revisá el orden de los <script> en mis-cursos.html.");
+        contenedorCursos.innerHTML = `<p class="error-curso">Error al cargar el catálogo de cursos.</p>`;
+        return;
+    }
 
     const idsComprados = usuarioActivo.cursosComprados || [];
     if (idsComprados.length === 0) {
@@ -22,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contenedorCursos.innerHTML = "";
 
     idsComprados.forEach(idCurso => {
-        const curso = catalogoCursosDetalle.find(c => c.id === idCurso);
+        const curso = catalogoCursosDetalle.find(c => String(c.id) === String(idCurso));
 
         if (curso) {
             const article = document.createElement("article");
@@ -31,18 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             article.innerHTML = `
                 <div class="portada-curso">
-                    <img src="${curso.imagen}" alt="${curso.alt}">
+                    <img src="${curso.imagen}" alt="${curso.alt || curso.nombre}">
                 </div>
                 <div class="tarjeta-cuerpo">
                     <h2>${curso.nombre}</h2>
                     <p class="descripcion-curso">${curso.descripcion}</p>
                     <div class="botones-curso">
-                        <a href="../Cursos/mis-clases.html?id=${curso.id}" class="boton-curso">Ir al curso</a>
+                        <a href="../Usuario/mis-cursos.html?id=${curso.id}" class="boton-curso">Ir al curso</a>
                     </div>
                 </div>
             `;
 
             contenedorCursos.appendChild(article);
+        } else {
+            console.warn("No se encontró en catalogoCursosDetalle el curso con ID:", idCurso);
         }
     });
 });

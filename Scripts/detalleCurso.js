@@ -158,8 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (yaComprado) {
             contenedorAcciones.innerHTML = `
-                <a href="../Cursos/mis-clases.html?id=${curso.id}" class="boton-curso-adquirido">
-                    <img src="../svg's/Iconos-SVG/whide/play.svg" alt="Icono de reproducción">
+                <a href="../Usuario/mis-cursos.html?id=${curso.id}" class="boton-curso-adquirido">
+                    <img src="../svg's/Iconos-SVG/whide/libro-abierto.svg" alt="Icono de reproducción">
                     Ir a mis clases
                 </a>
             `;
@@ -183,4 +183,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+
+    const yaComprado = typeof window.cursoYaAdquirido === "function"
+    ? window.cursoYaAdquirido(curso.id)
+    : false;
+
+if (yaComprado) {
+    contenedorAcciones.innerHTML = `
+        <a href="../Usuario/mis-cursos.html?id=${curso.id}" class="boton-curso-adquirido">
+            <img src="../svg's/Iconos-SVG/whide/play.svg" alt="Icono de reproducción">
+            Ir a mis clases
+        </a>
+    `;
+} else {
+    contenedorAcciones.innerHTML = `
+        <button type="button" class="boton-carrito" id="btn-comprar-detalle" data-id="${curso.id}">
+            <img src="../svg's/Iconos-SVG/whide/carrito-compras.svg" alt="Carrito de compra">
+            Añadir al carrito
+        </button>
+    `;
+
+    const btnComprar = document.getElementById("btn-comprar-detalle");
+    if (btnComprar) {
+        btnComprar.addEventListener("click", () => {
+            if (typeof window.agregarAlCarrito === "function") {
+                window.agregarAlCarrito(curso.id);
+            }
+        });
+    }
+}
 });

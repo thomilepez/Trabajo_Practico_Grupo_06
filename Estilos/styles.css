@@ -795,6 +795,184 @@ Carrusel
     color: var(--Color-Texto-Base);
 }
 
+/*resumen de pago*/
+
+.selector-metodos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.opcion-metodo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
+    border: 1.5px solid var(--Color-Borde);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.opcion-metodo:hover {
+    border-color: var(--Color-boton);
+}
+
+.opcion-metodo input[type="radio"] {
+    display: none;
+}
+
+.opcion-metodo.activa {
+    border-color: var(--Color-boton);
+    background-color: var(--Color-boton);
+    color: var(--Color-Texto-header);
+}
+
+.mensaje-pago {
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.mensaje-pago.error {
+    background-color: rgba(239, 68, 68, 0.12);
+    border: 1px solid #ef4444;
+    color: #ef4444;
+}
+
+.mensaje-pago.info {
+    background-color: rgba(59, 130, 246, 0.12);
+    border: 1px solid var(--Color-boton);
+    color: var(--Color-boton);
+}
+
+.caja-qr,
+.datos-bancarios,
+.caja-efectivo {
+    padding: 16px;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
+    border: 1px dashed var(--Color-Borde);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.caja-qr p,
+.datos-bancarios p,
+.caja-efectivo p {
+    color: var(--Color-Texto-Secundario);
+    font-size: 0.95rem;
+}
+
+.qr-visual {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.dato-copiable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    border-radius: 6px;
+    background-color: var(--Color-Fondo-Tarjeta);
+    border: 1px solid var(--Color-Borde);
+    color: var(--Color-Texto-Titulos);
+    text-align: left;
+    font-size: 0.92rem;
+}
+
+.codigo-cupon {
+    font-family: monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--Color-Texto-Titulos);
+    margin: 12px 0;
+}
+
+.btn-copiar {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--Color-Borde);
+    background-color: var(--Color-Fondo-Tarjeta);
+    color: var(--Color-Texto-Base);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-copiar:hover {
+    background-color: var(--Color-boton);
+    border-color: var(--Color-boton);
+    color: var(--Color-Texto-header);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(2, 6, 23, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.modal-contenido {
+    background-color: var(--Color-Fondo-Tarjeta);
+    color: var(--Color-Texto-Base);
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 28px 24px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.modal-contenido h2 {
+    color: var(--Color-Texto-Titulos);
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.modal-contenido p {
+    color: var(--Color-Texto-Secundario);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.icono-exito {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background-color: #16a34a;
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none !important;
+}
+
 /* ==========================================================
 10. PAGINA DE PAGO / RESUMEN DE PAGO
    ========================================================== */
