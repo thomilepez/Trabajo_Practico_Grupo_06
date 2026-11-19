@@ -227,7 +227,7 @@ form{
 .informacion-personal{
     display: flex;
     flex-direction: column;
-    gap:5px ;
+    gap: 7px;
 }
 
 .formulario-registro .campo {
@@ -262,7 +262,20 @@ form{
     
 }
 
-
+.campo-formulario > input{
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;   
+}
+.texto-login a{
+    color: #3B82F6;
+}
+.texto-login a:hover{
+    color: #2563EB;
+    text-decoration: underline;
+}
 /* PANTALLA COMPUTADORA */
 
 @media screen and (min-width: 1024px) {
