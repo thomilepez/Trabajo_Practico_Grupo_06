@@ -66,6 +66,7 @@ body.tema-oscuro {
     --Color-Texto-Secundario: #94A3B8;
     /* --Color-Borde: #084da7; */
     --Color-Borde: #233554;
+    
 }
 
 
@@ -77,6 +78,7 @@ body.tema-oscuro {
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -310,20 +312,52 @@ h1,h2,h3{
     flex-shrink: 0;
 }
 
+
+body.tema-oscuro .boton-favorito {
+    border-color: var(--Color-boton-carrito);
+
+
+}
+
+body.tema-oscuro .boton-favorito img {
+    
+ filter: brightness(0) saturate(100%) invert(19%) sepia(95%)
+            saturate(5000%) hue-rotate(250deg) brightness(95%);
+
+}
+
+body.tema-oscuro .boton-favorito.favorito-activo img {
+     filter: brightness(0) invert(1);
+     
+   /* opacity: 1;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(2352%) hue-rotate(342deg) brightness(96%) contrast(94%);*/
+}
+
+
+body.tema-oscuro .boton-favorito.favorito-activo {
+    border-color: #ff0000 ;
+
+}
+
+body.tema-oscuro .boton-favorito:hover {
+    border-color: #f22222 ;
+}
+
 .boton-favorito {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.6rem 0.75rem;
     background-color: transparent;
-    border: 1.5px solid var(--Color-Borde);
+    border: 1.5px solid #f22222;
     border-radius: 6px;
     cursor: pointer;
     transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
 }
 
 .boton-favorito:hover {
-    border-color: #ef4444;
+    background-color: #ff0000;
+    
     transform: scale(1.04);
 }
 
@@ -335,13 +369,19 @@ h1,h2,h3{
 }
 
 .boton-favorito.favorito-activo {
-    border-color: #ef4444;
-    background-color: rgba(239, 68, 68, 0.12);
+ 
+    background-color: #ff0000
+}
+
+.boton-favorito:hover img {
+    filter: brightness(0) invert(1);
 }
 
 .boton-favorito.favorito-activo img {
-    opacity: 1;
-    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(2352%) hue-rotate(342deg) brightness(96%) contrast(94%);
+     filter: brightness(0) invert(1);
+     
+   /* opacity: 1;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(2352%) hue-rotate(342deg) brightness(96%) contrast(94%);*/
 }
 
 /* ----------------------------------------------------------

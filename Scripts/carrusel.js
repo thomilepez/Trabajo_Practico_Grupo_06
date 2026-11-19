@@ -18,8 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
     return 4;
 }
 
+const cursosRecomendados = [
+    "javascript",
+    "java",
+    "python",
+    "diseno-grafico",
+    "html5-css3",
+    "sql"
+];
+
+
     // Generar las tarjetas de los cursos
-    catalogoCursosDetalle.forEach(curso => {
+    catalogoCursosDetalle
+    .filter(curso => cursosRecomendados.includes(curso.id))
+    .forEach(curso =>  {
 
         const tarjeta = document.createElement("article");
 
@@ -46,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Calcular cuántas posiciones puede tener el carrusel
     let cantidadVisible = obtenerCantidadVisible();
-    const cantidadPosiciones = catalogoCursosDetalle.length - cantidadVisible + 1;
+    const cantidadPosiciones = cursosRecomendados.length - cantidadVisible + 1;;
 
     // Crear los puntitos 
     for (let i = 0; i < cantidadPosiciones; i++) {
