@@ -984,7 +984,14 @@ body.pagina-red-social {
     border: 1px solid var(--Color-Borde);
     border-radius: 12px;
     padding: 1.5rem;
+    background-color: var(--Color-Fondo);
 }
+.seccion-datos-usuario h2{
+    color: var(--Color-Texto-Titulos);
+}
+.seccion-datos-usuario p{
+    color: var(--Color-Texto-Base);
+}   
 
 /* ==========================================================
 9. alerta y carrito
