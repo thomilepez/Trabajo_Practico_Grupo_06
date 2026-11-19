@@ -38,14 +38,13 @@
 :root{
     /* Fondos */
     --Color-Fondo: #F8FAFC;
-    --Color-Fondo-Header: #0F172A;
     --Color-Fondo-Tarjeta: #ffffff;
 
     /* Textos */
     --Color-Texto-Base: #1E293B;
     --Color-Texto-Titulos: #0F172A;
     --Color-Texto-Secundario: #475569;
-    --Color-Texto-header: #F8FAFC;
+    --Color-Texto-header: #fafcf8;
     --Color-Rasaltar : #3B82F6;
 
     /* Interfaz y Botones */
@@ -58,13 +57,15 @@
 
 /***        TEMA OSCURO        ***/
 body.tema-oscuro {
-    --Color-Fondo: #020617;
-    --Color-Fondo-Header: #0F172A;
-    --Color-Fondo-Tarjeta: #1E293B;
+    /* --Color-Fondo: #020617; */
+    --Color-Fondo: #0A111E;
+    /* --Color-Fondo-Tarjeta: #1E293B; */
+    --Color-Fondo-Tarjeta: #121E36;
     --Color-Texto-Base: #F8FAFC;
     --Color-Texto-Titulos: #F1F5F9;
     --Color-Texto-Secundario: #94A3B8;
-    --Color-Borde: #084da7;
+    /* --Color-Borde: #084da7; */
+    --Color-Borde: #233554;
 }
 
 
@@ -327,7 +328,7 @@ h1,h2,h3{
 
 /***        RESUMEN DEL PEDIDO        ***/
 .resumen-pedido {
-    background-color: #ffffff;
+    background-color: var(--Color-Fondo-Tarjeta);
     border: 1px solid var(--Color-Borde);
     border-radius: 12px;
     padding: 1.5rem;
@@ -396,7 +397,6 @@ h1,h2,h3{
 
 /***        SECCION DE INTRODUCCION        ***/
 .introduccion{
-    color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -414,12 +414,13 @@ h1,h2,h3{
 .introduccion h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: var(--Color-Texto-Titulos);
+    color: #3B82F6;
 }
 
 .introduccion p{
     max-width: 50em;
     font-size: 1.1rem;
+    color:  #F1F5F9;
 }
 
 /***        CURSOS RECOMENDADOS Y NUEVOS        ***/
@@ -455,14 +456,13 @@ h1,h2,h3{
 /***        TARJETA DE CURSO DEL INICIO        ***/
 .contenedor-img-curso {
     width: 100%;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--Color-Borde);
     transition: transform 0.3s ease;
-    background-color: var(--Color-Fondo);
+    background-color: var(--Color-Fondo-Tarjeta);
     
 
 }

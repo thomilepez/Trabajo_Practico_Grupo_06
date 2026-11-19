@@ -1,14 +1,35 @@
-/* :root{
-    --Color-Primario: #0F172A;
-    --Color-Secundario: #1E293B;
+:root{
+    /* Fondos */
     --Color-Fondo: #F8FAFC;
-    --Color-texto: #1E293B;
-    --Color-boton: #3B82F6;
-    --Color-Hover-hipervinculos: #2563EB;
-    --Colo-boton-opaco: #a2c4fa;
+    --Color-Fondo-Tarjeta: #ffffff;
+
+    /* Textos */
+    --Color-Texto-Base: #1E293B;
+    --Color-Texto-Titulos: #0F172A;
+    --Color-Texto-Secundario: #475569;
     --Color-Texto-header: #F8FAFC;
-    --Color-Borde: #084da7;
-} */
+    --Color-Rasaltar : #3B82F6;
+
+    /* Interfaz y Botones */
+    --Color-boton: #3B82F6;
+    --Color-boton-carrito: #532af7;
+    --Color-Hover-hipervinculos: #2563EB;
+    --Color-Borde: #E2E8F0;
+    --Color-Boton-Opaco: #a2c4fa;
+}
+
+/***        TEMA OSCURO        ***/
+body.tema-oscuro {
+    /* --Color-Fondo: #020617; */
+    --Color-Fondo: #0A111E;
+    /* --Color-Fondo-Tarjeta: #1E293B; */
+    --Color-Fondo-Tarjeta: #121E36;
+    --Color-Texto-Base: #F8FAFC;
+    --Color-Texto-Titulos: #F1F5F9;
+    --Color-Texto-Secundario: #94A3B8;
+    /* --Color-Borde: #084da7; */
+    --Color-Borde: #233554;
+}
 
 *{
     box-sizing: border-box;
@@ -85,7 +106,7 @@ main p{
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
-    border: 2px solid var(--Color-Texto-header);
+    border: 1px solid var(--Color-Texto-header);
     color: var(--Color-Texto-header);
 }
 .boton-borde:hover{
@@ -105,7 +126,7 @@ main p{
 /*                  NUESTROS VALORES              ****/
 .valores{
     padding: 3rem 8%;
-    background-color: #fff;
+    background-color: var(--Color-Fondo);
 }
 .valores h2{
     text-align: center;
@@ -129,7 +150,7 @@ main p{
     padding: 0.7rem;
     margin-bottom: 1rem;
     border-radius: 10px;
-    background-color: var(--Colo-boton-opaco);
+    background-color: var(--Color-Boton-Opaco);
 }
 
 /***                POR QUE ELEGIR E-STUDY              */
@@ -158,12 +179,16 @@ main p{
     padding: 1.5rem;
 }
 .comparar-no{
-    background-color: #fff;
+    background-color: #F8FAFC;
     border: 1px solid var(--Color-Borde);
+}
+.comparar-no{
+    color: #1E293B;
 }
 .comparar-si{
     background-color: var(--Color-Primario);
     color: var(--Color-Texto-header);
+    border: 1px solid var(--Color-Borde);
 }
 .comparar-no li,
 .comparar-si li{
@@ -188,8 +213,8 @@ main p{
     padding: 3rem 8%;
     margin: 2rem;
     border-radius: 12px;
-    background-color: var(--Color-boton);
-    color: #fff;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
 }
 .llamado div{
     flex: 1 1 22rem;
@@ -199,7 +224,7 @@ main p{
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
-    background-color: var(--Color-Primario);
+    background-color: var(--Color-boton);
     color: #fff;
 }
 .llamado a:hover{
