@@ -466,12 +466,13 @@ body.tema-oscuro .boton-favorito:hover {
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    color: var(--Color-Texto);
 }
 
 .resumen-pedido h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
 }
 
 .desglose-resumen {
@@ -1375,6 +1376,10 @@ width: 100%;
       .contenedor-cursos .contenedor-img-curso {
         flex: 0 0 calc((100% - 2rem) / 2);
     }
+    .resumen-pedido{
+        border: none;
+        background-color: transparent;
+    }
 }
 
 /***        MOBILE        ***/
@@ -1441,6 +1446,11 @@ width: 100%;
         min-height: 30%;
         width: 100%;
         height: 12rem;
+    }
+    
+    .resumen-pedido{
+        border: none;
+        background-color: transparent;
     }
 
 }
