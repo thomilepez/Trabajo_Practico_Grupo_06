@@ -102,12 +102,7 @@ img{
 }
 
 
-p{
-    color: var(--Color-Texto-Secundario);
-}
-h1,h2,h3{
-    color: var(--Color-Texto-Titulos);
-}
+
 /* ==========================================================
    3. ESTILOS COMPARTIDOS ENTRE VARIAS PAGINAS
    ========================================================== */
