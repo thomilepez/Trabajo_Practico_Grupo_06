@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const botonesDocenteHtml = esDocente
                 ? `
-                    <div class="botones-curso">
+                    <div class="botones-curso main-acciones-docente">
                         <button type="button" class="boton-curso btn-editar-curso" data-id="${curso.id}">Editar</button>
                         <button type="button" class="boton-eliminar btn-eliminar-curso" data-id="${curso.id}">Eliminar</button>
                     </div>

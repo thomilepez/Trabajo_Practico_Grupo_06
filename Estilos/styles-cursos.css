@@ -292,6 +292,33 @@ main{
     gap: 1rem;
     padding: 0.6rem 0.8rem;
 }
+
+
+/*======================
+ACIONES DOCENTES
+
+====================*/
+
+.main-acciones-docente{
+
+ display: grid;
+ grid-template-columns: 75% 15%; 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /**          DISEÑO RESPONSIVE   :  TABLET   47em    **/
 @media (max-width: 992px) {
     main {
