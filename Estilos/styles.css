@@ -66,6 +66,7 @@ body.tema-oscuro {
     --Color-Texto-Secundario: #94A3B8;
     /* --Color-Borde: #084da7; */
     --Color-Borde: #233554;
+    
 }
 
 
@@ -77,6 +78,7 @@ body.tema-oscuro {
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -310,20 +312,52 @@ h1,h2,h3{
     flex-shrink: 0;
 }
 
+
+body.tema-oscuro .boton-favorito {
+    border-color: var(--Color-boton-carrito);
+
+
+}
+
+body.tema-oscuro .boton-favorito img {
+    
+ filter: brightness(0) saturate(100%) invert(19%) sepia(95%)
+            saturate(5000%) hue-rotate(250deg) brightness(95%);
+
+}
+
+body.tema-oscuro .boton-favorito.favorito-activo img {
+     filter: brightness(0) invert(1);
+     
+   /* opacity: 1;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(2352%) hue-rotate(342deg) brightness(96%) contrast(94%);*/
+}
+
+
+body.tema-oscuro .boton-favorito.favorito-activo {
+    border-color: #ff0000 ;
+
+}
+
+body.tema-oscuro .boton-favorito:hover {
+    border-color: #f22222 ;
+}
+
 .boton-favorito {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.6rem 0.75rem;
     background-color: transparent;
-    border: 1.5px solid var(--Color-Borde);
+    border: 1.5px solid #f22222;
     border-radius: 6px;
     cursor: pointer;
     transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
 }
 
 .boton-favorito:hover {
-    border-color: #ef4444;
+    background-color: #ff0000;
+    
     transform: scale(1.04);
 }
 
@@ -335,13 +369,19 @@ h1,h2,h3{
 }
 
 .boton-favorito.favorito-activo {
-    border-color: #ef4444;
-    background-color: rgba(239, 68, 68, 0.12);
+ 
+    background-color: #ff0000
+}
+
+.boton-favorito:hover img {
+    filter: brightness(0) invert(1);
 }
 
 .boton-favorito.favorito-activo img {
-    opacity: 1;
-    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(2352%) hue-rotate(342deg) brightness(96%) contrast(94%);
+     filter: brightness(0) invert(1);
+     
+   /* opacity: 1;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(91%) saturate(2352%) hue-rotate(342deg) brightness(96%) contrast(94%);*/
 }
 
 /* ----------------------------------------------------------
@@ -757,6 +797,153 @@ body.pagina-red-social {
 
 .contenedor-mockup .img-celular {
     display: none;
+}
+
+/* ----------------------------------------------------------
+   MODAL DOCENTE Y CAMPOS DINAMICOS
+   ---------------------------------------------------------- */
+.modal-curso {
+    margin: auto;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 38rem;
+    width: 94%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--Color-Fondo-Tarjeta);
+    color: var(--Color-Texto-Base);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-curso::backdrop {
+    background-color: rgba(2, 6, 23, 0.65);
+}
+
+.form-curso-docente {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--Color-Texto-Titulos);
+}
+
+.campo-form input,
+.campo-form textarea,
+.fila-item-dinamico input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 6px;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.fila-dos-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .fila-dos-campos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bloque-dinamico {
+    border: 1px solid var(--Color-Borde);
+    border-radius: 8px;
+    padding: 0.85rem;
+    background-color: var(--Color-Fondo);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.bloque-dinamico-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--Color-Texto-Titulos);
+}
+
+.btn-agregar-item {
+    border: none;
+    border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    background-color: var(--Color-boton);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-agregar-item:hover {
+    background-color: var(--Color-Hover-hipervinculos);
+}
+
+.lista-items-dinamicos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fila-item-dinamico {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-quitar-item {
+    border: none;
+    border-radius: 6px;
+    padding: 0.45rem 0.65rem;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.btn-quitar-item:hover {
+    background-color: #dc2626;
+}
+
+/* Quitar flechas de spinner en input number */
+.campo-form input[type="number"]::-webkit-outer-spin-button,
+.campo-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.campo-form input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.campo-form select {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--Color-Borde);
+    border-radius: 6px;
+    background-color: var(--Color-Fondo);
+    color: var(--Color-Texto-Base);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
 }
 
 
