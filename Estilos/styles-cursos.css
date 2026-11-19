@@ -31,6 +31,11 @@ body.tema-oscuro {
     --Color-Borde: #233554;
 }
 
+body.tema-oscuro .menu-curso img,
+body.tema-oscuro .lista-requisitos img {
+    filter: invert(1) brightness(1.1);
+}
+
 
 *{
     box-sizing: border-box;
