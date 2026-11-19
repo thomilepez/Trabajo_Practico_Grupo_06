@@ -122,7 +122,7 @@ h1,h2,h3{
 
 .cabecera-cursos h1 {
     font-size: 2.25rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin-bottom: 0.5rem;
 }
 
@@ -385,6 +385,9 @@ h1,h2,h3{
     color: var(--Color-Texto-Titulos);
     margin-bottom: 0.5rem;
 }
+.encabezado-simple p {
+    color: var(--Color-Texto-Secundario);
+}
 
 
 /* ==========================================================
@@ -411,6 +414,7 @@ h1,h2,h3{
 .introduccion h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: var(--Color-Texto-Titulos);
 }
 
 .introduccion p{
@@ -424,7 +428,7 @@ h1,h2,h3{
     grid-column: 1 / -1;
     margin-bottom: 1rem;
     font-size: 1.75rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
 }
 
 .CURSOS-Recomendados,
@@ -445,7 +449,7 @@ h1,h2,h3{
     grid-column: 1 / -1;
     margin-bottom: 1rem;
     font-size: 1.75rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
 }
 
 /***        TARJETA DE CURSO DEL INICIO        ***/
@@ -476,12 +480,13 @@ h1,h2,h3{
 .contenedor-img-curso h3 {
     padding: 0.8rem 1rem 0.2rem;
     font-size: 1.15rem;
+    color: var(--Color-Texto-Titulos);
 }
 
 .contenedor-img-curso p {
     padding: 0 1rem;
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--Color-Texto-Base);
     flex-grow: 1;
 }
 
@@ -506,8 +511,13 @@ h1,h2,h3{
     padding: 3rem 8%;
     background-color: var(--Color-Fondo);
 }
-.valores h2, .valores p{
+.valores h2{
     text-align: center;
+    color: var(--Color-Texto-Base);
+}
+
+.valores p{
+    color: var(--Color-Texto-Titulos);
 }
 .lista-valores{
     display: flex;
@@ -582,14 +592,14 @@ h1,h2,h3{
 
 .grupo-preguntas h2 {
     font-size: 1.35rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--Color-Borde);
     padding-bottom: 0.5rem;
 }
 
 .item-duda {
-    background-color: #ffffff;
+    background-color: var(--Color-Fondo);
     border: 1px solid var(--Color-Borde);
     border-radius: 8px;
     margin-bottom: 0.75rem;
@@ -608,7 +618,7 @@ h1,h2,h3{
 }
 
 .aviso-contacto {
-    background-color: #f1f5f9;
+    background-color: var(--Color-Fondo);
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
@@ -807,6 +817,7 @@ Carrusel
 
 .item-carrito h3 {
     font-size: 1.1rem;
+    color: var(--Color-Texto-Titulos);
 }
 
 .item-carrito p {
@@ -1077,6 +1088,7 @@ Carrusel
     .cabecera-cursos h1,
     .encabezado-simple h1 {
         font-size: 1.75rem;
+        color: var(--Color-Texto-Titulos);
     }
 
     /* carrito, catalogo-cursos y mis-cursos */
