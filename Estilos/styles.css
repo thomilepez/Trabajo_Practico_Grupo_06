@@ -490,7 +490,7 @@ body.tema-oscuro .boton-favorito:hover {
 
 .fila-resumen.total {
     font-size: 1.15rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     padding-top: 0.5rem;
     border-top: 1px solid var(--Color-Borde);
 }
@@ -1043,18 +1043,120 @@ body.pagina-red-social {
 /*===============================
 Carrusel 
 ===============================*/
-/* Carrusel de cursos */
+/* ==========================================================
+   CARRUSEL INTERACTIVO
+   ========================================================== */
 .carrusel {
     grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.15rem;
+    width: 100%;
+    outline: none;
+}
+
+.carrusel-track-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     width: 100%;
 }
 
 .ventana-carrusel {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
+    touch-action: pan-y;
+}
+
+.contenedor-cursos {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+}
+
+.contenedor-cursos .contenedor-img-curso {
+    flex: 0 0 calc((100% - 6rem) / 4);
+    min-width: 0;
+    user-select: none;
+}
+
+.btn-carrusel {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--Color-Borde);
+    background-color: var(--Color-Fondo-Tarjeta);
+    color: var(--Color-Texto-Titulos);
+    font-size: 1.4rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+}
+
+.btn-carrusel:hover:not(:disabled) {
+    background-color: var(--Color-boton);
+    border-color: var(--Color-boton);
+    color: #ffffff;
+    transform: scale(1.06);
+}
+
+.btn-carrusel:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.indicadores-carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.indicadores-carrusel button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    cursor: pointer;
+    transition: width 0.25s ease, border-radius 0.25s ease, background-color 0.25s ease;
+}
+
+.indicadores-carrusel button.activo {
+    width: 24px;
+    border-radius: 999px;
+    background-color: var(--Color-boton);
+}
+
+@media (max-width: 1024px) {
+    .contenedor-cursos .contenedor-img-curso {
+        flex: 0 0 calc((100% - 2rem) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-cursos {
+        gap: 1rem;
+    }
+
+    .contenedor-cursos .contenedor-img-curso {
+        flex: 0 0 100%;
+    }
+
+    .btn-carrusel {
+        width: 2.1rem;
+        height: 2.1rem;
+        font-size: 1.2rem;
+    }
 }
 
 .contenedor-cursos {
@@ -1406,11 +1508,9 @@ width: 100%;
     }
 
     /* index, paginas con cabecera-cursos, docentes y preguntas-frecuentes */
-    .introduccion h1,
-    .cabecera-cursos h1,
-    .encabezado-simple h1 {
-        font-size: 1.75rem;
-        color: var(--Color-Texto-Titulos);
+  .introduccion h1 {
+        font-size: 1.85rem;
+        color: #ffffff;
     }
 
     /* carrito, catalogo-cursos y mis-cursos */
