@@ -84,6 +84,11 @@ function renderizarCarrito() {
     const btnPagar = document.getElementById("btn-avanzar-pago");
     if (btnPagar) {
         btnPagar.addEventListener("click", () => {
+            const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+            if (!usuarioActivo) {
+                window.location.href = "../Usuario/iniciar-sesion.html";
+                return;
+            }
             window.location.href = "../tienda-carrito/resumen-pago.html";
         });
     }

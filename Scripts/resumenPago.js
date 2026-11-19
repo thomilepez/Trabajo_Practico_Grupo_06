@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
 
+    if (!usuarioActivo) {
+        window.location.href = "../Usuario/iniciar-sesion.html";
+        return;
+    }
+
     if (usuarioActivo) {
         const inputNombre = document.getElementById("nombre-apellido");
         const inputEmail = document.getElementById("email");
