@@ -490,7 +490,7 @@ body.tema-oscuro .boton-favorito:hover {
 
 .fila-resumen.total {
     font-size: 1.15rem;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     padding-top: 0.5rem;
     border-top: 1px solid var(--Color-Borde);
 }
