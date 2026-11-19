@@ -63,28 +63,14 @@ main{
 }
 /*LOGO SVG*/
 
-.SVG_LOGO{
-    width: 10em;
-    height: 20%;
-    margin: 0;
-    max-width: 25rem;
 
-    background-color: var(--Color-Primario);
-}
 
-.SVG_LOGO img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
 
-  
-}
 
 .titulo-form{
     align-self: center;
     margin-bottom: 0.5rem;
+    font-size: 35px;
 }
 
 /*MODIFICACION DE COLORES DE INPUT RADIO*/
@@ -120,8 +106,8 @@ input[type="radio"] {
     
 
     accent-color: var(--Color-boton);
-    background-color: gray;
-    border: 1px solid rgb(43, 37, 37);
+    background-color:  none;
+    border: 4px solid #E2E8F0;
 
 
     cursor : pointer;
@@ -269,10 +255,12 @@ form{
 
 #error-inicio-sesion{
     display: flex;
-    color:red;
+    color:rgb(247, 76, 76);
     align-self: center;
+    font-size: 15px;
+    font-weight: bold;
+    
 }
-
 
 
 /* PANTALLA COMPUTADORA */
@@ -335,9 +323,7 @@ form{
         margin-bottom: 1rem;
     }
 
-    .SVG_LOGO{
-    display: none;
-    }
+    
 
 .cont-radio:hover{
     background-color: var(--Color-boton);
