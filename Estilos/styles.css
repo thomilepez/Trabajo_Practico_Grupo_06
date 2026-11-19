@@ -530,31 +530,42 @@ body.tema-oscuro .boton-favorito:hover {
    ========================================================== */
 
 /***        SECCION DE INTRODUCCION        ***/
-.introduccion{
+.introduccion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 0.9rem;
     margin: 0 auto 3rem auto;
-    padding: 0 1rem;
+    padding: 3.25rem 1.5rem;
     width: 100%;
-    height: 18em;
-    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../imagenes/imagen-hero-main-2.jpg);
-    background-size: cover;
-    background-position: center;
+    min-height: 20rem;
+    background: linear-gradient(135deg, #0f172a 0%, #172554 55%, #1d4ed8 100%);
+    border-bottom: 1px solid var(--Color-Borde);
 }
 
 .introduccion h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #3B82F6;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin: 0;
 }
 
-.introduccion p{
-    max-width: 50em;
-    font-size: 1.1rem;
-    color:  #F1F5F9;
+.introduccion p {
+    max-width: 46rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #dbeafe;
+    margin: 0;
+}
+
+.introduccion .btn-cursos-masInfo {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
 }
 
 /***        CURSOS RECOMENDADOS Y NUEVOS        ***/
@@ -1391,11 +1402,9 @@ width: 100%;
     }
 
     /* index, paginas con cabecera-cursos, docentes y preguntas-frecuentes */
-    .introduccion h1,
-    .cabecera-cursos h1,
-    .encabezado-simple h1 {
-        font-size: 1.75rem;
-        color: var(--Color-Texto-Titulos);
+  .introduccion h1 {
+        font-size: 1.85rem;
+        color: #ffffff;
     }
 
     /* carrito, catalogo-cursos y mis-cursos */
