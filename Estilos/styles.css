@@ -530,31 +530,46 @@ body.tema-oscuro .boton-favorito:hover {
    ========================================================== */
 
 /***        SECCION DE INTRODUCCION        ***/
-.introduccion{
+
+.hero{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto 3rem auto;
-    padding: 0 1rem;
+    gap: 3rem;
+    padding: 3rem 8%;
+    background-color: var(--Color-Primario);
+    color: var(--Color-Texto-header);
+}
+.hero-texto{
+    flex: 1 1 22rem;
+}
+.hero-texto h1{
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    color: var(--Color-Texto-header);
+}
+.hero-texto p{
+    color: var(--Color-Texto-header);
+}
+.hero-imagen{
+    flex: 1 1 20rem;
+}
+.hero-imagen img{
     width: 100%;
-    height: 18em;
-    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../imagenes/imagen-hero-main-2.jpg);
-    background-size: cover;
-    background-position: center;
+    border-radius: 16px;
+    display: block;
 }
 
-.introduccion h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #3B82F6;
-}
-
-.introduccion p{
-    max-width: 50em;
-    font-size: 1.1rem;
-    color:  #F1F5F9;
+/*             BOTONES DEL HERO              ****/
+.boton-azul{
+    display: inline-block;
+    padding: 0.8em 1.6em;
+    margin: 0.9rem 0 0 0;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--Color-boton);
+    color: #fff;
 }
 
 /***        CURSOS RECOMENDADOS Y NUEVOS        ***/
