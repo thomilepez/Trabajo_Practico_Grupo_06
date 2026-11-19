@@ -122,6 +122,7 @@
 // ];
 
 document.addEventListener("DOMContentLoaded", () => {
+        console.log("Se está ejecutando detallerCurso.js");
     const params = new URLSearchParams(window.location.search);
     const cursoId = params.get("id");
     const curso = catalogoCursosDetalle.find(c => c.id === cursoId);

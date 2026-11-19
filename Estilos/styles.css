@@ -860,6 +860,11 @@ Carrusel
     .layout-pago {
         grid-template-columns: 1fr;
     }
+
+
+      .contenedor-cursos .contenedor-img-curso {
+        flex: 0 0 calc((100% - 2rem) / 2);
+    }
 }
 
 /***        MOBILE        ***/
@@ -900,4 +905,8 @@ Carrusel
     .contenedor-mockup .img-celular {
         display: block;
     }
+      .contenedor-cursos .contenedor-img-curso {
+        flex: 0 0 100%;
+    }
+
 }
