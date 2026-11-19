@@ -970,28 +970,38 @@ body.pagina-red-social {
    .oculto esta en styles-header-footer.css)
    ========================================================== */
 .layout-perfil {
-    max-width: 50rem;
+    max-width: 75rem;
     margin: 0 auto;
     padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+
+}.perfil-columna {
+    flex: 3;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.seccion-datos-usuario,
-.panel-rol {
-    background: #fff;
-    border: 1px solid var(--Color-Borde);
-    border-radius: 12px;
-    padding: 1.5rem;
-    background-color: var(--Color-Fondo);
+
+.layout-perfil > section {
+    flex: 2;
 }
-.seccion-datos-usuario h2{
-    color: var(--Color-Texto-Titulos);
+.layout-perfil .listado-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
 }
-.seccion-datos-usuario p{
-    color: var(--Color-Texto-Base);
-}   
+
+.tarjeta-datos p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--Color-Borde);
+}
 
 /* ==========================================================
 9. alerta y carrito
@@ -1574,5 +1584,13 @@ width: 100%;
         border: none;
         background-color: transparent;
     }
+        .layout-perfil {
+        flex-direction: column;
+    }
 
+    .perfil-columna,
+    .layout-perfil > section {
+        flex: none;
+        width: 100%;
+    }
 }
