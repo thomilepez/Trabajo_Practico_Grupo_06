@@ -1,14 +1,36 @@
 :root{
-    --Color-Primario: #0F172A;
-    --Color-Secundario: #1E293B;
+    /* Fondos */
     --Color-Fondo: #F8FAFC;
-    --Color-texto: #1E293B;
+    --Color-Fondo-Tarjeta: #ffffff;
+
+    /* Textos */
+    --Color-Texto-Base: #0F172A;
+    --Color-Texto-Titulos: #0F172A;
+    --Color-Texto-Secundario: #475569;
+    --Color-Texto-header: #fafcf8;
+    --Color-Rasaltar : #3B82F6;
+
+    /* Interfaz y Botones */
     --Color-boton: #3B82F6;
+    --Color-boton-carrito: #532af7;
     --Color-Hover-hipervinculos: #2563EB;
-    --Colo-boton-opaco:#3b83f62f;
-    --Color-Texto-header: #F8FAFC; 
     --Color-Borde: #E2E8F0;
+    --Color-Boton-Opaco: #a2c4fa;
 }
+
+/***        TEMA OSCURO        ***/
+body.tema-oscuro {
+    /* --Color-Fondo: #020617; */
+    --Color-Fondo: #0A111E;
+    /* --Color-Fondo-Tarjeta: #1E293B; */
+    --Color-Fondo-Tarjeta: #121E36;
+    --Color-Texto-Base: #F8FAFC;
+    --Color-Texto-Titulos: #F1F5F9;
+    --Color-Texto-Secundario: #94A3B8;
+    /* --Color-Borde: #084da7; */
+    --Color-Borde: #233554;
+}
+
 
 *{
     box-sizing: border-box;
@@ -44,20 +66,21 @@ main{
 }
 .tipo-de-curso {
     display: inline-block;
-    background-color: var(--Color-Primario);
+    background-color: #0A111E;
     color: #fff;
     padding: 0.4em 1em;
     margin: 1.5rem 0;
     border-radius: 999px;
     font-size: 1.01rem;
     font-weight: 600;
+    border: 1px solid var(--Color-Borde);
     /* margin-bottom: 1rem; */
 }
 .curso-hero-info h1 {
     font-size: 2.75rem;   /*tamaño de la letra*/
     font-weight: 800;     /*tamaño de grosor*/
     line-height: 1.15;
-    color: var(--Color-Primario);
+    color: var(--Color-Texto-Titulos);
     margin-bottom: 1rem;
 }
 .curso-descripcion-corta {
@@ -86,7 +109,8 @@ main{
     padding: 0.5em 1.1em;
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--Color-texto);
+    color: var(--Color-Texto-Base);
+    
 }
 .curso-hero-media img {
     width: 100%;
@@ -172,7 +196,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    background-color: var(--Color-Primario);
+    background-color: var(--color-Fondo-Tarjeta);
     color: var(--Color-Texto-header);
     border-radius: 16px;
     padding: 1.2rem;
@@ -206,6 +230,7 @@ main{
     /* border: 1px solid #50a708; */
     gap: 20px;
     
+    
 }
 .para-quien div,
 .para-quien img{
@@ -229,7 +254,7 @@ main{
 .curso-seccion > ol{
     padding: 2rem;
     flex: 1 1 14rem;
-    background-color: #fff;
+    
     border: 1px solid var(--Color-Borde);
     /* border: 1px solid rgb(238, 255, 0); */
     border-radius: 12px;
@@ -241,7 +266,6 @@ main{
 .item-aprendizaje,
 .lista-temario,
 .lista-requisitos{
-    background-color: #fff;
     border: 1px solid var(--Color-Borde);
     /* border: 1px solid red; */
     border-radius: 12px;
@@ -257,7 +281,7 @@ main{
 .item-aprendizaje p,
 .lista-temario  p{
     font-size: 0.9rem;
-    color: #475569;
+    color: var(--Color-Texto-Base);
     line-height: 1.6;
 }
 
